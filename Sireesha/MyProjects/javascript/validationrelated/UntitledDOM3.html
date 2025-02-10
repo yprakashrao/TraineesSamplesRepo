@@ -1,0 +1,60 @@
+    <html>
+        <head>
+            <title>validating the form</title>
+            <h2>Validating the form</h2>
+        </head>
+        <body>
+            <script>
+                function myform1(){
+                    var name = document.getElementById("name").value;                    
+                    var fname = document.getElementById("fname").value;                   
+                    var mname = document.getElementById("mname").value;                   
+                    var x = document.getElementById("Email").value;  
+                    var atposition = x.indexOf("@");  
+                    var dotposition = x.lastIndexOf(".");                    
+                    var password = document.getElementById("password").value;
+                    var retypepassword = document.getElementById("retypepassword").value;
+                    var phonenumber = document.getElementById("phonenumber").value;
+                    var Gender = document.getElementById("male").value;
+                    var gender = document.getElementById("female").value;
+
+                    if (name == null || name == ""){
+                        alert("Name cannot be empty");
+                         return false;}
+                     if(fname == null || fname == ""){
+                        alert("fname cannot be empty");
+                        return false;}
+                    if(mname == null || mname == ""){
+                        alert("mname cannot be empty");
+                        return false;}
+                    if(atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+                        alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                        return false; }
+                    if (password === ""){  
+                        alert(document.getElementById("password").innerHTML="Please enter password");  
+                        return false;} 
+  }  
+        </script>
+            <form name="form1" method="post" action="" onsubmit="return myform1();">
+                Name:<input type="text" id="name"><br>
+                fname:<input type="text" id ="fname"><br>
+                mname:<input type="text" id ="mname"><br>
+                Email:<input type="text" id ="Email"><br>
+                password:<input type="text" id ="password"><br>
+                Retypepassword:<input type="text" id ="retypepassword"><br>
+                phonenumber:<input type="number" id ="phonenumber"><br>
+                Male<input type="radio" id="Gender">
+                Female<input type="radio" id="Gender"><br>
+                Interests:<select type="text" id="interests">
+                  <option value="--">---</option>
+                  <option value="coco">coco</option>
+                  <option value="fball">football</option>
+                  <option value="vball">valleyball</option></select><br>
+                Hobbies:<br>
+                <input type="checkbox" id="games">Games<br>
+                <input type="checkbox" id="reading">Reading<br>
+                <input type="checkbox" id="cooking">cooking<br>
+                <input type="button" onclick="myform" value="click here"><br>            
+            </form>
+        </body>
+    </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Call backs and chaining</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                  $(document).ready(function(){
+                        $("button").click(function(){
+                              $("#img").hide(2000,function()
+                              {
+                                    $("#img").show(2000)                                  
+                              });
+                        });
+                  });
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body>
+            <h2>simple program to show the callbacks and chaining</h2>
+            <img src="../../Images/siri.jpg" alt="siri" id="img">
+            <button>click</button>
+      </body>
+</html>

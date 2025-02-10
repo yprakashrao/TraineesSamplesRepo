@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>
+                  Traversing Up(Paren,parents,parentsUntill)
+            </title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script> 
+                  $(document).ready(function(){
+                        $("button").click(function(){
+                              $("p").parentsUntil("ul").css({"color":"red", "border":"1px dotted blue"})
+                        })
+                  })              
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body class="traup">
+            <div> div
+                  <ul> list
+                        <h3> heading 3
+                              <p>
+                                    Helooo
+                              </p>
+                        </h3>
+                  </ul>
+            </div>
+      </body><br><br><br><br> 
+      <button >Click for traverse up</button>
+</html>

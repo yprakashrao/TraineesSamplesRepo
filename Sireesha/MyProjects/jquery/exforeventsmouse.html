@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="utf-8"> 
+            <title>mouse events</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+               $(document).ready(function(){                        
+        /*$("p").dblclick(function(){
+                             $(this).text("mouse double clicked here..").css({"background-color":"orange"});
+                        });*/
+
+                        /*$("p").click(function(){
+                             $(this).text("mouse clicked here..").css({"background-color":"pink"});
+                        });
+                        */     
+
+                        /*$("p").mouseenter(function(){
+                             $(this).text("mouse entered here..").css({"background-color":"red"}).show().fadeOut(2000);
+                        });*/
+
+                        /*$("p").mouseleave(function(){
+                             $("span").text("bye i am leaving paragraph.").css({"background-color":"lightblue"}).show().toggle(8000);
+                        });*/
+                        
+                        /*$("p").hover(function(){
+                              $("#spn1").text("mouse entered here.....");
+                        },function(){
+                              $("#spn2").text("leaving mouse cursor").append("hello").prepend("hi").show();
+                        
+                        });*/
+
+                        /*$("p").mousedown(function(){
+                        $("#para").text("mouse is downed here...that means any clicking function is happened here..");
+                        });*/
+
+                        /*$("p").mouseup(function(){
+                        $("#para").text("mouse is up here...").fadeOut(2000);
+                        });
+
+                        $("p").mouseover(function(){
+                        $("#para").text("mouse is overed here...that means any clicking function is happened here..");
+                        });
+
+                        $("p").mouseout(function(){
+                        $("#para").text("mouse is outed here...").fadeOut(2000);
+                        });*/
+
+                        /*$("input").keydown(function(){
+                              $("input").css({"background-color":"green"});
+                        });
+                        $("input").keyup(function(){
+                              $("input").css({"background-color":"pink"});
+                        });
+                        $("input").focusin(function(){
+                              $("input").css({"background-color":"yellow"});                             
+                        });
+                        $("input").focusout(function(){
+                              $("input").css({"background-color":"blue"});                             
+                        });
+                        $("input").blur(function(){
+                              $("input").css({"background-color":"red"});
+                        });   */   
+
+                        /*$(":input").select(function(){
+                              $("div").text("some text selected").show(1000);
+                        }); */
+
+                        $("img").load(function(){
+                              alert("image is loaded");
+                        });
+
+                        $("body").delegate("img","click",function(){
+                              $("span").after("p is the first child of body");
+                         });                        
+                  });                                 
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body>                  
+            <!--<p>
+                        here i am doing an example for mouse enter and mouse 
+                        leave events for understanding purpose.
+                        here i am doing an example for mouse enter and mouse 
+                        leave events for understanding purpose.
+                  </p>-->
+            <!---this is for double click -->
+
+             <!--<p>
+                        here i am doing an example for mouse enter and mouse 
+                        leave events for understanding purpose.
+                        here i am doing an example for mouse enter and mouse 
+                        leave events for understanding purpose.
+                  </p>-->
+            <!---this is for click -->
+
+            <!---<p>
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+            </p>
+            <span></span>--->
+            <!---this for mouse enter and leave()-->
+
+            <!--<p>
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+            </p>
+            <span id="spn1"></span>
+            <span id="spn2"></span>--->
+            <!--this is for hover it is used to replace the mouseenter and mouse leave operations.-->
+            
+            <!--<p id="para">
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+            </p>-->     
+            <!---this for mouse clicking i.e mouse down-->    
+            
+            <!---<p id="para">
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+            </p>-->
+            <!--this is for mouse over,mouse down, mouse up----->
+
+            <!---Name:<input type="text" value="">                 
+            <input type="button" value="click">-->
+            <!---this is for key up,down focus in,out,blur-->
+
+            <!---Name:   <input type="text" value="">
+            <div></div>--->
+            <!---this for select()-->
+
+            <img src="../../Images/index.png" width="300px" height="200px" alt="index image">  
+            <p>
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+                  here i am doing an example for mouse enter and mouse 
+                  leave events for understanding purpose.
+            </p>
+            <span></span>
+      </body>
+</html>

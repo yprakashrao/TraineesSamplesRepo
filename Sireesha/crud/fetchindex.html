@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ajax call using fetch API</title>
+</head>
+
+<body>
+      <button id="getText">Get Text</button>
+      <div id="storetext"></div>
+      <button id="getjson">Get Json</button>
+      <div id="df"></div>
+      <button id="getApi">Get API data</button>
+      <div id="apiout"></div>
+      <script>
+            document.getElementById("getText").addEventListener('click', getText);
+
+            document.getElementById("getjson").addEventListener('click', getJson);
+
+            document.getElementById("getApi").addEventListener('click', getPosts);
+
+            function getText() {
+                  fetch("fetchtext.txt")
+                        .then((res) => res.text())
+                        .then((data) => {
+                              console.log(data);
+                              document.getElementById("storetext").innerHTML = data;
+                        })
+            }
+
+            function getJson() {
+                  fetch("fetchindex.json")
+                        .then((res) => res.json())
+                        .then((data) => {
+                              // console.log(data.person);
+
+                              var output = "";
+                              for (var i = 0; i < data.child.length; i++) {
+                                    output += `
+                              
+                             <ul>
+                              <li> Name: ${data.child[i].name} </li>
+                              <li> Age: ${data.child[i].age} </li>
+                              </ul>
+                              
+                              `;
+
+                              }
+
+                              document.getElementById("df").innerHTML = output;
+                        });
+                  }
+
+            function getPosts(){
+                  fetch('https://jsonplaceholder.typicode.com/posts')
+                  .then((res) => res.json())
+                  .then((data) => {
+                        console.log(data);
+                        
+                        var output = "";
+                        // for(var i = 0 ; i < data.length ; i++){
+                        //      output += `
+                        //     <ul>
+                        //       <h3> ID: ${data.id} </h3>
+                        //      <div> Title: ${data.title} </div>
+                        //       </ul>
+                        //      `; 
+                        // }
+
+                        data.forEach(function(post) {//post => arrow function like this
+                              output += `
+                              <li>
+                                    <h4>ID: ${post.id}</h4>
+                                    <p>Title: ${post.title}</p>
+                              </li>                                     
+                              
+                              `;
+                        });
+                        document.getElementById("apiout").innerHTML = output;
+                        });
+            }
+      </script>
+</body>
+
+</html>

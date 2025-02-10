@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<title>Basic example for jquery</title>
+<head>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+      <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                  $("button").click(function(){
+                     $("div.d1").toggle("fast");
+                  });
+            });
+      </script>
+             
+</head>
+      <body>
+            <div class="d1" style="border:1px dotted;">
+                  <p>
+                        <i>jQuery enables us to add effects on a web page.
+                         jQuery effects can be categorized into fading, 
+                         sliding, hiding/showing and animation effects.</i>
+                  </p>
+            </div>
+           
+            <button>Toggle</button>                           
+      </body>
+</html>

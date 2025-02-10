@@ -1,0 +1,118 @@
+
+<h2 class="card-header text-center">Registration Form</h2>
+
+<form [formGroup]="regForm" name="myForm">
+
+      <div class="form-group mt-3">
+            <label>User Name:</label>
+            <input type="text" formControlName="username" class="form-control"
+                  maxlength="15">
+            <div *ngIf="regForm.controls['username'].touched && regForm.controls['username']?.['errors']"
+                  class="invalid">
+                  <div *ngIf="regForm.controls['username']?.['errors']?.['required']">
+                        <span>User name is required</span>
+                  </div>
+                  <div *ngIf="regForm.controls['username']?.['errors']?.['maxLength']">
+                        <span>username reaches max characters</span>
+                  </div>
+                  <!-- <div *ngIf="regForm.controls['username']?.['errors']?.['pattern']">
+                        <span>please enter only characters</span>
+                  </div> -->
+            </div>
+      </div>
+
+      <div class="form-group mt-3">
+            <label for="uN">Full Name:</label>
+            <input type="text" formControlName="fullname" class="form-control" maxlength="15">
+            <div *ngIf="regForm.controls['fullname'].touched && regForm.controls['fullname']?.['errors']"
+                  class="invalid">
+                  <div *ngIf="regForm.controls['fullname']?.['errors']?.['required']">
+                        <span>full name isrequired</span>
+                  </div>
+                  <div *ngIf="regForm.controls['fullname']?.['errors']?.['maxLength']">
+                        <span>fullname reaches max characters</span>
+                  </div>
+            </div>
+      </div>
+
+      <!-- <div class="form-group mt-3">
+            <label for="email">Email:</label>
+            <input type="email" formControlName="email" class="form-control" maxlength="15">
+            <div *ngIf="regForm.controls['email'].touched && regForm.controls['email']?.['errors']"
+                  class="invalid">
+                  <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
+                        <span>email is required</span>
+                  </div>
+                  <div *ngIf="regForm.controls['email']?.['errors']?.['email']">
+                        <span>enter valid email..</span>
+                  </div>
+            </div>
+      </div> -->
+
+
+      <div class="form-group mt-3">
+            <label>Password:</label>
+            <input type="password" formControlName="password" class="form-control" minlength="8"
+                  maxlength="10">
+            <div *ngIf="regForm.controls['password'].touched && regForm.controls['password']?.['errors']"
+                  class="invalid">
+                  <div *ngIf="regForm.controls['password']?.['errors']?.['required']">
+                        <span>password is required</span>
+                  </div>
+                  <div *ngIf="regForm.controls['password']?.['errors']?.['minlength']">
+                        <span>password should be 8 characters</span>
+                  </div>
+                  <div *ngIf="regForm.controls['password']?.['errors']?.['maxlength']">
+                        <span>password should be 10 characters</span>
+                  </div>
+            </div>
+      </div>
+
+      <!-- <div class="form-group mt-3">
+            <label>Confirm Password:</label>
+            <input type="password" formControlName="cpassword" class="form-control" maxlength="10"
+                  minlength="8">
+            <div *ngIf="regForm.controls['cpassword'].touched && regForm.controls['cpassword']?.['errors']"
+                  class="invalid">
+                  <div *ngIf="regForm.controls['cpassword']?.['errors']?.['required']">
+                        <span>confirm password is required</span>
+                  </div>
+                  <div *ngIf="regForm.controls['cpassword']?.['errors']?.['minlength']">
+                        <span>confirm password should be 8 characters</span>
+                  </div>
+                  <div *ngIf="regForm.controls['cpassword']?.['errors']?.['maxlength']">
+                        <span>confirm password should be 10 characters</span>
+                  </div>
+            </div>
+      </div> -->
+
+
+      <div class="form-group mt-3">
+            <label for="phone">Phone:</label>
+            <input type="tel" formControlName="phonenumber" class="form-control" maxlength="10">
+            <div *ngIf="regForm.controls['phonenumber'].touched && regForm.controls['phonenumber']?.['errors']"
+                  class="invalid">
+                  <div *ngIf="regForm.controls['phonenumber']?.['errors']?.['required']">
+                        <span>phone number is required</span>
+                  </div>
+                  <div *ngIf="regForm.controls['phonenumber']?.['errors']?.['pattern']">
+                        <span>phone number should match the pattern</span>
+                  </div>
+            </div>
+      </div>
+
+      <div class="form-group mt-3">
+            <label for="gender">Gender:</label>
+            <label>
+                  <input type="radio" formControlName="gender" name="gender" value="male">male
+            </label>
+            <label>
+                  <input type="radio" formControlName="gender" name="gender" value="female">female
+            </label>
+            <label>
+                  <input type="radio" formControlName="gender" name="gender" value="others">others
+            </label>
+      </div><br>
+
+      <button type="submit" [disabled]="!regForm.valid"
+            class="btn btn-light form-control">Update</button><br><br>

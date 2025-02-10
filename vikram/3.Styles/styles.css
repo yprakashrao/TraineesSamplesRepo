@@ -1,0 +1,730 @@
+.assgn1-footer {
+    background-color: cadetblue;
+    margin-top:110px;
+    width:100%;
+}
+.assgn1-contact{
+    align-items:flex-end;
+}
+
+.assgn1-header {
+    background-color: bisque;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.assgn1-body {
+    margin-top: 10%;
+
+}
+
+.assgn1-about {
+align-items: center;
+  
+
+}
+
+#ass1secondpage-header {
+    text-size-adjust: 50px;
+    text-align: center;
+    background-color: cadetblue;
+    width: 100%;
+    height: 80px;
+}
+
+.ass1secondpage-footer {
+    margin-top:400px;
+    background-color: cadetblue;
+}
+#ass1secondpage-body{
+margin-left: 1px;
+}
+
+/* ----assgn-2---------------------------------------------- */
+#ass2-header{
+    text-align: center;
+    color:black;
+    width:100%;
+}
+#ass2-head{
+ background-color:cadetblue
+}
+#ass2-body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#ass2-table{
+  width: 100%;
+}
+#ass2-body td,
+#ass2-body th {
+    border: 1px solid #dddddd;
+    text-align:center;
+    padding:5px;
+
+}
+#ass2-body tr:nth-child(even){
+    background-color: #dddddd;
+}
+#ass2-sal{
+    background-color:cadetblue ;
+}
+
+
+
+/*-----assgn-3-----------------------------------------*/
+#ass3-header{
+    box-sizing: border-box;
+    background-color:black;
+}
+#ass3-h2 {
+    color: white;
+    text-align: center;
+    
+}
+#ass3-body{
+    width:100%;
+}
+
+#ass3-fname {
+
+    padding: 8px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: black;
+}
+
+#ass3-lname {
+
+    padding: 8px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: black;
+}
+
+#ass3-email {
+  
+    padding: 8px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: black;
+}
+
+#ass3-state {
+   
+    padding: 8px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: black;
+}
+
+#ass3-gender {
+
+    padding: 8px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: black;
+
+
+}
+
+#ass3-comment {
+    padding: 8px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: black;
+
+}
+
+.ass3-div {
+    border-radius: 5px;
+    background-color: ghostwhite;
+    padding: 20px;
+}
+#ass3form1-submit{
+    background-color: crimson;
+}
+
+
+#ass3form2-header {
+    text-align: center;
+    background-color: cornflowerblue;
+    width: 100%;
+}
+
+.ass3form2-form {
+    text-align: left;
+}
+
+#ass3form2-name {
+    width: 80%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+#ass3form2-email {
+    width: 80%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+#ass3form2-phone {
+    width: 80%;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+#ass3form2-commentbox {
+    width: 77%;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+/*-----------ass-4------------------------------------*/
+#ass4-heding{
+    color:white;
+}
+#fb-name{
+    color: white;
+    font-family:cursive;
+    text-decoration: underline;
+ 
+   
+}
+.ass4 header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: royalblue;
+    width: 100%;
+    height: 80px;
+  
+
+}
+
+.ass4 header img {
+    margin-left: 10px;
+}
+
+.ass4 header p {
+    margin-left: 30%;
+    font-size: 50px;
+
+}
+
+#ass4-body {
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../4.Images/fbg4.jpg) ;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+
+#ass4-about {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: justify;
+    float: left;
+    width: 50%;
+    height:500px;
+    padding: 25px;
+    padding-top: 5px;
+    color: white;
+    /* text-shadow: 3px 3px 30px black; */
+/*background-color: burlywood;*/
+}
+
+.ass4-form {
+    box-sizing: border-box;
+    margin: 0;
+    float: right;
+    text-align: left;
+    display: flex;
+    width: 50%;
+    height:500px;
+    padding-left: 300px;
+    color: white;
+
+    /*background-color:cadetblue;*/
+  
+}
+#ass4foot-img{
+    padding-left:1200px ;
+}
+
+#ass4-foot {
+    justify-content: space-between;
+
+    align-items: center;
+    text-align: end;
+
+    position: fixed;
+    bottom: 0;
+    /* left: 0; */
+    width: 100%;
+
+
+
+
+}
+
+.ass4-next {
+text-align: center;
+   
+padding-top: 5px;
+
+
+
+}
+.ass4-next img{
+ float: right;
+}
+.ass4-fname {
+ 
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 10px;
+}
+#ass4-form{
+    width:500px
+}
+
+.ass4 #lname {
+
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ass4 #email {
+
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ass4 #state {
+
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ass4 #foot img {
+    padding-left: 1213px;
+
+}
+#ass4-tv{
+    padding-left:20px;
+}
+#ass4-body2{
+    background-image: url(../4.Images/fbg4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+#fb-email2{
+    width: 150px;
+    float: right;
+    padding: 6px 8px;
+    border-radius: 15px;
+    text-align:center;
+    padding-left: 30px;
+}
+#fb-psw2{
+    width: 150px;
+    float: right;
+    padding: 6px 8px;
+    border-radius: 15px;  
+    padding-left: 30px;
+    text-align:center;
+}
+#fb-login2{
+    float: right; 
+    font-display: flex;
+    color:white;
+    padding-top: 0px;
+   font-size:small;
+   background-color:dodgerblue;
+    
+
+}
+.fb-name2{
+    color: white;
+}
+#ass4-foot2{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* background-color:white; */
+   display:inline
+}
+#foot-img2{
+    padding-left: 1250px; 
+}
+#fb-signup{
+    background-color: green;
+ 
+}
+
+/*------------tasksheet----------------------------------------*/
+#task table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#task td,
+#task th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#task tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.ass4-foot2{
+    float:bottom;
+}
+
+/*..........................Task..................................*/
+#login-header{
+    text-align: center;
+    background-color:grey
+}
+#login-container{
+    text-align: center;
+    align-items:center;
+    width: 380px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    /* background:darkgray; */
+    background-image: url(../4.Images/login.png);
+    padding-top:70px;
+    margin-left: 460px;
+
+}
+#tasklog-btn{
+background-color:green;
+padding: 5px 5px;
+border-radius: 5px;
+}
+
+/* ------------ass-5--------------------------------- */
+.ass5-head{
+    background-image:url(../4.Images/bg7.jpg);
+    width:100%;
+    
+}
+#ass5-h1{
+    text-align: center;
+    color:turquoise
+}
+.ass5-form{
+    width: 450px;
+ 
+}
+.ass5-foot{
+    bottom: 0;
+    text-align: center;
+    /* position: fixed; */
+    background-color: antiquewhite;
+    width: 100%;
+}
+#ass5-footimg{
+    align-items: center;
+}
+
+
+
+.grid-container2{
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:darkslategray;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width: fit-content;
+    gap:50px;
+  
+  }
+
+.grid-container1{
+  
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:darkseagreen;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width: fit-content;
+    gap:50px;
+  
+  }
+
+div{
+    float: left;
+}
+#ass5-form{
+
+}
+#column1{
+    width: 50%;
+    text-align: center;
+}
+#column2{
+    width: 50%;
+    align-items: center;
+}
+#ass5-formtitle{
+    text-align: center;
+}
+#ass5-container{
+    text-align: center;
+}
+#ass5-sideimg{
+    align-items: center;
+}
+#ass5-submit{
+text-align: center;
+margin-left: 600px;
+margin-top: 100px;
+background-color:turquoise;
+}
+#ass5-thank{
+    text-align: center;
+    background-color: darkseagreen;
+}
+#thank-img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+/* --------------Task6---------------------- */
+.task6container{
+    background-color:lavender;
+    margin-left:380px;
+    width: 600px;
+    text-align: center;
+    
+}
+#task6table{
+    margin-left: 172px;
+    border-radius: 25px;
+}
+#task6submit{
+float: right;
+margin-right: 100px;
+}
+
+/* -----------------Task7----------------------------- */
+.container7{
+    background-color:darkgrey;
+}
+#task7h1{
+    text-align: center;
+}
+#task7body{
+    margin-left: 450px;
+   
+}
+#task7table{
+   margin-left: 99px;
+}
+#task7submit{
+   margin-bottom: 10px; 
+}
+
+/* ...................Task8................................ */
+
+
+.ass8 * {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:black;
+    width: 100%;
+  }
+  .ass8 {
+    background-color:aliceblue(0, 0, 43);
+    background-size: auto;
+  }
+  .ass8 .header {
+    background-color: black;
+    font-size: 35px;
+    text-align: center;
+    color:black;
+    padding: 10px;
+   
+  }
+  .ass8 .container1 {
+    display: grid;
+    grid-template-rows: 50% auto;
+    width: 100%;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  .ass8 #top {
+    grid-row: 1/2;
+  }
+  .ass8 #bottom {
+    grid-row: 2/3;
+  }
+  .ass8 .items {
+    box-shadow: 5px 5px 5px black;
+  }
+  .ass8 #form {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 50px;
+  }
+  .ass8 .container2 {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto;
+    border-top: none;
+  }
+  .ass8 #Img {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding: 10px;
+    border-top: none;
+    margin-top: 60px;
+  }
+  .ass8 #data {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+    font-size: 30px;
+  }
+  .ass8 #threeimg {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 20px;
+    text-align: justify;
+    border-bottom: none;
+    border-right: none;
+  }
+  .ass8 label {
+    padding-top: 20px;
+  }
+  .ass8 #namealert {
+    display: none;
+    color:black;
+    font-size: 20px;
+    text-align: center;
+  }
+  .ass8 #minagealert {
+    display: none;
+    text-align: center;
+    color:black;
+    font-size: 20px;
+  }
+   #threeimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:200px;
+    width: 200px;
+    filter: drop-shadow(1px 1px 10px black);
+  }
+  .ass8 #selectimg {
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(1px 1px 10px black);
+  }
+  .ass8 input,
+  .ass8 select,
+  .ass8 option {
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid black;
+    color: black;
+  }
+  .ass8 #form input[type="text"]:hover,
+  .ass8 #form input[type="number"]:hover,
+  .ass8 #form select:hover {
+    box-shadow: 0px 0px 10px black;
+  }
+  .ass8 #form input[type="text"]:focus,
+  .ass8 #form input[type="number"]:focus,
+  .ass8 #form select:focus {
+    outline: none;
+    border: 2px solid black;
+  }
+  .ass8 .trail { 
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: black;
+    box-shadow: 0px 0px 30px black;
+  }
+  /* ---------------Task9------------------------- */
+
+ #task9-myTable,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:500px;
+    height:50px;
+    text-align: center;
+    
+
+ }
+ #task9-header{
+background-color:cadetblue  
+ }
+#task9-body th{
+    background-color: darkgray;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>
+                  traverse of siblings 
+            </title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                  $(document).ready(function(){
+                        $("button").click(function(){
+                             /* $("h3").siblings().css({"border":"1px dashed green","color":"yellow"});similarlt prev,prevall,prevuntill,next all,next*/
+                             $("h3").prevAll().css({"border":"1px dashed green","color":"yellow"});
+
+                        });
+                  });
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body>
+            <div class="traup">
+                  <h2>hi</h2>
+                  <h3>heloo</h3>
+                  <p>hi query you are simple and understandable</p>
+                  <span>hi</span>
+            </div>
+      </body><br>
+      <br>
+      <button>click for siblings</button>
+</html>

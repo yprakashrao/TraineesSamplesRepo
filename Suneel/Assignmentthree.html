@@ -1,0 +1,102 @@
+<head>
+    <link rel="stylesheet" href="mystyles.css">
+    <script src="myscript.js"></script>
+</head>
+
+<body onload="onload">
+    <div class="container">
+
+        <marquee direction="right">
+            Hi Team, welcome to my page
+        </marquee>
+        <table class="registartion-form">
+            <tr>
+                <td>
+                    Name :
+                </td>
+                <td>
+                    <input type="text" name="myname" id="myname" onkeyup="checkCharacters()">
+                    <span id="mynamemsg" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Minumm Age :
+                </td>
+                <td>
+                    <input type="number" name="minage" id="minage" min="0" onkeyup="checkMinAge()">
+                    <span id="minagemsg" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Maximum Age :
+                </td>
+                <td>
+                    <input type="number" name="maxage" id="maxage" min="0" onkeyup="checkMaxAge()">
+                    <span id="maxagemsg" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Location :
+                </td>
+                <td>
+                    <select onchange="showMap()" id="location">
+                        <option value="">Select Location</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="WI">West Indies</option>
+                        <option value="Srilanka">Srilanka</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <div class="flex-container">
+            <div class="flex-child magenta">
+                <img src="blank.jpg" style="width: 50%;height: 100%" id="locationmap">
+            </div>
+            <div class="flex-child green">
+                <table class="registartion-form" style="width: 100%;height: 100%">
+                    <tr>
+                        <td>
+                            Name :
+                        </td>
+                        <td>
+                            <label id="selname"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Age :
+                        </td>
+                        <td>
+                            <label id="totalage">
+
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Location :
+                        </td>
+                        <td>
+                            <label id="selLocation">
+
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div>
+
+            <section>
+                <img id="slides" src="" style="width:100%">
+
+            </section>
+        </div>
+    </div>
+</body>

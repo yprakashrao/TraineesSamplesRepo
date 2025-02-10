@@ -1,0 +1,85 @@
+<div class="row mt-5">
+    <div class="col">
+        <img src="../../assets/fgg.png" alt="img" style="width:100%" height="300px">
+    </div>
+
+    <div class="col">
+
+        <h2 class="header">Employee Details</h2>
+
+        <form [formGroup]="regForm" name="myForm" (ngSubmit)="onSubmit(regForm)">
+
+            <div class="form-group">
+                <label class="form-label">Courses:</label>
+                <input type="text" formControlName="courses" class="form-control" maxlength="15"
+                    placeholder="">
+
+                <div *ngIf="regForm.controls['courses'].touched && regForm.controls['courses']?.['errors']"
+                    class="invalid">
+
+                    <div *ngIf="regForm.controls['courses']?.['errors']?.['required']">
+                        <span> courses is required</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['courses']?.['errors']?.['maxlength']">
+                        <span>courses reaches max characters.</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['courses']?.['errors']?.['pattern']">
+                        <span>please enter alphabets with some space only.</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="form-label">Certification:</label>
+                <input type="text" formControlName="certification" class="form-control" maxlength="15"
+                    placeholder="">
+
+                <div *ngIf="regForm.controls['certification'].touched && regForm.controls['certification']?.['errors']"
+                    class="invalid">
+
+                    <div *ngIf="regForm.controls['certification']?.['errors']?.['required']">
+                        <span> certification is required</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['certification']?.['errors']?.['maxlength']">
+                        <span>certification reaches max characters.</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['certification']?.['errors']?.['pattern']">
+                        <span>please enter alphabets with some space only.</span>
+                    </div>
+
+                </div>
+
+            </div>&nbsp;
+
+            <!-- <div *ngIf="regForm.controls['certification']?.['errors']?.['required']">
+                                    <span> certification is required</span>
+                                </div>
+            
+                                <div *ngIf="regForm.controls['certification']?.['errors']?.['maxlength']">
+                                    <span>certification reaches max characters.</span>
+                                </div>
+            
+                                <div *ngIf="regForm.controls['certification']?.['errors']?.['pattern']">
+                                    <span>please enter alphabets with some space only.</span>
+                                </div>
+             -->
+
+
+            <button type="submit" [disabled]="!regForm.valid"
+                class="btn btn-primary form-control">Click/Continue</button><br><br>
+
+
+
+        </form>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,84 @@
+/*sidenav styles*/
+
+.sidenav-wrapper {
+    position: absolute;
+    height: 100%;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
+mat-sidenav {
+    width: 250px;
+}
+
+.table table,
+mat-paginator {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+mat-paginator {
+    transform: translateY(-61px);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: rgb(222, 222, 255);
+
+}
+
+.table .mat-header-row {
+    background-color: #eee;
+}
+
+.table tr {
+    background-color: white;
+}
+
+.table .mat-sort-header-arrow {
+    color: white !important;
+}
+
+.table th {
+    background-color: rgb(121, 121, 255);
+    color: white;
+    font-size: 16px;
+    text-shadow: 0px 0px 5px blue;
+}
+
+.table th:hover {
+    background-color: rgb(0, 0, 153);
+}
+
+
+
+.table tr:nth-child(even) {
+    background-color: rgb(241, 241, 255);
+}
+
+
+.table th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.table th:last-child {
+    border-top-right-radius: 20px;
+}
+
+.table tr:last-child {
+    background-color: #eee;
+}
+
+
+.table tr:last-child td {
+    background-color: #fff;
+}
+
+.table tr td {
+    border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,136 @@
+<head>
+   
+    <script type="text/javascript" src="myscript.js"></script>
+    <link rel="stylesheet" href = "mystyles.css">
+    
+  <body onload="pageload();">
+    
+  <div class="container">
+    <h1>HTML registration form with varification</h1>
+    <form name="myvalidations" onsubmit="return SubmitFormValidations();">     
+    <div >
+      <table>
+        <tr>
+            <td><label for="logo">Logo:</label></td>
+            <td><input type="file" name="logo" id="logo" accept="image/.png" onchange="validateFileType()" placeholder="Upload an image"></td>
+        </tr>
+        <tr>
+            <td><label for="Technologies">Technologies:</label></td>
+            <td> 
+              <input type="radio" name="Technologies" id="Technologies" value="java" onclick="techonClick()"> Java <br> 
+              <input type="radio" name="Technologies" id="Technologies" value="HTML" onclick="techonClick()">FrontEnd  <br>
+             <input type="radio" name="Technologies" id="Technologies" value="Javascript" onclick="techonClick()">  Scripting <br> </td>
+        </tr>
+        <tr><td>
+       <div class="container">
+         <table>
+        <tr id="myDIV"><td></td>
+            <td><label for="language">Java Language</label></td>
+            <td>  
+              <select name="jlanguage" id="jlanguage" onchange="showFormFields()">
+                <option value="">Select language</option>
+                <option value="CoreJava">Core Java</option>
+                <option value="AdvanceJava">Advance Java</option>
+                <option value="Springboot">Springboot</option>
+                <option value="SpringMVC">Spring MVC</option>
+                <option value="Struts">Struts</option>
+              </select>
+            </td>
+            
+        </tr>
+    
+        <tr id="FEDiv">
+            <td><label for="language">Frontend Language</label></td>
+            <td>
+              <select name="felanguage" id="felanguage" onchange="showFormFields()">
+                <option value="">Select language</option>
+                <option value="HTML">HTML</option>
+                <option value="JSP">JSP</option>
+                <option value="Angular">Angular</option>
+                <option value="AngularJS">AngularJs</option>
+                <option value="React">React</option>
+              </select>
+            </td>
+           
+            
+        </tr>
+        <tr id="ScDiv">
+            <td><label for="language">Script Language</label></td>
+            <td>
+              <select name="sclanguage" id="sclanguage" onchange="showFormFields()">
+                <option value="">Select language</option>
+                <option value="Javascript">Javascript</option>
+                <option value="JQuery">JQuery</option>
+                <option value="Ajax">Ajax</option>
+                <option value="Typescript">TypeScript</option>               
+              </select>
+            </td>
+        </tr>
+      </table>
+</div>
+</td></tr>
+        </table>
+    </div>
+        <div id="formtable" class="container">
+        <table>
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td><input type="text" name="name" id="name" placeholder="your name"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" placeholder="your email"></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" name="password" id="password"></td>
+        </tr>
+        <tr>
+          <td><label for="phoneNumber">Phone Number:</label></td>
+          <td><input type="text" name="phoneNumber" id="phoneNumber"></td>
+        </tr>
+        <tr>
+          <td><label for="gender">Gender:</label></td>
+          <td> <input type="radio" name="gender" value="male"> Male <br> 
+            <input type="radio" name="gender" value="female">Female  <br>
+           <input type="radio" name="gender" value="other">  Other <br> </td>
+        </tr>
+        <tr>
+          <td><label for="language">Language</label></td>
+          <td>
+            <select name="language" id="language">
+              <option value="">Select language</option>
+              <option value="English">English</option>
+              <option value="Spanish">Spanish</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Arabic">Arabic</option>
+              <option value="Russian">Russian</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="zipcode">Zip Code:</label></td>
+          <td><input type="number" name="zipcode" id="zipcode"></td>
+        </tr>
+        <tr>
+          <td><label for="Interested">Interested:</label></td>
+          <td><input type="checkbox" name="Interested" value="Cricket"> Cricket <br>
+            <input type="checkbox" name="Interested" value="Chess">Chess <br>
+            <input type="checkbox" name="Interested" value="Boxing">Boxing <br></td>
+        </tr>
+        <tr>
+          <td><label for="about">About:</label></td>
+          <td><textarea name="about" id="about" placeholder="Write about yourself..."></textarea></td>
+        </tr>
+        
+      </table>
+    
+    </div>
+    <div> 
+      <input type="submit" class="submit" value="Register" />
+    </div>
+    </form>
+  </div>
+  </body>
+    
+  

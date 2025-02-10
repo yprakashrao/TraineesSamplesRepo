@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.home{
+    height:100vh
+}
+
+.userlist{
+height: max-content;
+margin-bottom: 10vh;
+}
+
+.userlist footer{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+}

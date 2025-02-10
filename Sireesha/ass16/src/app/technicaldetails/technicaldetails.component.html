@@ -1,0 +1,73 @@
+
+
+  <div class="table-responsive wrapper mattab mt-5">
+      <h2 class="fdemployee">
+            Final Details of Employee
+      </h2>
+      <table mat-table [dataSource]="data" matSort class="mat-elevation-z8">
+            <ng-container matColumnDef="name">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef>Name</th>
+                  <td mat-cell *matCellDef="let formValue">{{formValue.name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef>Email</th>
+                  <td mat-cell *matCellDef="let formValue">{{formValue.email }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="phonenumber">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef>Number </th>
+                  <td mat-cell *matCellDef="let formValue"> {{formValue.phonenumber}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="age">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Age </th>
+                  <td mat-cell *matCellDef="let formValue"> {{formValue.age}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="gender">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef>Gender </th>
+                  <td mat-cell *matCellDef="let formValue"> {{formValue.gender}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="mstatus">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Marriatal Status </th>
+                  <td mat-cell *matCellDef="let formValue"> {{formValue.mstatus}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ug">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> UG </th>
+                  <td mat-cell *matCellDef="let formValue"> {{formValue.ug}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="pg">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> PG </th>
+                  <td mat-cell *matCellDef="let formValue"> {{formValue.pg}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="pcname">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Previous C Name </th>
+                  <td mat-cell *matCellDef="let formValue"> {{formValue.pcname}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="yoe">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Years Of Exp </th>
+                  <td mat-cell *matCellDef="let formValue"> {{formValue.yoe}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="courses">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Courses </th>
+                <td mat-cell *matCellDef="let formValue"> {{formValue.courses}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="certification">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Certification </th>
+            <td mat-cell *matCellDef="let formValue"> {{formValue.certification}} </td>
+      </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="columns"></tr>
+            <tr mat-row *matRowDef="let row; columns: columns"></tr>
+
+      </table>
+</div>

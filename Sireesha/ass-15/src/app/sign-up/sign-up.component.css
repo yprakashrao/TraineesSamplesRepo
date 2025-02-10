@@ -1,0 +1,19 @@
+
+.bg-img {
+    background-image: url("../../assets/imgbackground.jpg");
+    height: 768px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    /* position: absolute;
+    right: 0; */
+    /* margin: 100px; */
+    width: 50%;
+    padding-top: 30px;
+    background-color:rgb(248, 246, 244);
+}
+

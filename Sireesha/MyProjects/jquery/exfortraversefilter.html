@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>
+                  traverse of filtering
+            </title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                  $(document).ready(function(){
+                        $("button").click(function(){
+                             /* $("div").last().css({"border":"1px solid red"}) ;
+                              first and last are same
+                              $("div").eq(2).css({"border":"1px solid red"}) ;eq is used to show the line with respect to index number*/                    
+                              $("div").not(".hia").css({"border":"1px solid red"}) ;/*filter and not are same to select the element of a particular element using class*/
+                        });
+                  });
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body>
+            <div>
+                  <h4>here is the paragraph for filtering</h4>
+            </div>
+            <div class="hia">
+                  <h2>hello welcome query</h2>
+            </div>
+            <div class="hia">
+                  <h3>in this we can able to reduce the code</h3>
+            </div>  
+            <div>
+                  <h4>query helps to reduce the code</h4>
+            </div>  
+      </body>
+      <button>click for filter</button>
+</html>

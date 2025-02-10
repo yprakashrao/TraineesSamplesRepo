@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Example for Wrap-unwrap using query </title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                 $(document).ready(function(){
+                        $("#btn1").click(function(){
+                        $("p").wrap('<h2></h2>');
+                  });
+                        $("#btn2").click(function(){
+                        $("p").unwrap();
+                  });
+
+                 });
+            </script>
+            <style>
+                  h2{
+                        background-color: lightcoral;
+                  }
+            </style>
+      </head>
+      <body>
+            <p>hello html</p>
+            <p>hello javascript</p>
+            <button id="btn1">wrap</button>
+            <button id="btn2">unwrap</button>
+      </body>
+</html>

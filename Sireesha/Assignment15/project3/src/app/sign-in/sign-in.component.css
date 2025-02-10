@@ -1,0 +1,33 @@
+p {
+      font-family: Lato;
+}
+
+.invalid{
+      color: red;
+}
+
+label{
+      margin-right: 5px;
+      font-size: medium;
+}
+
+span{
+      font-size: small;
+}
+.bg-img {
+      background-image: url("../../assets/signin.jpg");
+      height: 768px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+}
+
+.container {
+      position: absolute;
+      left: 50px;
+      margin-top: 100px;
+      /* width: 50px; */
+      /* padding: 10px; */
+      background-color:rgb(230, 173, 103);
+}

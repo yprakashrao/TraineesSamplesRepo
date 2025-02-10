@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  function loadDoc() {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                      if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML = this.responseText;
+                      }
+                    };
+                    xhttp.open("GET", "text.txt", true);
+                    xhttp.send();
+                  }
+                  </script>
+      </head>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<p >Let AJAX change this text.</p>
+
+<button type="button" onclick="loadDoc()">Change Content</button>
+<div id="demo"></div>
+
+
+
+</body> 
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+      <head>
+            <title>Getting data using Ajax</title>         
+            <p>Example for Ajax</p><br>
+      </head>
+      <body>
+            <button id="btn">Click for content</button>
+            <div id="displayhere"></div>
+            <script>
+                  var btn = document.getElementById("btn");
+                  var displayhere = document.getElementById("displayhere");
+                  btn.addEventListener("click", loaddata);
+                  
+                  function loaddata(){
+                      let  xhr = new XMLHttpRequest();
+                       xhr.open('get', 'text.txt',true);
+                        xhr.send();
+
+                  xhr.onprogress = function(){
+                        displayhere.innerText = "Loading..."
+                  }                
+
+                  xhr.onload = function(){
+                        displayhere.innerHTML = xhr.responseText,;                  }
+                  }
+            </script>
+      </body>
+</html> -->

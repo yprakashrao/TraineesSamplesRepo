@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Example for delay</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                  $(document).ready(function(){
+                        $("button").click(function(){
+                        $("#d1").delay("slow").fadeIn();
+                        $("#d2").delay("fast").fadeIn();
+                        $("#d3").delay(1000).fadeIn();
+                        $("#d4").delay(3000).fadeIn();
+                        });                       
+                  });
+            </script>            
+      </head>
+      <body>
+            <p>here are the list of items to produce delay.</p>
+            <button>click for delay</button>
+            <div id="d1" style="display: none;">hello html</div>
+            <div id="d2" style="display: none;">hello css</div>
+            <div id="d3" style="display: none;">hello javascript</div>
+            <div id="d4" style="display: none;" >hello jquery</div>
+      </body>
+</html>

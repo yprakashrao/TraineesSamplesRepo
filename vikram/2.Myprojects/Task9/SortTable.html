@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../../3.Styles/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body id="task9-body">
+  <center>
+    <h2 id="task9-header">Table Sorting</h2>
+    Search here: &nbsp;&nbsp;<input type="text" id="task9-myInput" onkeyup="myFunction()" placeholder="Search for names.."><br><br>
+    
+   <p><button onclick="sortTable(0)">SortName</button>
+    <button onclick="sortTable(1)">SortCompany</button>
+    <button onclick="sortTable(2)">SortLocation</button>
+    <button onclick="sortTable(3)">SortSalary</button>
+  
+  </p>
+    <table id="task9-myTable">
+      <tr>
+        <th>Name:</th>
+        <th>Company:</th>
+        <th>Location:</th>
+        <th>Salary:</th>
+      </tr>
+      <tr>
+        <td>Ajay</td>
+        <td>Solventek</td>
+        <td>Mindspace</td>
+        <td>25000</td>
+      </tr>
+      <tr>
+        <td>Sai</td>
+        <td>Tcs</td>
+        <td>Kondapur</td>
+        <td>35000</td>
+      </tr>
+      <tr>
+        <td>Prafull</td>
+        <td>Deloite</td>
+        <td>Gachibowli</td>
+        <td>45000</td>
+      </tr>
+      <tr>
+        <td>Manish</td>
+        <td>Infosys</td>
+        <td>Madhapur</td>
+        <td>55000</td>
+      </tr>
+      <tr>
+        <td>Prem</td>
+        <td>Cignity</td>
+        <td>Raidurg</td>
+        <td>65000</td>
+      </tr>
+      <tr>
+        <td>kishore</td>
+        <td>Tcs</td>
+        <td>Manikonda</td>
+        <td>75000</td>
+      </tr>
+      <tr>
+        <td>Nagaraj</td>
+        <td>Stonegrid</td>
+        <td>Kukatpally</td>
+        <td>85000</td>
+      </tr>
+    </table>
+  </center>
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("task9-myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("task9-myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+
+
+    function sortTable(column) {
+      var table, rows, switching, i, x, y, shouldSwitch;
+      table = document.getElementById("task9-myTable");
+      switching = true;
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[column];
+          y = rows[i + 1].getElementsByTagName("TD")[column];
+          //check if the two rows should switch place:
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch = true;
+            break;
+          }
+        }
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>

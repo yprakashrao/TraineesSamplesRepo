@@ -1,0 +1,57 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="nav.toggle()"><mat-icon>menu</mat-icon></button>
+  <div class="logo">PRAFULL</div>
+  <div class="extra">
+  <button mat-icon-button (click)="restart()">restore</mat-icon>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-wrapper">
+
+  <mat-sidenav opened="true" #nav mode="side">
+    <mat-list class="mt-5">
+
+
+      <mat-list-item routerLinkActive="active">
+        <button disabled class="sidenav-btn" routerLink="personal">
+          <mat-icon>person</mat-icon>
+          Personal Details
+        </button>
+      </mat-list-item>
+
+
+      <mat-list-item routerLinkActive="active">
+        <button disabled class="sidenav-btn" routerLink="qualification">
+          <mat-icon>book</mat-icon>
+          Qualification Details
+        </button>
+      </mat-list-item>
+     
+      <mat-list-item routerLinkActive="active">
+        <button disabled class="sidenav-btn" routerLink="jobprofile">
+          <mat-icon>description</mat-icon>
+          Job Profile
+        </button>
+      </mat-list-item>
+
+      <mat-list-item routerLinkActive="active">
+        <button disabled class="sidenav-btn" routerLink="address">
+          <mat-icon>edit</mat-icon>
+          Feedback
+        </button>
+      </mat-list-item>
+
+      <mat-list-item routerLinkActive="active">
+        <button disabled class="sidenav-btn" routerLink="confirmpage">
+          <mat-icon>check-circle</mat-icon>
+          Confirm Page
+        </button>
+      </mat-list-item>
+
+
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

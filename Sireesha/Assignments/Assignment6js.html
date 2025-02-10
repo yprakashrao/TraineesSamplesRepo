@@ -1,0 +1,65 @@
+<html>
+<body>
+<script>  
+function validateform(){  
+  
+var name=document.getElementById("name").value;   
+var Address=document.getElementById("Address").value;
+var x=document.getElementById("EMail").value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");
+var Phone=document.getElementById("PhoneNumber").value; 
+var mypassword = document.getElementById("password").value;  
+var Subject = document.getElementById("Subject").value; 
+
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  } 
+if(Address==""){
+  alert("Enter the address");
+  return false;}
+if(atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address ");  
+  return false; }
+if (mypassword === ""){  
+  alert(document.getElementById("PhoneNumber").innerHTML="Please enter password");  
+  return false;}
+if(mypassword.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false; }
+if (Phone === ""){  
+  alert(document.getElementById("PhoneNumber").innerHTML="Please enter phone number");  
+  return false;}
+if (isNaN(Phone)){  
+  alert(document.getElementById("PhoneNumber").innerHTML="Enter Numeric value only");  
+  return false;}
+  if (Subject === ""){  
+  alert(document.getElementById("PhoneNumber").innerHTML="Please select subject");  
+  return false;}
+  else{  
+  return true;  
+}
+
+} 
+</script>  
+<body>  
+<form name="myform" method="post" action="../MyProjects/Bgcolorform.html" onsubmit="return validateform()" >  
+Name:<input type="text" size="25" id="name"><br/></br>
+Address:<input type="text" size="25" id="Address"><br/></br>
+E-mail Address: <input type="text" size="25" id="EMail"><br /></br>
+Password:<input type="password" size= "25"id="password"><br/></br>  
+Phone Number:<input type="text" size="25" id="PhoneNumber"><span id="numloc"></span><br /></br>
+Select Course:<select type="text" id="Subject">
+    <option value="">----</option>
+    <option value="BBA">BBA</option>2
+    <option value="BCA">BCA</option>
+    <option value="B.Com">B.COM</option>
+    <option value="BA">BA</option>
+    </select></p><br /><br />
+Comments: <textarea rows="10" cols="25" name="Comment"> </textarea></br></br>
+
+
+<input type="submit" value="register">  
+</form>  
+</body>
+</html>

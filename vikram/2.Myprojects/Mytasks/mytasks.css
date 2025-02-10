@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#mytask1body{
+
+background-image:url(../../4.Images/beach3.jpg);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+height: 78vh;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    padding-right: 5px;
+}
+ul li{
+    display:inline-block ;
+}
+ul li a{
+    text-decoration: none;
+    color:black;
+    padding: 5px 20px;
+    border:1px solid black;
+    transition: 0.6s ease;
+}
+ul li a:hover{
+    background-color:white;
+    color: blue;
+}
+.mytask1logo img{
+    float: left;
+    width: 150px;
+    height: auto;
+    border-radius: 500px;
+    
+}
+#mytask1h1{
+/* text-align: center; */
+margin-left:650px ;
+}

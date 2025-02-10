@@ -1,0 +1,85 @@
+<html>
+
+<head>
+  <title>Validating the each line of the form</title>
+  <h2>A form and validate the each line</h2>
+</head>
+<script>
+  function validateform() {
+    var name = document.myform.name.value;
+    var password = document.myform.password.value;
+
+    if (name == null || name == "") {
+      alert("Name can't be blank");
+      return false;
+    } else if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return false;
+    }
+  }  
+</script>
+
+
+<body>
+
+  <h1 style="text-align: center;">REGISTRATION FORM</h1>
+  <center>
+    <form name="RegForm" onsubmit="return validateform()" method="post">
+
+      <table class="container">
+        <tr>
+          <td>
+            <p>Name: <input type="text" size="25" name="Name" /></p>
+          </td>
+        </tr><br>
+        <tr>
+          <td>
+            <p>Address: <input type="text" size="25" name="Address" /></p>
+          </td>
+        </tr><br>
+        <tr>
+          <td>
+            <p>E-mail Address: <input type="text" size="25" name="EMail" /></p>
+          </td>
+        </tr> <br>
+        <tr>
+          <td>
+            <p>Password: <input type="text" size="25" name="Password" /></p>
+          </td>
+        </tr><br>
+        <tr>
+          <td>
+            <p>Telephone: <input type="text" size="25" name="Telephone" /></p>
+          </td>
+        </tr><br>
+        <tr>
+          <td>
+            <p>SELECT YOUR COURSE<select type="text" value="" name="Subject">
+                <option>BTECH</option>
+                <option>BBA</option>
+                <option>BCA</option>
+                <option>B.COM</option>
+                <option>BA</option>
+              </select></p>
+          </td>
+        </tr><br>
+
+        <tr>
+          <td>
+            <p>Comments: <textarea rows="10" cols="25" name="Comment"> </textarea></p>
+          </td>
+        </tr><br>
+
+        <tr>
+          <td>
+            <p><input type="submit" value="send" name="Submit" />
+              <input type="reset" value="Reset" name="Reset" />
+            </p>
+          </td>
+        </tr><br>
+      </table>
+    </form>
+  </center>
+</body>
+
+</html>

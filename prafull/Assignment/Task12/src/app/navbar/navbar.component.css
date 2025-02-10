@@ -1,0 +1,118 @@
+ #home{
+    margin-left: 25px; 
+    font-weight: bold;
+}
+
+#home :hover {
+    border-radius: 50px;
+    background-color: rgb(101, 216, 24);
+    font-weight: bold;
+}
+#about{
+    margin-left: 10px; 
+    font-weight: bold;
+}
+#about :hover {
+    border-radius: 50px;
+    background-color: rgb(101, 216, 24);
+    font-weight: bold;
+}
+
+#contact {
+    margin-left: 10px; 
+    font-weight: bold; 
+}
+#contact :hover {
+    border-radius: 50px;
+    background-color: rgb(101, 216, 24);
+    font-weight: bold;
+} 
+header{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
+.navbar{
+    padding:20px 0;
+}
+.navbar-brand{
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 2em;
+    color:whitesmoke;
+}
+
+.nav-item{
+  font-size: 800;
+  /* text-transform:uppercase;  */
+  text-transform:uppercase; 
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+    background:#262626;
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-item .nav-link{
+   color: #262626;
+   padding: 5px 15px;
+}
+.banner{
+    position: relative;
+    background: url(..//../assets/images/contact.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
+}
+.banner h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.8em;
+    font-weight: 1000;
+    color:#fff;
+    text-transform: uppercase;
+}
+.banner p{
+    margin: 1em 0 0;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color:#fff;
+    text-transform: uppercase;
+}
+.btnD1{
+    display:inline-block;
+    margin: 1em 0 0;
+    background: gold;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    font-weight:800;
+}
+.btnD1:hover{
+    color:#fff;
+    text-decoration:none;
+}
+
+.navbar-light .navbar-toggler{
+    border: none;
+    color: #fff;
+    border: 2px solid #7f7f7f;
+    border-radius: 0;
+    outline: none;
+}
+
+.navbra-collapse{
+    background: #fff;
+}
+
+@media-collapse(max-width:768px){
+  .banner{
+    padding:200px 0;
+  }
+  .banner h2{
+    font-size:1.8em;
+  }
+}
+

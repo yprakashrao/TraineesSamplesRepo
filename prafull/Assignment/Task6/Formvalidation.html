@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../../3.styles/index.css">
+     
+    <script type="text/javascript" src="../../4.Script/Script.js"></script>
+</head>
+
+<body id="task6body">
+    <div class="task6form"> 
+        <h1>Registration Form</h1>
+        <div class="input-fi">
+            <form name="registration" action="confirm.html" class="registartion-form" onsubmit="return Validation()">
+                <label for="name">Name:</label><br>
+                <input type="text" name="username" placeholder="Enter your Name" id="username"><br><br>
+                <label for="email">Email Id:</label><br>
+                <input type="text" name="email" placeholder="Enter your Email id" id="email"><br><br>
+                <label for="mobilenumber">Mobile No.</label><br>
+                <input type="text" name="mobilenumber" placeholder="Enter your Phone number" id="mobilenumber" /><br>
+                <br>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+
+                <br>
+                <br>
+                <label for="interest">Interest:</label>
+                <input type="checkbox" name="interest" value="java">Java
+                <input type="checkbox" name="interest" value="python">Python
+                <input type="checkbox" name="interest" value=".net">.Net
+                <br>
+                <br>
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                    <option value="">&nbsp;&nbsp;&nbsp;&nbsp;Select</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Gujrat">Gujrat</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Goa">Goa</option>
+                </select>
+                <br><br>
+
+                <label for="comments">Comments:</label>
+                <textarea name="Comments" id="comments" placeholder="comment here..."></textarea>
+                <br><br>
+                <br>
+
+                <div class="task6btn">
+                    <input type="submit" class="submit" value="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

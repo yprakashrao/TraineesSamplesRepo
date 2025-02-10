@@ -1,0 +1,12 @@
+main{
+      padding-top: 35px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+}
+
+.container{
+      border: 1px solid black;
+      margin-top: 25px;
+      padding-bottom: 25px;
+}

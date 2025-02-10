@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Example for DOM Dimensions</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                 $(document).ready(function(){
+                        $("button").click(function(){
+                        /*      alert("Width of div: " +$("p").width());
+                        });
+                        var txt = "";
+                        txt += "Width of div: " + $(".divwh").width() + "</br>";
+                        txt += "Height of div: " + $(".divwh").height()+ "</br>";
+                        txt += "InnerWidth of div: " + $(".divwh").innerWidth() + "</br>";
+                        txt += "InnerHeight of div: " + $(".divwh").innerHeight()+ "</br>";
+                        txt += "outerWidth of div: " + $(".divwh").outerWidth() + "</br>";
+                        txt += "outerHeight of div: " + $(".divwh").outerHeight()+ "</br>";
+                         txt += "outerWidth of div: " + $(".divwh").outerWidth(true) + "</br>";
+                        txt += "outerHeight of div: " + $(".divwh").outerHeight(true);
+                        $(".divwh").html(txt);*/
+                        $("#divwh").width(300).height(100);
+                        var txt = "";
+                        txt += "Document width/height: " + $(document).width();
+                        txt += "x" + $(document).height() + "\n";
+                        txt += "Window width/height: " + $(window).width();
+                        txt += "x" + $(window).height();
+                        alert(txt);
+                       
+                        
+                  });
+            });
+
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body>
+            <!--- <p class="divvv">
+                  The width() method sets or returns the width of an element (excludes padding, border and margin).
+                  The height() method sets or returns the height of an element (excludes padding, border and margin).
+            </p>--->
+            <!--<div class="divwh">
+                  jQuery width() method is used to return or set the width of matched 
+                  element.To return width: When this method is used to return the width,
+                   it returns the width of first matched element.To set width:When this 
+                   method is used to set the width, it sets the width for every matched element. 
+            </div>--->
+            <div class="divwh"></div>             
+            <button>click for width & height (inner&outer)</button>
+      </body>
+</html>

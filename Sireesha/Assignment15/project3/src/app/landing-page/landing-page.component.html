@@ -1,0 +1,67 @@
+<mat-toolbar color="burlywood" class="headerstyle">
+
+      <button mat-icon-button (click)="nav.toggle()">
+            <mat-icon>menu</mat-icon>
+      </button>
+
+      <div class="logo1 h1">
+            Share and Care Clinic
+            <mat-icon>add_circle</mat-icon>
+      </div>
+
+      <div class="extra"></div>
+
+      <!-- <a  color="primary" class="anchordecor">signIn</a>
+      <a  color="primary" class="anchordecor">signUp</a> -->
+
+</mat-toolbar>
+
+
+<mat-sidenav-container class="sidenav-wrapper">
+      <mat-sidenav opened="false" #nav>
+            <a [routerLink]="['home']" color="primary">
+                  <button mat-button>
+                        <mat-icon>home</mat-icon>
+                        <span>home</span>
+                  </button>
+            </a>
+
+            <a [routerLink]="['signIn']" color="primary">
+                  <button mat-button>
+                        <mat-icon>login</mat-icon>
+                        <span>signIn</span>
+                  </button>
+            </a>
+
+            <a [routerLink]="['signUp']" color="primary">
+                  <button mat-button>
+                        <mat-icon>input</mat-icon>
+                        <span>signUp</span>
+                  </button>
+            </a>
+
+            <a [routerLink]="['contactUs']" color="primary">
+                  <button mat-button>
+                        <mat-icon>call</mat-icon>
+                        <span>contactUs</span>
+                  </button>
+            </a>
+
+            <a [routerLink]="['show']" color="primary">
+                  <button mat-button>
+                        <mat-icon></mat-icon>
+                        <span>show</span>
+                  </button>
+            </a>
+
+            <a [routerLink]="['dialog']" color="primary">
+                  <button mat-button>
+                        <mat-icon></mat-icon>
+                        <span>dialog</span>
+                  </button>
+            </a>
+      </mat-sidenav>
+      <mat-sidenav-content>
+            <router-outlet></router-outlet>
+      </mat-sidenav-content>
+</mat-sidenav-container>

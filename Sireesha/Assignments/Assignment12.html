@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>printing the missing number and sorting</title>
+      <style>
+            .para{
+                  padding-top: 50px;
+            }
+            p{
+                  margin-top: 30px;
+            }
+      </style>
+</head>
+
+<body>
+      <center>
+            <p class="para"  id="demo"></p>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+
+
+            <script>
+
+                  const list1 = [21, 23, 56, 12, 89];
+                  const list2 = [89, 23, 26, 42, 9, 21, 12];
+
+                  const output = list1.filter(function (obj) {
+                        return list2.indexOf(obj) == -1;
+                  });
+                  document.getElementById("demo").innerHTML = output;
+                  let sortedarr = output.sort(function (a, b) { return a - b });
+                  document.getElementById("demo").innerHTML = "Missing number in list 2 is :" + sortedarr;
+
+                  let sortedarr1 = list1.sort();
+                  document.getElementById("demo1").innerHTML = "First array sort is:" + sortedarr1;
+
+                  let sortedarr2 = list2.sort();
+                  document.getElementById("demo2").innerHTML = "Second array sort is:" + sortedarr2;
+
+            </script>
+
+      </center>
+</body>
+
+</html>

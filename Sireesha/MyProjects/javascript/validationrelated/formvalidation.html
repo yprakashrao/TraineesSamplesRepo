@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form creation</title>
+    <link rel="stylesheet" href="../../styles/mystyles.css">
+    <script type="text/javascript">
+
+        function formValidation() {
+            var name = document.getElementById("name");
+            var submitvalue = true;
+            //name validation with character
+            if (name.value == null || name.value == "") {
+                alert("please enter name");
+                name.focus();
+                submitvalue = false;
+            }
+            if (submitvalue) {
+                if (!name.value.match(/^[a-zA-Z\s]*$/)) {
+                    alert("please enter characters");
+                    name.focus();
+                    submitvalue = false;
+                }
+            }
+            //mail validation
+            var mail = document.getElementById("Email");
+            if (submitvalue) {
+                if (mail.value == null || mail.value == "") {
+                    alert("please enter Email");
+                    mail.focus();
+                    submitvalue = false;
+                }
+            }
+            if (submitvalue) {
+                if (!mail.value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)) {
+                    alert("Please enter valid Email");
+                    mail.focus();
+                    submitvalue = false;
+                }
+            }
+            //password validation
+            var password = document.getElementById("Pass");
+            if (submitvalue) {
+                if (password.value == null || password.value == "") {
+                    alert("please enter password");
+                    password.focus();
+                    submitvalue = false;
+                }
+            }
+            //phonenumber validations
+            var phonenumber = document.getElementById("pnumber");
+            if (submitvalue) {
+                if (phonenumber.value == null || phonenumber.value == "") {
+                    alert("Enter phonenumber");
+                    phonenumber.focus();
+                    submitvalue = false;
+                }
+            }
+            if (submitvalue) {
+                if (!phonenumber.value.match(/^[0-9]*$/)) {
+                    alert("please enter numerics");
+                    phonenumber.focus();
+                    submitvalue = false;
+                }
+            }
+            //dropdown validation
+            var Branch = document.getElementById("Course");
+            if (submitvalue) {
+                if (Branch.value == null || Branch.value == "") {
+                    alert("Please Select Branch");
+                    Branch.focus();
+                    submitvalue = false;
+                }
+            }
+            //Radio validation
+            var gender = document.querySelectorAll('input[name="gender"]:checked');
+            if (submitvalue) {
+                if (!gender.length) {
+                    alert("Please select Gender");
+                    submitvalue = false;
+                }
+
+            }
+            //Checkbox validation
+            var Hobbies = document.querySelectorAll('input[name="Hobbies"]:checked');
+            if (submitvalue) {
+                if (!Hobbies.length) {
+                    alert("Please select Hobbies");
+                    submitvalue = false;
+                }
+            }
+            //Textarea validation
+            var Comment = document.getElementById("Comment").value;
+            if (submitvalue) {
+                if (Comment == null || Comment == "") {
+                    alert("Enter your feedback");
+                    Comment.focus();
+                    submitvalue = false;
+                }
+            }
+            if (submitvalue) {
+                var finaldata =
+                    "name: " + "\n" +
+                    name.value +
+                    "\n" +
+                    "pnumber:" + "\n" +
+                    phonenumber.value +
+                    "\n" +
+                    "Email: " + "\n" +
+                    mail.value +
+                    "\n" +
+                    "Course: " + "\n" +
+                    Branch.value +
+                    "\n" +
+                    "Gender: " + "\n" +
+                    gender.length +
+                    "\n" +
+                    "Hobbies: " + "\n" +
+                    checkbox.length +
+                    "\n" +
+                    "Comment: " + "\n" +
+                    Comment.value + "\n";
+                alert(finaldata);
+            }
+            return submitvalue;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="ass6head">
+        <h2><b> Form Elements </b></h2>
+    </div>
+    <form onsubmit="return formValidation();">
+        <table class="ass6table">
+            <tr>
+                <td>
+                    <label for="text">Name:</label>
+                    <input type="text" placeholder="Enter Name" size="20" id="name"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Email">Email:</label>
+                    <input type="text" placeholder="Enter Valid Email" size="20" id="Email"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password:</label>
+                    <input type="text" placeholder="Enter Password" id="Pass" size="20"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="number">Number:</label>
+                    <input type="text" placeholder="Enter phonenumber" id="pnumber" size="20"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Branch">Branch:</label>
+                    <select id="Course">
+                        <option value="">----</option><br>
+                        <option value="BBA">BBA</option><br>
+                        <option value="BCA">BCA</option><br>
+                        <option value="B.Com">B.COM</option><br>
+                        <option value="BA">BA</option><br>
+                    </select><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Gender">Gender:</label>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="Female">Female<br><br>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="ass6check">
+                    <label for="Hobbies">Hobbies:</label>
+                    <input type="checkbox" name="Hobbies" value="footbal">football
+                    <input type="checkbox" name="Hobbies" value="valleybal">valleyball
+                    <input type="checkbox" name="Hobbies" value="Coco">Coco
+                    <input type="checkbox" name="Hobbies" value="Karate">Karate
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="area">Comments:</label>
+                    <textarea rows="7" cols="15" id="Comment">Comment here...</textarea><br><br>
+                </td>
+            </tr>
+            <tr>
+
+                <td><input type="submit"></td><br><br>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

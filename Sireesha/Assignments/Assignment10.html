@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating a form using javascript to show data in a table</title>
+    <script type="text/javascript" src="../Assignments/Assignment10js.js" defer></script>
+</head>
+
+<body>
+    <center>
+    <div>
+        <div>
+            <form name="myform">
+                <label for="text">Name:</label>
+                <input type="text" placeholder="Enter Name" size="20" id="name"><br><br>
+
+                <label for="Email">Email:</label>
+                <input type="email" placeholder="Enter Valid Email" size="20" id="email"><br><br>
+
+                <label for="number">Phone Number:</label>
+                <input type="tel" placeholder="Enter phonenumber" id="pnumber" size="20"><br><br>
+
+                <label for="Gender">Gender:</label>
+                    <input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female<br><br>
+                <!-- <button  onclick="formValidation();">submit</button> -->
+                <input type="button" id="submit" value="submit" onclick="formValidation();"> <br>
+            </form>           
+        </div>
+        <div>
+            <table id="mytable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>phonenumber</th>
+                        <th>Gender</th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>      
+    </div>
+</center>
+</body>
+</html>
+
+
+
+
+

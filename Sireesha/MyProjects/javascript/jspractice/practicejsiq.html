@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>jq</title>
+     
+</head>
+<body>
+      <script lang="javascript" type="text/javascript">
+            let cars = ["bmw", "volvo", "honda"];//rep of array
+            console.log(cars[0]);//to know the value using index number
+
+            let len = cars.length;// to rep the lenght of an array            
+            console.log(len); //to know the length
+
+            let last = cars[cars.length - 1];           
+            console.log(last);// to access the last value
+            
+            cars.forEach((item, index, array) => {
+            console.log(item, index);
+            });               // to access multiple elements of an array at once will use foreach method
+            
+            let list_Number = [2,4,6,8,17]
+            let x = 5;         
+            console.log(x.toString());// to string() method is used to rep a number interms of string
+
+            for(let x=0;x<list_Number.length;x++)
+            {  
+                  let y = list_Number[x]
+            console.log(y.toString(2))
+            }           // to convert a number into string will use tostring() method and is also used to convert the number into bin,dec,oct,hex format
+     
+            cars.push("audi");
+            console.log(cars); // push method is used to add a string to the array..it places the value at the end
+           
+            cars.unshift("Toyota")
+            console.log(cars); //unshift method is for adding at first place..to the array
+
+            cars.pop()
+            console.log(cars); // pop method is used to pop or remove the last string from the array
+
+            cars.shift();
+            console.log(cars); //this method removes the first string from the array..opp to pop
+
+            let cars1 = ["Toyota", "bmw", "volvo", "honda","Audi"];
+            let cars2 = cars1.slice(3)
+            console.log(cars2); // this method for cut or remove the strings from the specified number given in slice methhod
+            
+            let cars3 = ["Toyota", "bmw", "volvo", "honda","Audi"];
+            let cars4 = cars3.slice(1,3)
+            console.log(cars4);// slice method works on start and end values.it considers start value exclude the end value
+
+            let carz = ["bmw", "volvo", "honda"];
+            let bikes = ["yamaha", "suzuki", "royal enfield"];
+            let vehicles = carz.concat(bikes);
+            console.log(vehicles); // concat method is used add the two arrays..first followed by second
+
+            let li_Number = [3,2,6,1,5,4,8,7];
+            let li_string = ["bmw", "volvo", "honda"];
+            li_Number.sort(); 
+            console.log(li_Number);// this method to place all the numbers in accsending order
+
+            li_Number.reverse();
+            li_string .reverse();
+            console.log(li_Number);
+            console.log(li_string );//it can able to reverse the string s too
+
+            let num1 = [2, 3, 4, 5, 6, 7];
+            let num2 = num1.map(fivetimes);
+            function fivetimes(value) {
+            return value * 5;
+            }      //map method is for multiply the array of numbers at a time 
+            console.log(num2)
+
+            let num4 = [6, 8, 4, 2, 1, 7];
+            let num3 = num4.filter(comp);
+            function comp(value) {
+            return value > 4;
+            }
+            console.log(num3) //filter method is for getting all the values according to our condition
+
+            let num5 = [1,2,3];
+            let num6 = num5.reduce(sum);
+            function sum(total, value) {
+            return total + value;
+            }
+            console.log(num6)// reduce
+            
+</script>
+</body>
+</html>
+

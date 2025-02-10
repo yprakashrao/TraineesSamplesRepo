@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Example for fadeIn</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script type="text/javascript" language="javascript">
+                  $(document).ready(function(){
+                        $("button").click(function(){
+                              $("#img").slideUp(2000).css('opacity','0.4').slideDown(2000).hide(3000);
+                        });
+                  });
+            </script>
+      </head>
+      <body>
+            <h4>Simple program for chaining</h4>
+            <button>chaining</button><br><br>
+            <img src="../../Images/taj.jpg" alt="taj" id="img">
+                     
+      </body>
+</html>

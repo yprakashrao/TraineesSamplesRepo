@@ -1,0 +1,9 @@
+.brand{
+      color: red;
+      text-transform: capitalize;     
+}
+
+.thead{
+      display: flex;
+      justify-content: space-between;
+}

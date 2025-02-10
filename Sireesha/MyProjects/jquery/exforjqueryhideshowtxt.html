@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>Basic example for jquery</title>
+<head>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+      <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+            $("#hide").click(function() { 
+                  $("p").hide(2000);  });  
+            });
+                     
+             
+            $(document).ready(function(){
+            $("#show").click(function() { 
+                  $("p").show(1500); });
+            });
+      </script>
+</head>
+      <body>
+            <p>
+                  <i>jQuery enables us to add effects on a web page.
+                   jQuery effects can be categorized into fading, 
+                   sliding, hiding/showing and animation effects.</i>
+            </p>
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>                 
+      </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <title>Dynamic dropdown filling using ajax</title>
+            <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+            <h2>Created a dropdown and dynamically filled the other dropdown using ajax-jquery</h2>
+      </head>
+      <body>
+            <!---country-->
+            <label for="country" id="country">country:</label>
+            <select>
+                  <option value="------">-------</option>
+                  <option value="India">India</option>
+                  <option value="USA">United states</option>
+                  <option value="UK">UK</option>
+            </select><br><br>
+            <span id="loading_placeholder"></span>
+            <span id="error_placeholder"></span>
+
+
+            <!---borders-->
+            <label for="border" id="borders">borders:</label>
+            <select>
+                  <option value="-------">-------</option>
+            </select><br><br>
+
+
+            <!---radio-->
+            <label for="gender">Gender:</label>
+            <input type="radio" value="Male" name="male">Male
+            <input type="radio" value="female" name="female">Female
+            <br><br>
+            <script>
+                  $(document).ready(function(){
+                        $("#country").change(function(){
+                              var selecountry = $("country").val();                             
+                              var url = "https://restcountries.com/v3.1/name/"+selecountry+"?fullText=true";
+                              $.ajax({
+                                    url: url,                                   
+                                    function(){
+                                          $("#borders").find("option").not(":first").remove();
+                                          $("#loading_placeholder").html("loading....");
+                                          console.log(borders);
+                                          alert("borders loading");
+                                    },
+                                    success: function(data, textStatus, jqXHR){
+                                          var borders_dropdown = $("#borders");
+                                          if(data.borders){
+                                                $.each(data.borders, function(index,item){
+                                                      borders_dropdown.append($("<option />").val(item.borderscode).text(item.bordersName));
+                                                })
+                                          }
+                                    },
+                                    error: function(jqXHR, textStatus, errorThrown){
+                                          $("#error_placeholder").html("please try again");
+                                    },
+                                    complete: function(jqXHR, textStatus){
+                                          $("#loading_placeholder").html("");
+                                    }
+                              });
+                        });
+                  });
+            </script>
+            <!---in this program i tried to load some data dropdown by selecting dropdown.
+                  but here we need to write a backend program for getting url.
+                  that means we can able to show the data in span or div tags but in 
+                  dropdown we need an backend api. -->
+      </body>
+</html>

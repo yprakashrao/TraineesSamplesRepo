@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <title>Creation of a form</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                   
+                  $(document).ready(function(){    
+                        $("#disable1,#disable2,#disable3").hide();                   
+                        $("#state").change(function(){
+                              if($("#state").val() == "ap") {
+                               $("#ap").show();
+                               $("#ts").hide();
+                               $("#kl").hide();
+                             }  console.log(state.value);   
+                        })
+                                                   
+                        // if($("#state").val() == "ap") {
+                        //             $("#ap").show();
+                        //             $("#ts").hide();
+                        //             $("#kl").hide();
+                        // }  
+
+                        $("button").click(function(){
+                              window.location.href='../../../Assignments/assignment3.html';                            
+                        });                     
+                  });
+            </script>
+            <link rel="stylesheet" href="../../../styles/myjquerystyles.css">
+            <h2>Creation of a form which shows a district by selecting a state dropdown</h2>
+      </head>
+      <body>
+            <table>
+                  <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" placeholder="Enter name"></td>
+                  </tr>
+                  <tr>
+                        <td><label for="mail">Email:</label></td>
+                        <td><input type="email" placeholder="Enter email"></td>
+                  </tr>
+                  <tr>
+                        <td><label for="gender">Gender:</label></td>
+                        <td><input type="radio" name="male">Male
+                            <input type="radio" name="female">Female</td>
+                  </tr>
+                  <tr>
+                        <td> <label for="dropdown">State:</label></td>
+                        <td><select id="state">
+                              <option value="---">---</option>
+                              <option value="Andhra pradesh">Andhra Pradesh</option>
+                              <option value="telangana">Telangana</option>
+                              <option value="kerala">Kerala</option>
+                        </select></td>
+                        <span id="spn1"></span>
+                  </tr>                  
+                  <tr id="disable1">
+                        <td><label for="dropdown">District:</label></td>
+                        <td><select id="ap">
+                              <option value="---">---</option>
+                              <option value="vizag">Vizag</option>
+                              <option value="egodavari">EGodavari</option>
+                              <option value="wgodavari">WGodavari</option>
+                        </select></td>
+                  </tr>
+                  <tr id="disable2">
+                        <td><label for="dropdown">District:</label></td>
+                        <td><select id="ts">
+                              <option value="---">---</option>
+                              <option value="Kanchi">Kanchi</option>
+                              <option value="Madhurai">Madhurai</option>
+                              <option value="Mahabalipuram">Mahabalipuram</option>
+                        </select></td>
+                  </tr>
+                  <tr id="disable3">
+                        <td><label for="dropdown">District:</label></td>
+                        <td><select id="kl">
+                              <option value="---">---</option>
+                              <option value="Kottayam">Kottayam</option>
+                              <option value="Alleppy">Alleppy</option>
+                              <option value="Dhanbad">Dhanbad</option>
+                        </select></td>      
+                  </tr>          
+                  <tr>
+                        <td><label for="Interests">Interests:</label></td>
+                        <td><input type="checkbox">Cricket
+                            <input type="checkbox">Football
+                            <input type="checkbox">Valleyball</td>
+                  </tr>
+                  <tr>
+                        <td><label for="textarea">Coments:</label></td>
+                        <td><textarea rows="10" column="5"></textarea></td>
+                  </tr>
+                  <tr>
+                        <td><button>Click</button></td>
+                  </tr>
+            </table>
+      </body>
+</html>

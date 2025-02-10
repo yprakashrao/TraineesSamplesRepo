@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>
+                  no conflict
+            </title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+            </script>
+            <script>
+                  $.noConflict();
+                        jQuery(document).ready(function($){
+                              $("button").click(function(){
+                                    $("h2").text("query will work");
+                              });
+                              $("p").click(function(){
+                              $("span").text("hellooo");
+                              });
+                        });
+                  
+            </script>
+      </head>
+      <Body>
+            <h2>here is a paragraph</h2>
+            <p> hello query you can able to use the $ as  you want.</p>
+            <span></span><br>
+      </Body>
+      <button>click</button>
+</html>

@@ -1,0 +1,41 @@
+header {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: lightsteelblue;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: lightslategrey;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: center;
+  border: 1px solid ;
+}
+th {
+  background-color: lightgray;
+}
+tr:nth-child(odd) {
+  background-color: bisque;
+}
+tr:nth-child(even) {
+  background-color: white;
+}

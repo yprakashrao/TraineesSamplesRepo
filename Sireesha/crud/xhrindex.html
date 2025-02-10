@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>json</title>
+</head>
+
+<body>
+      <ol id="people"></ol>
+      <script>
+            var person = {
+                  name: "siri", //string
+                  age: 34, //number
+                  address: {
+                        street: "srinagar street",
+                        city: "vizag"
+                  }, // object
+                  child: ['akshaj', 'rudhvi'] // array
+                  // email : function(){
+                  //       return 'sireeshatalktive2@gmail.com';
+                  // } it is not shown in json because function is not the json datatype. to overcome this we will use json.stringify().
+            }
+            person = JSON.stringify(person); //this is used to convert object into json sting.
+            console.log(person.name);// the output will be undefined here because it is not an object here
+            person = JSON.parse(person);// this is used to convert json string into object
+            console.log(person.name);// here we will get the person name.
+
+            var people = [
+                  {
+                        name: "siri",
+                        age: 27
+                  },
+                  {
+                        name: "suneel",
+                        age: 23
+                  },
+                  {
+                        name: "adi",
+                        age: 12
+                  },
+                  {
+                        name: "sdf",
+                        age: 34
+                  }
+            ];
+
+                 console.log(person.child[1]);
+                 console.log(people[1].name);
+            var output = '';
+
+            for (var i = 0; i < people.length ; i++) {
+                  // console.log(people[i].age);
+                  output += '<li>' +people[i].name+ '</li>';
+            }
+
+            document.getElementById("people").innerHTML = output;
+
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.open("GET", "Untitl.json", true);
+            xhttp.send();
+
+            xhttp.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                        var person = JSON.parse(xhttp.responseText);
+                        var person = response.person;
+                        console.log(person);
+                  }
+            }
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Patient Registration Form</title>
+      <script src="patient.js" defer></script>
+      <link rel="stylesheet" href="hsptlstyle.css">
+</head>
+
+<body onload="retrievedbdata()">
+      <div id="achorvisibility">
+            <table>
+                  <th><a href="" class="anchordisplay">Home||</a></th>
+                  <th><a href="" class="anchordisplay">In-patient List||</a></th>
+                  <th><a href="" class="anchordisplay">Doctors List||</a></th>
+                  <th><a href="retrieveddb.html" class="anchordisplay" id="gettotaldb" >Registered List||</a></th>
+                  <th><a href="" class="anchordisplay">About||</a></th>
+                  <th>
+                        <h3 class="anchordisplay">Contact us: +91 99660-78961</h3>
+                  </th>
+            </table>
+      </div>
+
+      <u>
+            <h1>Welcome to <b>MotherTerisa</b> hospital</h1>
+      </u>
+
+      <div id="formbody">
+            <form action="" method="" target="" id="">
+                  <table>
+                        <tr>
+                              <td>
+                                    <label for="text">Patient Name:</label>
+                              </td>
+                              <td>
+                                    <input type="text" id="name">
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>
+                                    <label for="age">Enter Age:</label>
+                              </td>
+                              <td>
+                                    <input type="number" id="age">
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>
+                                    <label for="gender">Gender:</label>
+                              </td>
+                              <td> <input type="radio" name="gender">Male
+                                    <input type="radio" name="gender">Female
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>
+                                    <label for="Phnum">Phone Number:</label>
+                              </td>
+                              <td>
+                                    <input type="tel" id="number">
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>
+                                    <label for="date">Entry Date&Time:</label>
+                              </td>
+                              <td>
+                                    <input type="datetime-local" id="date">
+                              </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                              <td></td>
+                              <td id="btn">
+                                    <input type="button" value="Submit" onclick="registrationform();" onsubmit="addingUserDataToTable();">
+                              </td>
+                        </tr>
+                       
+                  </table>
+            </form>
+      </div>
+      <span id="successmsg"></span>
+      <div id="Displayhere1"></div>
+</body>
+
+</html>

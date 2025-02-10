@@ -1,0 +1,244 @@
+<head>
+  <link rel="stylesheet" href="../../3.Styles/styles.css">
+</head>
+
+<body>
+
+  <div class="task6container">
+    <h1 id="task6h1">Registration-Form</h1>
+    <form name="registration" action="../Task6/task6thankyou.html" class="registartion-form"
+      onsubmit="return formValidation()">
+      <table id="task6table">
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td><input type="text" name="name" id="name" placeholder="your name" class="task6input"><br><br></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" placeholder="your email"><br><br></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" name="password" id="password"><br><br></td>
+        </tr>
+        <tr>
+          <td><label for="phoneNumber">Phone Number:</label></td>
+          <td><input type="text" name="phoneNumber" id="phoneNumber"><br><br></td>
+        </tr>
+        <tr>
+          <td><label for="gender">Gender:</label></td>
+          <td> <input type="radio" name="gender" value="male"> Male <br>
+            <input type="radio" name="gender" value="female">Female <br>
+            <input type="radio" name="gender" value="other"> Other <br><br><br>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="language">Language</label></td>
+          <td>
+            <select name="language" id="language" class="select">
+              <option value="">Select language</option>
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Arabic">Arabic</option>
+              <option value="German">German</option>
+            </select>
+            <br><br>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Pincode">Pincode:</label></td>
+          <td><input type="number" name="Pincode" id="Pincode class=" task6input"><br><br></td>
+        </tr>
+        <tr>
+          <td><label for="InterestedIn">InterestedIn:</label></td>
+          <td><input type="checkbox" name="InterestedIn" value="Playing-Cricket"> Playing-Cricket <br>
+            <input type="checkbox" name="InterestedIn" value="Watching-Tv">Watching-Tv<br>
+            <input type="checkbox" name="InterestedIn" value="Reading-Books">Reading-Books<br><br>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="MessageBox">MessageBox:</label></td>
+          <td><textarea name="MessageBox" id="MessageBox" placeholder="Write your message here..."></textarea><br><br>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><input id="task6submit" type="submit" class="submit" value="Submit" /><br><br></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <script>
+    function formValidation() {
+      var name = document.getElementById("name");
+      var email = document.getElementById("email");
+      var password = document.getElementById("password");
+      var phoneNumber = document.getElementById("phoneNumber");
+      var language = document.getElementById("language");
+      var Pincode = document.getElementById("Pincode");
+      var MessageBox = document.getElementById("MessageBox");
+      var getSelectedValue = document.querySelector('input[name="gender"]:checked');
+      var getSelectedInterestedIn = document.querySelectorAll('input[name="InterestedIn"]:checked');
+
+      var submitValue = true;
+
+      if (name.value == null || name.value == "") {
+        alert("Please enter the name");
+        name.focus();
+        submitValue = false;
+      }
+
+      if (submitValue) {
+        if (!name.value.match(/^[a-zA-Z\s]*$/)) {
+          alert("Please enter characters only");
+          name.focus();
+          name.value = "";
+          submitValue = false;
+        }
+      }
+      if (submitValue) {
+        if (email.value == null || email.value == "") {
+          alert("Please enter the email");
+          email.focus();
+          submitValue = false;
+        }
+      }
+
+      // checking email
+      if (submitValue) {
+        if (!email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+          alert("Please enter a valid email!");
+          email.focus();
+          email.value = "";
+          submitValue = false;
+        }
+      }
+      if (submitValue) {
+        if (password.value == null || password.value == "") {
+          alert("Please enter password");
+          password.focus();
+          submitValue = false;
+        }
+      }
+
+      // checking password
+      if (submitValue) {
+        if (!password.value.match(/^.{15}$/)) {
+          alert("Password length max be 15 characters!");
+          password.focus();
+          submitValue = false;
+        }
+      }
+      // checking phone number
+      if (submitValue) {
+        if (phoneNumber.value == null || phoneNumber.value == "") {
+          alert("Pleae enter phone number");
+          phoneNumber.focus();
+          submitValue = false;
+        }
+      }
+
+      if (submitValue) {
+        if (!phoneNumber.value.match(/^[0-9]+$/)) {
+          alert("Pleae enter numbers only");
+          phoneNumber.focus();
+          submitValue = false;
+        }
+      }
+
+      if (submitValue) {
+        if (!phoneNumber.value.match(/^[1-9][0-9]{9}$/)) {
+          alert("Phone number must be 10 characters long number and first digit can't be 0!");
+          phoneNumber.focus();
+          submitValue = false;
+        }
+      }
+
+      if (submitValue) {
+        if (getSelectedValue != null) {
+          submitValue = true;
+        }
+        else {
+          alert("Please select gender");
+          submitValue = false;
+        }
+      }
+
+      // checking language
+      if (submitValue) {
+        if (language.value === "") {
+          alert("Please select your language!")
+          submitValue = false;
+          language.focus();
+        }
+      }
+      // checking pin code
+      if (submitValue) {
+        if (Pincode.value == null || Pincode.value == "") {
+          alert("Please enter Pincode");
+          Pincode.focus();
+          submitValue = false;
+        }
+      }
+
+      if (submitValue) {
+        if (!Pincode.value.match(/^[0-9]{6}$/)) {
+          alert("Pincode must be 6 characters long number!");
+          Pincode.focus();
+          submitValue = false;
+        }
+      }
+      if (submitValue) {
+        if (getSelectedInterestIn != null) {
+          submitValue = true;
+          var mydata = "";
+          for (var i = 0; i < getSelectedInterestIn.length; i++) {
+
+            mydata = mydata + getSelectedInterestIn[i].value + "\n";
+          }
+          getSelectedInterestIn.value = mydata;
+
+        }
+        else {
+          alert("Please select interest");
+          submitValue = false;
+
+        }
+      }
+      if (submitValue) {
+        if (MessageBox.value === "") {
+          alert("Please enter comments")
+          submitValue = false;
+          MessageBox.focus();
+        }
+      }
+      if (submitValue) {
+        var finalSelection = " Entered Values are  \n" +
+          "\n " +
+          "Name is          : " + name.value + "\n" +
+          "\n " +
+          "E-mail is        : " + email.value + "\n" +
+          "\n " +
+          "Password is      : " + password.value + "\n" +
+          "\n " +
+          "Gender is        : " + getSelectedValue.value + "\n" +
+          "\n " +
+          "Language is      : " + language.value + "\n" +
+          "\n " +             
+          "Pincode is      : " + Pincode.value + "\n" +
+          "\n " +
+          "Interests is    : " + getSelectedInterestIn.value + "\n" +
+          "\n " +
+          "Comments are     : " + MessageBox.value + "\n" +
+          "\n ";
+        alert(finalSelection);
+      }
+      localStorage.setItem('test-item', finalSelection);
+
+      return submitValue;
+    }
+
+
+
+
+  </script>
+</body>

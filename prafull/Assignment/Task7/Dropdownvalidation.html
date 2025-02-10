@@ -1,0 +1,362 @@
+<head>
+    <link rel="stylesheet" href="../../3.styles/index.css">
+</head>
+<body onload="pageload();">
+    <div class="task8container">
+        <h1 style="color:red ;">Choose Your Technologies</h1>
+        <form name="myvalidations" class="" onsubmit="return SubmitFormValidations();">
+            <div class="task8form">
+                <label for="logo">Logo:</label>
+                <input type="file" name="logo" id="logo" accept="image/.png" onchange="validateFileType()"
+                    placeholder="Upload an image">
+                    <br>
+                    <br>
+                <label for="Technologies">Technologies:</label>
+                
+                <input type="radio" name="Technologies" id="Technologies" value="java" onclick="techonClick()"> Java
+                
+                <input type="radio" name="Technologies" id="Technologies" value="HTML" onclick="techonClick()">FrontEnd
+                
+                <input type="radio" name="Technologies" id="Technologies" value="Javascript" onclick="techonClick()">
+                Scripting <br>
+                <br>
+                <div class="task7container">
+                    <div id="myDIV">
+                        <label for="language">Java Language</label>
+                        <select name="jlanguage" id="jlanguage" onchange="showFormFields()">
+                            <option value="">Select language</option>
+                            <option value="CoreJava">Core Java</option>
+                            <option value="AdvanceJava">Advance Java</option>
+                            <option value="Springboot">Springboot</option>
+                            <option value="SpringMVC">Spring MVC</option>
+                            <option value="Struts">Struts</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="FEDiv">
+                        <label for="language">Frontend Language</label>
+                        <select name="felanguage" id="felanguage" onchange="showFormFields()">
+                            <option value="">Select language</option>
+                            <option value="HTML">HTML</option>
+                            <option value="JSP">JSP</option>
+                            <option value="Angular">Angular</option>
+                            <option value="AngularJS">AngularJs</option>
+                            <option value="React">React</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="ScDiv">
+                        <label for="language">Script Language</label>
+                        <select name="sclanguage" id="sclanguage" onchange="showFormFields()">
+                            <option value="">Select language</option>
+                            <option value="Javascript">Javascript</option>
+                            <option value="JQuery">JQuery</option>
+                            <option value="Ajax">Ajax</option>
+                            <option value="Typescript">TypeScript</option>
+                        </select>
+                    </div>
+                    <br>
+                </div>
+                <div id="formtable" class="task8fileds">
+                    <h1 style="color:red;">Registration Form With Verification</h1>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="your name">
+                    <br>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" placeholder="your email">
+                    <br>
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                    <br>
+                    <br>
+                    <label for="phoneNumber">Phone No:</label>
+                    <input type="text" name="phoneNumber" id="phoneNumber">
+                    <br>
+                    <br>
+                    <label for="gender">Gender:</label>
+                    <input type="radio" name="gender" value="male"> Male 
+                    <input type="radio" name="gender" value="female">Female 
+                    <input type="radio" name="gender" value="other"> Other 
+                    <br>
+                    <br>
+                    <label for="language">Language:</label>
+                    <select name="language" id="language">
+                        <option value="">Select language</option>
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Russian">Russian</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="zipcode">Zip Code:</label>
+                    <input type="number" name="zipcode" id="zipcode">
+                    <br>
+                    <br>
+                    <label for="Interested">Interested:</label>
+                    <input type="checkbox" name="Interested" value="Cricket"> Cricket 
+                    <input type="checkbox" name="Interested" value="Chess">Chess 
+                    <input type="checkbox" name="Interested" value="Boxing">Boxing <br>
+                    <br>
+                    <label for="about">About:</label><br>
+                    <textarea name="about" id="about" placeholder="Write about yourself..."></textarea>
+                </div>
+                <br>
+                <br>
+                <div class="task8btn">
+                    <input type="submit" class="submit" value="Submit" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateFileType() {
+            var fileName = document.getElementById("logo").value;
+            var idxDot = fileName.lastIndexOf(".") + 1;
+            var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+            if (extFile == "png") {
+                //TO DO
+            } else {
+                document.getElementById("logo").value = "";
+                alert("Please upload png format image  only.");
+            }
+        }
+          
+        function pageload() {
+            document.getElementById("myDIV").style.display = "none";
+            document.getElementById('FEDiv').style.display = "none";
+            document.getElementById("ScDiv").style.display = "none";
+            document.getElementById("formtable").style.display = "none";
+        }
+
+        function techonClick() {
+            var getSelectedValue = document.querySelector('input[name="Technologies"]:checked');
+
+            if (getSelectedValue.value == "java") {
+                document.getElementById("myDIV").style.display = "block";
+                document.getElementById('FEDiv').style.display = "none";
+                document.getElementById("ScDiv").style.display = "none";
+            } else if (getSelectedValue.value == "HTML") {
+                document.getElementById('FEDiv').style.display = "block";
+                document.getElementById("ScDiv").style.display = "none";
+                document.getElementById("myDIV").style.display = "none";
+            } else if (getSelectedValue.value == "Javascript") {
+                document.getElementById("ScDiv").style.display = "block";
+                document.getElementById("myDIV").style.display = "none";
+                document.getElementById('FEDiv').style.display = "none";
+            }
+
+        }
+
+        function showFormFields() {
+            var getSelectedjLanguage = document.getElementById("jlanguage");
+            var getSelectedFelanguage = document.getElementById('felanguage');
+            var getSelectedSclanguage = document.getElementById('sclanguage');
+
+            if ((getSelectedjLanguage.value == "" || getSelectedjLanguage.value == null) && (getSelectedFelanguage.value == "" || getSelectedFelanguage.value == null) && (getSelectedSclanguage.value == "" || getSelectedSclanguage.value == null)) {
+                document.getElementById("formtable").style.display = "none";
+            } else if (getSelectedjLanguage.value != "" && getSelectedFelanguage.value == "" && getSelectedSclanguage.value == "") {
+                document.getElementById("formtable").style.display = "block";
+            }
+            else if (getSelectedjLanguage.value == "" && getSelectedFelanguage.value != "" && getSelectedSclanguage.value == "") {
+                document.getElementById("formtable").style.display = "block";
+            }
+            else if (getSelectedjLanguage.value == "" && getSelectedFelanguage.value == "" && getSelectedSclanguage.value != "") {
+                document.getElementById("formtable").style.display = "block";
+            } else {
+                document.getElementById("formtable").style.display = "none";
+            }
+        }
+
+
+        function SubmitFormValidations() {
+            var submitValue = false;
+            var logo = document.getElementById("logo");
+            var password = document.getElementById("password");
+            var phoneNumber = document.getElementById("phoneNumber");
+            var language = document.getElementById("language");
+            var zipcode = document.getElementById("zipcode");
+            var comment = document.getElementById("about");
+            var getSelectedValue = document.querySelector('input[name="Technologies"]:checked');
+            var getSelectedInterest = document.querySelectorAll('input[name="Interested"]:checked');
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var getSelectedGenderValue = document.querySelector('input[name="gender"]:checked');
+
+            if (logo.value === "") {
+                alert("Please select logo")
+                submitValue = false;
+                logo.focus();
+            } else {
+                submitValue = true;
+            }
+            if (submitValue) {
+                if (getSelectedValue != null) {
+                    submitValue = true;
+                }
+                else {
+                    alert("Please select any technologie");
+                    submitValue = false;
+                }
+            }
+            if (getSelectedValue.value != "" || getSelectedValue.value != null) {
+                if (submitValue) {
+                    if (name.value == null || name.value == "") {
+                        alert("Please enter the name");
+                        name.focus();
+                        submitValue = false;
+                    }
+                }
+                if (submitValue) {
+                    if (!name.value.match(/^[a-zA-Z\s]*$/)) {
+                        alert("Please enter characters only");
+                        name.focus();
+                        name.value = "";
+                        submitValue = false;
+                    }
+                }
+                if (submitValue) {
+                    if (email.value == null || email.value == "") {
+                        alert("Please enter the email");
+                        email.focus();
+                        submitValue = false;
+                    }
+                }
+                // checking email
+                if (submitValue) {
+                    if (!email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                        alert("Please enter a valid email!");
+                        email.focus();
+                        email.value = "";
+                        submitValue = false;
+                    }
+                }
+                if (submitValue) {
+                    if (password.value == null || password.value == "") {
+                        alert("Please enter password");
+                        password.focus();
+                        submitValue = false;
+                    }
+                }
+
+                // checking password
+                if (submitValue) {
+                    if (!password.value.match(/^.{5,15}$/)) {
+                        alert("Password length must be between 5-15 characters!");
+                        password.focus();
+                        submitValue = false;
+                    }
+                }
+                // checking phone number
+                if (submitValue) {
+                    if (phoneNumber.value == null || phoneNumber.value == "") {
+                        alert("Pleae enter phone number");
+                        phoneNumber.focus();
+                        submitValue = false;
+                    }
+                }
+
+                if (submitValue) {
+                    if (!phoneNumber.value.match(/^[0-9]+$/)) {
+                        alert("Pleae enter numbers only");
+                        phoneNumber.focus();
+                        submitValue = false;
+                    }
+                }
+
+                if (submitValue) {
+                    if (!phoneNumber.value.match(/^[1-9][0-9]{9}$/)) {
+                        alert("Phone number must be 10 characters long number and first digit can't be 0!");
+                        phoneNumber.focus();
+                        submitValue = false;
+                    }
+                }
+
+                if (submitValue) {
+                    if (getSelectedGenderValue != null) {
+                        submitValue = true;
+                    }
+                    else {
+                        alert("Please select gender");
+                        submitValue = false;
+                    }
+                }
+
+                // checking language
+                if (submitValue) {
+                    if (language.value === "") {
+                        alert("Please select your language!")
+                        submitValue = false;
+                        language.focus();
+                    }
+                }
+                // checking zip code
+                if (submitValue) {
+                    if (zipcode.value == null || zipcode.value == "") {
+                        alert("Please enter zip code");
+                        zipcode.focus();
+                        submitValue = false;
+                    }
+                }
+
+                if (submitValue) {
+                    if (!zipcode.value.match(/^[0-9]{6}$/)) {
+                        alert("Zip code must be 6 characters long number!");
+                        zipcode.focus();
+                        submitValue = false;
+                    }
+                }
+                if (submitValue) {
+                    if (getSelectedInterest != null) {
+                        submitValue = true;
+                        var mydata = "";
+                        for (var i = 0; i < getSelectedInterest.length; i++) {
+
+                            mydata = mydata + getSelectedInterest[i].value + "\n";
+                        }
+                        getSelectedInterest.value = mydata;
+
+                    }
+                    else {
+                        alert("Please select interest");
+                        submitValue = false;
+
+                    }
+                }
+                if (submitValue) {
+                    if (comment.value === "") {
+                        alert("Please enter comments")
+                        submitValue = false;
+                        comment.focus();
+                    }
+                }
+                if (submitValue) {
+                    var finalSelection = " Entered Values are  \n" +
+                        "\n " +
+                        "Name is          : " + name.value + "\n" +
+                        "\n " +
+                        "E-mail is        : " + email.value + "\n" +
+                        "\n " +
+                        "Password is      : " + password.value + "\n" +
+                        "\n " +
+                        "Gender is        : " + getSelectedGenderValue.value + "\n" +
+                        "\n " +
+                        "Language is      : " + language.value + "\n" +
+                        "\n " +
+                        "Zip Code is      : " + zipcode.value + "\n" +
+                        "\n " +
+                        "Interested is    : " + getSelectedInterest.value + "\n" +
+                        "\n " +
+                        "Comments is      : " + comment.value + "\n" +
+                        "\n ";
+                    alert(finalSelection);
+                }
+            }
+            return submitValue;
+        }
+    </script>
+</body>

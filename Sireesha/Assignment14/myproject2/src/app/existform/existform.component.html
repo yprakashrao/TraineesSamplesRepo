@@ -1,0 +1,94 @@
+<div class="container">
+      <!-- <div class="card w-50 mx-auto mt-4"> -->
+      <div class=" text-center mt-3">
+            <span class="h4 ">Patient Registration Form</span>
+      </div>
+      <div class=" ">
+            <form name="myForm" #RegForm=ngForm (ngSubmit)="searchPat(RegForm.value)">
+                  <div class="row col-md-12 mt-3 d-flex justify-content-center">
+                        <div class="form-group col-md-3">
+                              <!-- <label>firstname:</label> -->
+                              <input type="text" ngModel class="form-control" placeholder="firstName" name="firstname"
+                                    pattern="[A-Za-z]{1,15}" required minlength="6" maxlength="15">
+                              <div *ngIf="RegForm.controls['firstname']?.['touched'] && RegForm.controls['firstname']?.['errors']"
+                                    class="invalid">
+                                    <div *ngIf="RegForm.controls['firstname']?.['errors']?.['required']">
+                                          firstname is required.
+                                    </div>
+                                    <div *ngIf="RegForm.controls['firstname']?.['errors']?.['minlength']">
+                                          minimum 6 characters required.
+                                    </div>
+                                    <div *ngIf="RegForm.controls['firstname']?.['errors']?.['pattern']">
+                                          please enter characters only.
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                              <!-- <label>lastname:</label> -->
+                              <input type="text" ngModel class="form-control" placeholder="lastName" name="lastname"
+                                    pattern="[A-Za-z]{1,15}" required minlength="6" maxlength="15">
+                              <div *ngIf="RegForm.controls['lastname']?.['touched'] && RegForm.controls['lastname']?.['errors']"
+                                    class="invalid">
+                                    <div *ngIf="RegForm.controls['lastname']?.['errors']?.['required']">
+                                          lastname is required.
+                                    </div>
+                                    <div *ngIf="RegForm.controls['lastname']?.['errors']?.['minlength']">
+                                          minimum 6 characters required.
+                                    </div>
+                                    <div *ngIf="RegForm.controls['lastname']?.['errors']?.['pattern']">
+                                          please enter characters only.
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                              <!-- <label>phone:</label> -->
+                              <input type="tel" ngModel class="form-control" placeholder="phone Number" name="phone"
+                                    pattern="[0-9]{10}" maxlength="10" required>
+                              <div *ngIf="RegForm.controls['phone']?.['touched'] && RegForm.controls['phone']?.['errors']"
+                                    class="invalid">
+                                    <div *ngIf="RegForm.controls['phone']?.['errors']?.['required']">
+                                          phone is required.
+                                    </div>
+                                    <div *ngIf="RegForm.controls['phone']?.['errors']?.['pattern']">
+                                          please enter proper phone.
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div class="form-group col-md-3 pt-2 ">
+                              <!-- <label>Search:</label> -->
+                              <button type="submit" placeholder="Search here.."
+                                    class="btn btn-primary form-control">Search</button>
+                        </div>
+
+                  </div>
+            </form>
+      </div>
+
+
+
+</div>
+
+<div class="mt-3">
+      <h2 class="text-center">List Of Patients</h2>
+      <!-- *ngIf="status==200" if we want place this in ts component then we need to place this in table -->
+      <table class="table container">
+
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+
+
+            <tbody>
+                  <tr *ngFor="let product of resp">
+                        <td>{{product.id}}</td>
+                        <td>{{product.firstname}}</td>
+                        <td>{{product.lastname}}</td>
+                        <td>{{product.phone}}</td>
+                  </tr>
+            </tbody>
+      </table>
+</div>

@@ -1,0 +1,151 @@
+
+<div class="row mt-5">
+    <div class="col">
+        <img src="../../assets/devd.avif" alt="img" style="width:100%">
+    </div>
+
+    <div class="col mt-3">
+
+        <h2 class="header">Qualification Details</h2>
+
+            <form [formGroup]="regForm" name="myForm" (ngSubmit)="onSubmit(regForm)" >
+
+        
+                <div class="form-group">
+        
+                    <label>Under Graduate:</label>
+                    <input type="text" formControlName="ug" class="form-control" maxlength="15" placeholder="btech,bca...etc">
+                    <div *ngIf="regForm.controls['ug'].touched && regForm.controls['ug']?.['errors']" class="invalid">
+        
+                        <div *ngIf="regForm.controls['ug']?.['errors']?.['required']">
+                            <span> graduation details is required</span>
+                        </div>
+        
+                        <div *ngIf="regForm.controls['ug']?.['errors']?.['maxlength']">
+                            <span>graduation details reaches max characters.</span>
+                        </div>
+        
+                        <div *ngIf="regForm.controls['ug']?.['errors']?.['pattern']">
+                            <span>please enter alphabets with some space only.</span>
+                        </div>
+        
+                    </div>
+        
+                </div>&nbsp;
+        
+        
+                <div class="form-group">
+        
+                    <label>Post Graduate:</label>
+                    <input type="text" formControlName="pg" class="form-control" maxlength="15" placeholder="mtech,msc..etc">
+                    <div *ngIf="regForm.controls['pg'].touched && regForm.controls['pg']?.['errors']" class="invalid">
+        
+                        <div *ngIf="regForm.controls['pg']?.['errors']?.['required']">
+                            <span> post graduation is required</span>
+                        </div>
+        
+                        <div *ngIf="regForm.controls['pg']?.['errors']?.['maxlength']">
+                            <span>post graduation details reaches max characters.</span>
+                        </div>
+        
+                        <div *ngIf="regForm.controls['pg']?.['errors']?.['pattern']">
+                            <span>please enter alphabets with some space only.</span>
+                        </div>
+        
+                    </div>
+        
+                </div>&nbsp;
+
+
+                <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary form-control">Click/Continue</button><br><br>
+
+        
+        
+                <!-- <div class="form-group row col-md-12 mt-1">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary form-control">Back</button>
+        
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary form-control">Click/Continue</button><br><br>
+                    </div>
+              </div> -->
+        
+            </form>
+        
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- <div class="bg-img">
+
+    <form [formGroup]="regForm" name="myForm" (ngSubmit)="onSubmit(regForm)" class="container">
+
+        <h2 class="header">Qualification Details</h2>
+
+        <div class="form-group">
+
+            <label>Under Graduate:</label>
+            <input type="text" formControlName="ug" class="form-control" maxlength="15" placeholder="btech,bca...etc">
+            <div *ngIf="regForm.controls['ug'].touched && regForm.controls['ug']?.['errors']" class="invalid">
+
+                <div *ngIf="regForm.controls['ug']?.['errors']?.['required']">
+                    <span> graduation details is required</span>
+                </div>
+
+                <div *ngIf="regForm.controls['ug']?.['errors']?.['maxlength']">
+                    <span>graduation details reaches max characters.</span>
+                </div>
+
+                <div *ngIf="regForm.controls['ug']?.['errors']?.['pattern']">
+                    <span>please enter alphabets with some space only.</span>
+                </div>
+
+            </div>
+
+        </div>&nbsp;
+
+
+        <div class="form-group">
+
+            <label>Post Graduate:</label>
+            <input type="text" formControlName="pg" class="form-control" maxlength="15" placeholder="mtech,msc..etc">
+            <div *ngIf="regForm.controls['pg'].touched && regForm.controls['pg']?.['errors']" class="invalid">
+
+                <div *ngIf="regForm.controls['pg']?.['errors']?.['required']">
+                    <span> post graduation is required</span>
+                </div>
+
+                <div *ngIf="regForm.controls['pg']?.['errors']?.['maxlength']">
+                    <span>post graduation details reaches max characters.</span>
+                </div>
+
+                <div *ngIf="regForm.controls['pg']?.['errors']?.['pattern']">
+                    <span>please enter alphabets with some space only.</span>
+                </div>
+
+            </div>
+
+        </div>&nbsp;
+
+
+        <div class="form-group row col-md-12 mt-1">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary form-control">Back</button>
+
+            </div>
+            <div class="col-md-6">
+                <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary form-control">Click/Continue</button><br><br>
+            </div>
+      </div>
+
+    </form>
+
+</div> -->
+

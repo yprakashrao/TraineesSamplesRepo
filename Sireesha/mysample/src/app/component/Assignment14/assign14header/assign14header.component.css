@@ -1,0 +1,9 @@
+
+.contfluid{
+      border: 1px solid whitesmoke; 
+      display: flex;
+      flex-direction: row;
+      /* justify-content: space-between; */
+      margin-top: 35px;
+      background-color: aliceblue;
+}

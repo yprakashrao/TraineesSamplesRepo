@@ -1,0 +1,75 @@
+img{
+      margin: auto;
+      display: flex;
+      text-align: center;
+      border: 3px  pink;
+      width: 300px;
+      height: 300px;
+      border-width: 50px;
+}
+
+#divv {
+text-align: center;      
+}
+
+#divvv{
+      margin: auto;      
+      width: 800px;
+      height: 30px;
+      color: rgb(255, 0, 140);
+      text-align: center;
+      background-color: azure;
+      font-size: 20px;
+}
+
+#para {
+      border: 1px solid blue;
+      margin: auto;
+      text-align: center;
+      width: 50%;
+      height: 200px;
+}
+
+.divvv{
+      margin: auto;      
+      width: 800px;
+      height: 30px;
+      color: rgb(255, 0, 140);
+      text-align: center;
+      background-color: azure;
+      font-size: 20px;
+}
+.divwh {
+      border: 1px solid blue;
+      margin: auto;
+      text-align: center;
+      width: 300px;
+      height: 200px;
+      text-align: center;
+}
+.traup *{
+      font-size: 20px;  
+      border: 2px solid black;  
+      color: black;   
+      padding: 30px;  
+      margin: 40px;     
+}
+.Ass2-table {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      text-align: center;
+      width: 100%;           
+}
+#Ass2-tabhead {
+      background-color: grey;
+      width: auto;
+      height: 40px;
+      text-align: center;
+}
+
+
+
+     
+
+
+

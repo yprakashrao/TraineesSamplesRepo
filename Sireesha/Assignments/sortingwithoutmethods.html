@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <script>
+            const list1 = [21, 56, 2, 89, 37, 45, 90];
+            const list2 = [92, 56, 82, 11, 45, 32, 0];
+            const list3 = [];
+
+
+            console.log(list1);
+            console.log(list2);
+
+            //missing elements
+            function missingNumbers(l1, l2) {
+                  for (var i = 0; i < l1.length; i++) {
+                        var num = l1[i];
+                        for (var j = 0; j < l2.length; j++) {
+                              if (search(l2, num)) {
+                                    list3.push(num);
+                                    break;
+                              }
+                        }
+                  }
+            }
+
+
+            //search elements
+            function search(list, value) {
+                  var flag = false;
+                  for (var i = 0; i < list.length; i++) {
+                        if (list[i]  == value) {
+                              flag = true;
+                        }
+                  }
+                  return flag;
+            }
+
+            //sorting method
+            function sort(list) {
+                  for (var i = 0; i < list.length; i++) {
+                        for (j = i + 1; j < list.length; j++) {
+                              if (list[i] > list[j]) {
+                                    var temp = list[i];
+                                    list[i] = list[j];
+                                    list[j] = temp;
+                              }
+                        }
+                  }
+            }
+
+            sort(list1);
+            sort(list2);
+
+            console.log(list1);
+            console.log(list2);
+
+            missingNumbers(list1, list2);
+
+            console.log(list3);
+
+
+            function add(num1, num2) {
+                  console.log(num1 + num2);
+                  return num1+num2;
+            }
+
+            var x=add(5,2);
+            
+      </script>
+</body>
+
+</html> 
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<h2>HTML Iframes example</h2>
+<p>Use the height and width attributes to specify the size of the iframe:</p>
+<iframe src="https://www.javatpoint.com/" height="300" width="400"></iframe>
+</body>
+</html> -->

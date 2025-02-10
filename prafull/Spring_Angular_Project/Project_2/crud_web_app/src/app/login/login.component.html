@@ -1,0 +1,79 @@
+
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="../../assets/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+          <div *ngIf="isLoginError" class="text-danger text-center error-message mb-2">
+             Incorrect username or password
+        </div>
+
+          <form #LoginForm="ngForm" [formGroup]="loginForm" (ngSubmit)="onSubmit(username.value,password.value)">
+            <div class="d-flex flex-row justify-content-center">
+              <p class="lead text-danger fw-normal mb-0 me-3">Login</p>
+            </div>
+  
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0"></p>
+            </div>
+            
+            <div class="form-outline mb-4">
+            <label class="form-label" maxLength="20">User Name</label>
+            <input type="username" #username ngModel name="username" id="username" formControlName="username" class="form-control"
+                placeholder="Enter a valid username"/>
+<!--                 
+                <div class="form-text text-danger" 
+                *ngIf="username.errors?.['required'] && (username.touched || username.dirty)">
+                  *username is required.
+                </div> 
+                <div class="form-text text-danger" 
+                *ngIf="username.errors?.['pattern'] && (username.touched || username.dirty)">
+                *Enter only Alphabet. 
+          </div> -->
+            </div>
+  
+           
+            <div class="form-outline mb-3">
+            <label class="form-label" for="form3Example4">Password</label>
+            <input type="password" #password ngModel name="password" id="password" formControlName="password" class="form-control"
+                placeholder="Enter password"/>
+                <!-- <div class="form-text text-danger" 
+                *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">
+                  *password is required.
+                </div> 
+                <div class="form-text text-danger" 
+                *ngIf="password.errors?.['pattern'] && (password.touched || password.dirty)">
+                *minimum eight 8 keywords. 
+          </div>  -->
+            </div>
+  
+            <div class="d-flex justify-content-between align-items-center">
+      
+              <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                <label class="form-check-label" for="form2Example3">
+                  Remember me
+                </label>
+              </div>
+              <a routerLink="#!" class="text-body">Forgot password?</a>
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button [disabled]="!LoginForm.valid" type="submit" class="btn btn-success"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/register-form"
+                  class="link-danger">Register</a></p>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+ 
+  

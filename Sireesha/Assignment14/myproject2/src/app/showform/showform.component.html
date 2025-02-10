@@ -1,0 +1,121 @@
+<div class="mt-5 d-flex justify-content-center">
+      <mat-form-field appearance="fill">
+            <!-- <mat-label>Search</mat-label> -->
+            <input matInput (keyup)="filter($event.target)" placeholder="Search here..">
+      </mat-form-field>
+</div>
+
+<div class="table-responsive wrapper">
+      <table mat-table [dataSource]="data" matSort class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef>Id</th>
+                  <td mat-cell *matCellDef="let element">{{element.id }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="firstname">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef>First Name</th>
+                  <td mat-cell *matCellDef="let element">{{element.firstname }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="lastname">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef>Last Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="age">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Age </th>
+                  <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="gender">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef>Gender </th>
+                  <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="phone">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Phone </th>
+                  <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="edit">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Edit </th>
+                  <td mat-cell *matCellDef="let element">
+                        <button mat-raised-button class="btn btn-primary" (click)="editData(element.id)">Edit</button>
+                  </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="delete">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Delete </th>
+                  <td mat-cell *matCellDef="let element">
+                        <button mat-raised-button class="btn btn-danger" (click)="deleteData(element.id)">Delete</button>
+                  </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columns"></tr>
+            <tr mat-row *matRowDef="let row; columns: columns"></tr>
+
+      </table>
+</div>
+
+<mat-paginator [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"
+      showFirstLastButtons>
+</mat-paginator>
+
+
+
+
+
+
+
+<!-- <ng-template #contentDelete let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Confirm Delete</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2>Are you sure you want to delete this record.</h2>
+        <div class="border text-center"> 
+          <button data-dismiss="modal" class="btn btn-danger" (click)="onDelete()">Yes, Delete!</button> 
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cancel</button>
+      </div>
+      </ng-template> -->
+
+
+
+
+<!--first table without mattab
+      <div class="container mt-4">
+      <div class="table-responsive card">
+            <h2 class="text-center">List Of Patients</h2> -->
+<!-- *ngIf="status==200" if we want place this in ts component then we need to place this in table -->
+<!-- <table class="table table-striped table-hover table-bordered  t-body">
+                  <thead>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>Phone Number</th>
+                        <th>Gender</th>
+                  </thead>
+
+                  <tbody>
+                        <tr *ngFor="let product of data">
+                              <td>{{product.id}}</td>
+                              <td>{{product.firstname}}</td>
+                              <td>{{product.lastname}}</td>
+                              <td>{{product.age}}</td>
+                              <td>{{product.gender}}</td>
+                              <td>{{product.phone}}</td>
+                        </tr>
+                  </tbody>
+            </table>
+      </div>
+</div> -->

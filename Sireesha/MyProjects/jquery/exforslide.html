@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Example for slideDown</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                  $(document).ready(function(){
+                        $("#flip").click(function(){
+                              $("#panel").slideToggle("slow");
+                        });
+                  });
+            </script> 
+            <style>
+            #flip {
+                  text-align: center;
+                  border: 2px dotted blue;
+                  background-color: aliceblue;
+                  border-radius: 55px;
+            }
+            #panel {  
+                  padding: 50px;  
+                  display: none; 
+                  border: 1px solid red;
+                  border-radius: 55px; 
+                  background-color: antiquewhite;
+            }      
+            </style>          
+      </head>
+      <body>
+            <div id="flip">
+                  <p><b>Click here for slidedown data</b></p>
+            </div><br>
+            <div id="panel">
+                  <p><i>To design webpages html is required for applying more styles css is required.
+                        To create webpages dynamically javascript is required.To reduce the number of
+                        steps jquery is required.
+                  </i></p>
+            </div>
+      </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Example for text and html</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                 $(document).ready(function(){
+                       /*  $("button").click(function(){
+                              alert($("#para").html());
+                        });
+                  }); */
+                  /* $(document).ready(function(){
+                        $("button").click(function(){
+                              var x = $("#para").html();
+                              $("span").text(x);
+                        });
+                  }); here we used to find the text value and html value
+                  $(document).ready(function(){
+                        $("button").click(function(){
+                              alert($("p").attr("id"));
+                        });
+                        $("p").click(function(){
+                              alert($("p").attr("class"));
+                        });
+                 here it is used to find the attribute of the paragraph here.
+                 $("button").click(function(){
+                 alert($("#para").css("border")) ;
+                 });
+                 $("p").click(function(){
+                  $("#para").css("border","3px dotted green");
+                 });here it is used to find the css-id-class ie attributes of given data using attribute 
+                 method .*/
+                 $("#btn1").click(function(){
+                  $("#para").prepand("<p>hello query2</p>");
+                 });
+                 $("#btn2").click(function(){
+                  $("#para").append("<b>helloooo</b>");
+                 });
+                 $("#btn3").click(function(){
+                  $("#para").before("<p>hello query2</p>");
+                 });
+                 $("#btn4").click(function(){
+                  $("#para").after("<b>helloooo</b>");
+                 });
+                 $("#btn5").click(function(){
+                  $("#para").remove();
+                 });
+                 $("#btn6").click(function(){
+                  $("#para").empty();
+                 });
+
+
+            });
+
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body>
+            <h3>Example for html and text dom method</h3>
+            <button id="btn1">prepand</button>
+            <button id="btn2">append</button>
+            <button id="btn3">Before</button>
+            <button id="btn4">After</button>
+            <button id="btn5">Remove</button>
+            <button id="btn6">Empty</button>
+            <p id="para" class="p" >
+                  jQuery tutorial for beginners and professionals provides deep knowledge of jQuery
+                   technology. Our jQuery tutorial will help you to learn jQuery fundamentals, 
+                   example, selectors, events, effects, traversing, CSS and attributes. 
+            </p>
+            <span></span>
+      </body>
+</html>

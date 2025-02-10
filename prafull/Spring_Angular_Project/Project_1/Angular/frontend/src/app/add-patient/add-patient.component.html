@@ -1,0 +1,108 @@
+
+<section class="vh-80" style="background-color: #eee;">
+<div class="container h-80">
+<div class="row d-flex justify-content-center align-items-center h-80">
+  <div class="col-lg-12 col-xl-12 mb-2">
+  <div class="card text-black" style="border-radius: 25px;">
+     <div class="card-body p-md-5">
+      <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                 <p class="text-center h2 fw-bold mb-4 mx-1 mx-md-0 ">Book Appointment</p>
+   
+      <!-- <form [formGroup]="patientsaveform" (ngSubmit)="save(patientsaveform)"> -->
+
+
+      <form [formGroup]="patientsaveform" (ngSubmit)="registered(patientsaveform)">
+        <div class="form-group mb-3">
+          <label for="firstName">First Name</label>
+          <input type="text" maxlength="15" class="form-control" formControlName="firstName" id="firstName" data-toggle="tooltip"
+            data-placement="right" title="Enter Patient Name">
+          <div class="form-text text-danger" 
+          *ngIf="FirstName.errors?.['required'] && (FirstName.touched || FirstName.dirty)">
+            *First Name is required.
+          </div>
+          <div class="form-text text-danger" 
+          *ngIf="FirstName.errors?.['pattern'] && (FirstName.touched || FirstName.dirty)">
+            *Enter only Alphabet. 
+          </div>
+        </div>
+
+
+        <div class="form-group mb-3">
+          <label for="lastName">Last Name</label>
+          <input type="text" maxlength="15" class="form-control" formControlName="lastName" data-toggle="tooltip"
+            data-placement="right" title="Enter Patient lastName">
+             <div class="form-text text-danger" 
+          *ngIf="LastName.errors?.['required'] && (LastName.touched || LastName.dirty)">
+            *Last Name is required.
+          </div>
+          <div class="form-text text-danger" 
+          *ngIf="LastName.errors?.['pattern'] && (LastName.touched || LastName.dirty)">
+            *Enter only Alphabet. 
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="age">Age</label>
+          <input type="number" max="100" class="form-control" formControlName="age" data-toggle="tooltip" data-placement="right"
+            title="Enter Patient age">
+            <div class="form-text text-danger" 
+            *ngIf="Age.errors?.['required'] && (Age.touched || Age.dirty)">
+              *Age is required.
+            </div>
+            <div class="form-text text-danger" 
+          *ngIf="Phone.errors?.['pattern'] && (Phone.touched || Phone.dirty)">
+            *Enter only Number. 
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="phone">Phone No</label>
+          <input type="text" maxlength="10" minlength="10" class="form-control" formControlName="phone" id="phone" data-toggle="tooltip" data-placement="right"
+            title="Enter Patient Phone">
+            <div class="form-text text-danger" 
+            *ngIf="Phone.errors?.['required'] && (Phone.touched || Phone.dirty)">
+              *Phone number is required.
+            </div>
+            <div class="form-text text-danger" 
+            *ngIf="Phone.errors?.['minLength'] && (Phone.touched || Phone.dirty)">
+              *Phone number is short.
+            </div>
+        </div>
+         
+        <div class="form-group form-check-inline mb-3">
+          <div class="form-text text-dark" 
+            *ngIf="Gender.errors?.['required']">
+              Select:
+            </div>
+          <label for="gender">Gender</label>
+          <label class="form-check-label" style="padding-left:15px;" for="inlineRadio1">Male</label>
+          <input mdbRadio class="form-check-input" formControlName="gender" type="radio" name="gender" id="inlineRadio1" value="male" />
+          <label class="form-check-label" style="padding-left:15px;" for="inlineRadio2">Female</label>
+          <input mdbRadio class="form-check-input" formControlName="gender" type="radio" name="gender" id="inlineRadio2" value="Female"/>
+          <label class="form-check-label" style="padding-left:15px;" for="inlineRadio2">Other</label>
+          <input mdbRadio class="form-check-input" formControlName="gender" type="radio" name="gender" id="inlineRadio2" value="Other"/>
+          </div>
+        <div class="d-flex justify-content-center pt-3">
+        <button  type="submit" class="btn btn-primary">Register</button>
+        </div>
+        <div class="mt-2 text-center text-success" *ngIf="mystatus==1">
+          <strong>registered successfully</strong>
+          </div>
+         
+      </form>
+        
+    </div>
+    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+      <img src="../../assets/dev.png" class="img-fluid" alt="Sample image">
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+ 

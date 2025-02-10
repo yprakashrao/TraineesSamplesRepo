@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webform</title>
+  <link rel="stylesheet" href="../styles/mystyles.css">
+  <script src="../Assignments/Assignment8js.js"></script>
+  <div class="Ass7heading">
+    <marquee behavior="scroll" direction="right">
+      <h3>Designing a webpage using JS</h3>
+    </marquee>
+  </div>
+</head><br><br>
+
+<body>
+  <table class="Ass8">
+    <!---1st row--->    
+    <tr>         
+      <td >       
+        <h2>First portion of validation</h2>   
+        <table class="Ass8-1">             
+          <tr >
+            <td><label for="name">Name:</label>
+              <input type="text" id="name" name="name" onkeyup="namevalidate()"><span id="char"></span><br><br>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="number">Min Age:</label>
+              <input type="number" id="minage" name="minage" onkeyup="minvalidate()"><br><span id="age1"></span><br>
+            </td>
+          </tr>
+          <tr>
+            <td> <label for="number">Max Age:</label>
+              <input type="number" id="maxage" name="maxage" onkeyup="maxvalidate()"><br><span id="age2"></span><br>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="location" name="location">Location:</label>
+              <select id="country" onchange="locationvalidate();">
+                <option value="">----</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+              </select><br><br>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!---2nd row--->
+    <tr class="Ass8-2">      
+      <td><img src="" id="myimg"></td>
+      <td>
+        <table>
+          <h2>Second portion validation</h2>
+          <tr>
+            <td>
+              <p>Name: <span id="demo"></span></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Total Age: <span id="demo1"></span></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Location: <span id="demo2"></span></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!---3rd row-->
+  <table class="Ass8-3" >    
+    <tr >
+      <Div style="text-align: center;"><h2>Third portion validation</h2></Div>      
+      <td><img name="slide"></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

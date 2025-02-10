@@ -1,0 +1,22 @@
+<div class="row">
+    <h2 class="tabhead">List Of Sections</h2>
+    <div class="col-sm-6">
+        <ul>
+            <li *ngFor="let data of data">
+                <span (click)="removeItem(data)">
+                    {{data.name}}
+                </span>
+                
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <ul>
+            <li *ngFor="let secondbox of data1">
+                
+                <span (click)="addnew(secondbox)">
+                    {{secondbox.name}}
+                </span>
+        </ul>
+    </div>
+</div>

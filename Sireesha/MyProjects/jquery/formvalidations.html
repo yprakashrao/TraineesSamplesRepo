@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>creating a form using javascript to show data in a table</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body>
+      <center>
+            <h4>jQuery Form Validation Example</h4>
+            <form id="formValid" action="">
+                  <div>
+                        <label for="name">First Name:</label>
+                        <input type="text" id="form_fname" name="fname" placeholder="Enter first name" ><br><br>
+                        <span class="error_fname" id="fname_error_msg"></span>
+                  </div>
+                   <div>
+                        <label for="name">Last Name:</label>
+                        <input type="text" id="form_lname" name="lname" placeholder="Enter first name"><br><br>
+                        <span class="error_lname" id="lname_error_msg"></span>
+                  </div>
+                  <!--<div>
+                        <label for="email"> E-Mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email"><br><br>
+                        <span class="error_message" id="email_error_msg"></span>
+                  </div>
+                  <div>
+                        <label for="password"> Password: </label>
+                        <input type="password" id="password" name="password"><br><br>
+                        <span class="error_message" id="password_error_msg"></span>
+                  </div> -->
+                  <div>
+                        <input type="submit" class="submit" value="submit"><br><br>
+                  </div>
+            </form>
+      </center>
+</body>
+<script type="text/javascript">
+      $(document).ready(function () {
+            $("#fname_error_msg").hide();
+            $("#lname_error_msg").hide();
+      });
+      var error_fname = false;
+      var error_lname = false;
+
+
+      $("#form_fname").focusout(function () {
+            check_fname();
+      });
+      $("#form_lname").focusout(function () {
+            check_lname();
+      });
+
+      function check_fname() {
+            var pattern = /^[a-zA-Z\s]*$/;
+            var fname = $("#form_fname").val();
+            if (pattern.test(fname) && fname != "") {
+                  $("#fname_error_msg").hide();
+            } else {
+                  $("#fname_error_msg").html("Enter only characters");
+                  $("#fname_error_msg").show();
+                  error_fname = true;
+            } 
+      };
+      function check_lname() {
+            var pattern = /^[a-zA-Z\s]*$/;
+            var lname = $("#form_lname").val();
+            if (pattern.test(lname) && lname !== "") {
+                  $("#lname_error_msg").hide();
+            } else {
+                  $("#lname_error_msg").html("Enter only characters");
+                  $("#lname_error_msg").show();
+                  error_lname = true;
+            }; 
+      };
+</script>
+
+</html>

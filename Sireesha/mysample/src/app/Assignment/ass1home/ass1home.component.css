@@ -1,0 +1,18 @@
+
+.container {
+      position: absolute;
+      right: 40px;
+      margin-top: 80px;
+      max-width: 700px;
+      padding: 16px;
+      color: whitesmoke;
+    }
+
+    .bg-img {
+      background-image: url("../../../assets/stone.jpg");   
+      height: 380px;    
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }

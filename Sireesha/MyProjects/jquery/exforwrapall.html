@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Example for wrapAll</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                  $(document).ready(function(){
+                        $("button").click(function(){
+                              $("p").wrapAll("<h2></h2>");
+                        });
+                  });
+            </script>
+            <style>
+                  h2{
+                        background-color: red;
+                        font-size: x-large;
+                  }
+            </style>
+      </head>
+      <body>
+            <button>wrapAll</button>
+            <b>Here I am showing example for wrapAll method</b>
+            <p>Hello javascript!</p>
+            <p>hello html!</p>
+      </body>
+</html>

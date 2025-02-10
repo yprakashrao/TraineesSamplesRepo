@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="script.js" defer></script>
+</head>
+<body>
+      <label for="State:">State:</label>
+      <select name="state" id="state">
+      <option value="---">---</option>
+      <option value="ap">ap</option>
+      <option value="ts">ts</option>
+      <option value="kl">kl</option>
+</select>
+<br><br>
+      <div id="ap-d">
+      <label for="ap-d">ap-d</label>
+            <select name="ap-d" >ap-d
+            <option value="a1">a1</option>
+            <option value="a2">a2</option>
+            <option value="a3">a3</option>
+      </select>
+      </div>
+      <div id="ts-d">
+      <label for="ts-d">ts-d</label>
+            <select name="ts-d" >kl-d
+            <option value="b1">b1</option>
+            <option value="b2">b2</option>
+            <option value="b3">b3</option>
+      </select>
+      </div>
+      <div id="kl-d">
+      <label for="kl-d">kl-d</label>
+            <select name="kl-d" >kl-d
+            <option value="c1">c1</option>
+            <option value="c2">c2</option>
+            <option value="c3">c3</option>
+      </select>
+      </div>
+
+      <!-- <script>
+            var state = document.getElementById("state");
+            var d1=document.getElementById("ap-d");
+            var d2=document.getElementById("ts-d");
+            var d3=document.getElementById("kl-d");
+
+            d1.style.display="none";
+            d2.style.display="none";
+            d3.style.display="none";
+
+            function func(){
+                  if(state.value=="ap"){
+            d1.style.display="block";
+            d2.style.display="none";
+            d3.style.display="none";
+      }
+      else if(state.value=="ts"){
+            d1.style.display="none";
+            d2.style.display="block";
+            d3.style.display="none";
+      }
+      else if(state.value=="kl"){
+            d1.style.display="none";
+            d2.style.display="none";
+            d3.style.display="block";
+      }
+
+      else{
+            d1.style.display="none";
+            d2.style.display="none";
+            d3.style.display="none";
+      }
+      console.log(state.value);
+            }
+      </script> -->
+</body>
+</html>

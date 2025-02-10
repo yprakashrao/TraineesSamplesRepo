@@ -1,0 +1,54 @@
+body {
+      background-image: url(../../Images/hspt.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% ;            
+}
+.anchordisplay {
+      text-decoration: none;
+      color: black;
+      font-size: large;
+
+}
+
+#achorvisibility {
+      text-decoration: solid;
+      padding-top: 2px;
+      margin-left: 48%;
+}
+
+#formbody {
+      background-color: rgb(238, 230, 243); 
+      border: 1px solid blueviolet;
+      margin-right: 15%;
+      margin-left: 50%;
+      padding-top: 4%;
+      padding-bottom: 6%;
+      justify-content: center;
+      display: flex;
+      width: 40%; 
+      border-radius: 80%;
+      
+}
+
+table {
+      border-collapse: separate;
+      border-spacing: 0 1em;
+}
+
+h1{
+      margin-left: 7%;
+      padding-left: 45%;
+      padding-top: 1%;
+      color: black;
+}
+#successmsg{
+      color: black;
+      text-transform: uppercase;
+      font-size: larger;
+      font-style: bold;
+      margin-left: 60%;
+}
+
+
+
+

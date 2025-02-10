@@ -1,0 +1,151 @@
+<div class="p-4">
+
+    <div class="card w-50 mt-4 mx-auto p-5  container">
+
+        <h2 class="card-header text-center">Registration Form</h2>
+
+        <span *ngIf="errormsg">Kindly check the connection.Form is not updated in database</span>
+        <span *ngIf="successmsg">Form is updated successfully</span>
+
+        <form [formGroup]="regForm" name="myForm" (ngSubmit)="updateForm()">
+
+            <div class="form-group mt-3">
+                <label>User Name:</label>
+                <input type="text" (focus)="successmsg=false" formControlName="username" class="form-control"
+                    maxlength="15" placeholder="Please enter name">
+                <div *ngIf="regForm.controls['username'].touched && regForm.controls['username']?.['errors']"
+                    class="invalid">
+
+                    <div *ngIf="regForm.controls['username']?.['errors']?.['required']">
+                        <span>User name is required</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['username']?.['errors']?.['maxlength']">
+                        <span>Username reaches max characters.</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['username']?.['errors']?.['pattern']">
+                        <span>Please enter alpha numerics only..no spaces and special chars.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group mt-3">
+                <label>Full Name:</label>
+                <input type="text" formControlName="fullname" class="form-control" maxlength="15"
+                    placeholder="Please enter full name">
+                <div *ngIf="regForm.controls['fullname'].touched && regForm.controls['fullname']?.['errors']"
+                    class="invalid">
+
+                    <div *ngIf="regForm.controls['fullname']?.['errors']?.['required']">
+                        <span>full name is required</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['fullname']?.['errors']?.['maxlength']">
+                        <span>fullname reaches max characters.</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['fullname']?.['errors']?.['pattern']">
+                        <span>please enter alphabets and spaces only.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="email">Email:</label>
+                <input type="email" formControlName="email" class="form-control" placeholder="abc@gmail.com">
+
+                <div *ngIf="regForm.controls['email'].touched && regForm.controls['email']?.['errors']" class="invalid">
+
+                    <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
+                        <span>email is required</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['email']?.['errors']?.['pattern']">
+                        <span>enter valid email..</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="form-group mt-3">
+                <label for="phone">Phone:</label>
+                <input type="tel" formControlName="phonenumber" class="form-control" maxlength="10"
+                    placeholder="enter phone number">
+                <div *ngIf="regForm.controls['phonenumber'].touched && regForm.controls['phonenumber']?.['errors']"
+                    class="invalid">
+
+                    <div *ngIf="regForm.controls['phonenumber']?.['errors']?.['required']">
+                        <span>Phone number is required</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['phonenumber']?.['errors']?.['maxlength']">
+                        <span>Phonenumber should be 10 digits</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['phonenumber']?.['errors']?.['pattern']">
+                        <span>Phone number should be 10 numerals</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="role">Role:</label>
+                <select name="role" id="role" class="form-select" formControlName="role">
+                    <option value="ROLE_ADMIN">admin</option>
+                    <option value="ROLE_USER">user</option>
+                </select>
+                <div *ngIf="regForm.controls['role'].touched && regForm.controls['role']?.['errors']"
+                    class="invalid">
+
+                    <div *ngIf="regForm.controls['role']?.['errors']?.['required']">
+                        <span>role is required</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group mt-3">
+
+                <label for="gender">Gender:</label>
+                <label>
+                    <input type="radio" formControlName="gender" name="gender" value="Male">male
+                </label>
+                <label>
+                    <input type="radio" formControlName="gender" name="gender" value="Female">female
+                </label>
+                <label>
+                    <input type="radio" formControlName="gender" name="gender" value="Others">others
+                </label>
+
+                <div *ngIf="regForm.controls['gender'].touched && regForm.controls['gender']?.['errors']"
+                    class="invalid">
+
+                    <div *ngIf="regForm.controls['gender']?.['errors']?.['required']">
+                        <span>Gender is required</span>
+                    </div>
+
+                </div>
+
+            </div><br>
+
+            <button type="submit" [disabled]="!regForm.valid" class="btn btn-light form-control">Update</button><br><br>
+
+        </form>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+<app-footer-component></app-footer-component>

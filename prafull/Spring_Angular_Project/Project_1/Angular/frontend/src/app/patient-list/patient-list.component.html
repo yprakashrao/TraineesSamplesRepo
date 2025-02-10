@@ -1,0 +1,103 @@
+<!-- <div class="panel panel-default">  
+  <div class="panel-heading pt-3">  
+      <h1 style="text-align:center">Patients List</h1><br> 
+                <div class="col-sm-4"> 
+        </div>             
+    </div>   
+    <section>
+  <div class="panel-body text-center"> 
+      <table class="table table-bordered">
+          <thead class="table-dark">  
+              <tr>  
+                  <th>Id</th>
+                  <th>Firstname</th>  
+                  <th>Lastname</th>  
+                  <th>Age</th>  
+                  <th>Contact No</th>  
+                  <th>Gender</th>   
+              </tr>  
+          </thead>  
+          <tbody>  
+               <tr *ngFor="let patients of patients">  
+                  <td>{{patients.id}}</td>
+                  <td>{{patients.firstName}}</td>
+                  <td>{{patients.lastName}}</td>
+                  <td>{{patients.age}}</td>
+                  <td>{{patients.phone}}</td>
+                  <td>{{patients.gender}}</td>
+                </tr>   
+          </tbody><br>  
+       </table>  
+   </div>    
+    </section>
+ -->
+
+
+ <div class="panel panel-default">  
+    <div class="panel-heading pt-3">  
+        <h1 style="text-align:center">Patients List</h1><br> 
+                  <div class="col-sm-4"> 
+          </div>             
+      </div>
+<div class="container">
+
+<table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+ class="mat-elevation-z8">
+
+
+<ng-container matColumnDef="id">
+<th class="bg-dark text-light" mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by id">
+Id.
+</th>
+<td mat-cell *matCellDef="let patients"> {{patients.id}} </td>
+</ng-container>
+
+
+<ng-container matColumnDef="firstName">
+<th class="bg-dark text-light" mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by firstName">
+Firstname
+</th>
+<td mat-cell *matCellDef="let patients"> {{patients.firstName}} </td>
+</ng-container>
+
+
+<ng-container matColumnDef="lastName">
+<th class="bg-dark text-light" mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by lastName">
+Lastname
+</th>
+<td mat-cell *matCellDef="let patients"> {{patients.lastName}} </td>
+</ng-container>
+
+
+<ng-container matColumnDef="age">
+<th class="bg-dark text-light" mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by age">
+Age
+</th>
+<td mat-cell *matCellDef="let patients"> {{patients.age}} </td>
+</ng-container>
+
+<ng-container matColumnDef="phone">
+    <th class="bg-dark text-light" mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by phone">
+    Phone
+    </th>
+    <td mat-cell *matCellDef="let patients"> {{patients.phone}} </td>
+    </ng-container>
+
+<ng-container matColumnDef="gender">
+    <th class="bg-dark text-light" mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by gender">
+    Gender
+    </th>
+    <td mat-cell *matCellDef="let patients"> {{patients.gender}} </td>
+    </ng-container>
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+showFirstLastButtons
+aria-label="Select page of patients">
+</mat-paginator>
+</div>
+
+

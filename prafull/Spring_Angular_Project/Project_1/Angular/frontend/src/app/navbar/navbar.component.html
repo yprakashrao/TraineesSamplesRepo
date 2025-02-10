@@ -1,0 +1,28 @@
+
+   <nav class="navbar navbar-expand-sm my-1 bg-dark">  
+      <div class="container-fluid">
+        <div class="headm">
+            <img src="../../assets/kidney.png" class="img-fluid" width="60px;">
+          </div>
+          <a class="navbar-brand" routerLink="">Hospital</a>
+        <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-target="#navbarSupportContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          (click)="collapsed = !this.collapsed">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+         <div class="navbarSupportedContent" [ngClass]="{collapse:collapsed,'navbar-collapse':true}">
+        <ul class="navbar-nav"> 
+          <li class="nav-item ">  
+            <a routerLink="add-patient" class="nav-link" class="btn btn-warning active" role="button" >New</a>  
+          </li>   
+          <li class="nav-item ">  
+            <a routerLink="existing-patient" class="nav-link" class="btn btn-warning active" role="button" >Existing </a>  
+          </li>   
+          <li class="nav-item ">  
+            <a  routerLink="view-patient" class="nav-link" class="btn btn-warning active" role="button" >Show</a>  
+          </li>            
+        </ul>
+         </div> 
+         </div> 
+      </nav>  
+<router-outlet></router-outlet>

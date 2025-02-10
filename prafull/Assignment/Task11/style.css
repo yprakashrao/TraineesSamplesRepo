@@ -1,0 +1,251 @@
+
+body{
+  border: 1px solid black;
+  margin: 10px 10px 10px 10px;
+  background-color: lightskyblue;
+}
+.navbar{
+    background-color:whitesmoke;
+}
+.header{
+    font-size: 45px;
+    background-color:lightskyblue;
+    color: red;
+}
+.header img{
+    width: 50%;
+    height: 50%;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: whitesmoke;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+.navbar a:hover {
+    color: var(--green);
+}
+.navbar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.header .navbar a{
+    border-radius: 25px;
+    border: 0.5px solid white; 
+    background-color:black;
+    color: white;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size:22px;
+    float: right;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+h6{
+    text-align: center;
+    color:black;
+    margin-bottom: 5px;
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    position:relative;
+    display: flex; 
+    margin-left: 100px;
+  }
+  .column {
+    padding: 5px; 
+    border: 10px solid gray;
+    border-radius: 25px;
+    display: flex;
+    margin:20px 25px 20px 25px;
+  }
+  .column img{
+    height: 200px;
+    width: 200px;
+  }
+  /* Clear floats after image containers */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+
+/* Book file css */
+#booktask{
+  border-radius: 30px;
+  border: 2px solid black;
+  margin-left: 350px;
+  margin-right: 350px;
+  background-color: whitesmoke;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  #booktask {
+    border-radius: 45px;
+  }
+
+  .form{
+    background-color: aquamarine; 
+    border-radius: 45px;
+  }
+  #booktask img{
+    width: 85px;
+    height: 85px;
+    border-radius: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+  }
+ #booktask h1{
+    text-align: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: red;
+    height: 50px;
+    /* padding-bottom: 40px; */
+ } 
+ .OD input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+ }
+ .OD{
+  text-align: center;
+ }
+ .firstname{
+  margin-top: 20px;
+  text-align: center;
+ }
+ .firstname input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+ }
+ .lastname{
+  margin-top: 20px;
+  text-align: center;
+ }
+ .lastname input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+ }
+
+ .dob{
+  margin-top: 20px;
+  text-align: center;
+ }
+
+ .dob input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+ }
+
+ .age{
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 55px;
+ }
+ .age input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+ }
+
+ .mo{
+  margin-top: 20px;
+  text-align: center;
+ }
+ .mo input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+ }
+#gender input{
+  margin-left: 5px;
+}
+ .Bg {
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 110px;
+ }
+ .add {
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 20px;
+ }
+ .add input{
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+ }
+
+ .btn input{
+   background-color: green;
+   border-radius: 20px;
+   width: 90px;
+   height: 35px;
+   border: none;
+ }
+ .btn{
+  text-align: center;
+  margin-top: 30px;
+ }
+ .btn .submit{
+  color: whitesmoke;
+  cursor: pointer;
+ }
+
+#add_to{
+  background-color: whitesmoke;
+  border: none;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+ .contact {
+  background-color: rgb(250, 197, 97);
+  border-radius: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  text-align: center;
+  box-shadow: 1px 1px 2px 7px;
+ }
+
+ .contact h1{
+   margin-top: 20px;
+   font-family: cursive;
+ }
+ .contact input{
+  width: 250px;
+  height: 25px;
+  border-radius: 10px;
+ }
+
+ .buton input {
+  color: whitesmoke;
+  background-color:limegreen;
+  height: 30px;
+  width: 100px;
+  margin-top: 20px;
+  border: none;
+  margin-bottom: 10px;
+ }

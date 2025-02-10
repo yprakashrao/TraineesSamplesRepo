@@ -1,0 +1,77 @@
+.table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 100%;
+    overflow: auto;
+    /* border-radius: 20px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+table {
+    width: 80%;
+}
+
+table th {
+    background-color:gray;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+}
+th.mat-sort-header-sorted {
+    color:white;
+  }
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+tr:nth-child(even):hover {
+    background-color: lightgrey;
+}
+
+tr:nth-child(even) button {
+    background-color: lightgray;
+}
+
+td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+}
+
+th.mat-column-position,
+td.mat-column-position {
+    padding-left: 8px;
+}
+
+.menu-btn {
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+
+
+.paginator {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 16px 20px lightgray;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border: none;
+    border-top: 1px solid lightgray;
+    transform: translateY(-16px);
+}
+
+tr,
+td {
+    border: none;
+}

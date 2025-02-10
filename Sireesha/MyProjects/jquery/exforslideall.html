@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>slideall</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                  $(document).ready(function(){
+                        $("#btn1").click(function(){
+                              $("p").slideUp(1000);
+                        })
+                        $("#btn2").click(function(){
+                              $("p").slideDown(2000);
+                        })
+                        $("#btn3").click(function(){
+                              $("p").slideToggle(3000);
+                        })
+                        $("#btn4").click(function(){
+                              $("p").stop(1000);
+                        })
+                  })
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body>
+            <h2 class="divvv">Here is the example for slide up-down-toggle the values.</h2>
+            <p id="para">
+                  When you click on an element, the click event occurs and once the click event occurs 
+                  it execute the click () method or attaches a function to run.
+                  When you click on an element, the click event occurs and once the click event occurs 
+                  it execute the click () method or attaches a function to run.
+                  When you click on an element, the click event occurs and once the click event occurs 
+                  it execute the click () method or attaches a function to run.
+                  When you click on an element, the click event occurs and once the click event occurs 
+                  it execute the click () method or attaches a function to run.
+                  When you click on an element, the click event occurs and once the click event occurs 
+                  it execute the click () method or attaches a function to run.
+                  When you click on an element, the click event occurs and once the click event occurs 
+                  it execute the click () method or attaches a function to run.
+            </p><br><br>
+            <div class="divvv">
+                  <button id="btn1">slideup</button>
+                  <button id="btn2">slidedown</button>
+                  <button id="btn3">slidetoggle</button>
+                  <button id="btn4">stop</button>
+            </div>
+            
+      </body>
+</html>

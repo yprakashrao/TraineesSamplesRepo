@@ -1,0 +1,391 @@
+<head>
+  <link rel="stylesheet" href="../../3.Styles/styles.css">
+   
+  <script type="text/javascript" src="myscript.js"></script>
+  
+  
+</head>
+<body onload="pageload();" id="task7body">
+  
+<div class="container7">
+  <h1 id="task7h1">Form-Validation</h1>
+  <form id="task7form" name="myvalidations" onsubmit="return SubmitFormValidations();">     
+  <div >
+    <table id="task7table">
+      <tr>
+          <td><label for="logo">Logo:</label></td>
+          <td><input type="file" name="logo" id="logo" accept="image/.png" onchange="validateFileType()" placeholder="Upload an image"><br></td>
+      </tr>
+      <tr>
+          <td><label for="Technologies">Technologies:</label></td>
+          <td> 
+            <input type="radio" name="Technologies" id="Technologies" value="java" onclick="techonClick()"> Java <br> <br>
+            <input type="radio" name="Technologies" id="Technologies" value="HTML" onclick="techonClick()">Html  <br><br>
+           <input type="radio" name="Technologies" id="Technologies" value="Javascript" onclick="techonClick()">Css<br> <br></td>
+      </tr>
+      <tr><td>
+     <div class="container">
+       <table>
+      <tr id="myDIV"><td></td>
+          <td><label for="language">Java-Language</label></td>
+          <td>  
+            <select name="jlanguage" id="jlanguage" onchange="showFormFields()">
+              <option value="">Select language</option>
+              <option value="CoreJava">Core Java</option>
+              <option value="AdvanceJava">Advance Java</option>
+              <option value="Springboot">Springboot</option
+            </select>
+          </td>
+          
+      </tr>        
+      <tr id="FEDiv">
+          <td><label for="language">Html-Language</label></td>
+          <td>
+            <select name="felanguage" id="felanguage" onchange="showFormFields()">
+              <option value="">Select language</option>
+              <option value="HTML5">HTML5</option>
+              <option value="Angular">Angular</option>
+              <option value="React">React</option>
+            </select>
+          </td>
+         
+          
+      </tr>
+      <tr id="ScDiv">
+          <td><label for="language">Css-Language</label></td>
+          <td>
+            <select name="sclanguage" id="sclanguage" onchange="showFormFields()">
+              <option value="">Select language</option>
+              <option value="Css1">Css1</option>
+              <option value="Sass">Sass</option>               
+              <option value="Css2">Css2</option>            
+            </select>
+          </td>
+      </tr>
+    </table>
+</div>
+</td></tr>
+      </table>
+  </div> <br><br>
+      <div id="formtable" class="container">
+      <table>
+
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" name="name" id="name" placeholder="your name"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="text" name="email" id="email" placeholder="your email"></td>
+      </tr>
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" name="password" id="password"></td>
+      </tr>
+      <tr>
+        <td><label for="phoneNumber">Phone Number:</label></td>
+        <td><input type="text" name="phoneNumber" id="phoneNumber"></td>
+      </tr>
+      <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td> <input type="radio" name="gender" value="male"> Male <br> 
+          <input type="radio" name="gender" value="female">Female  <br>
+         <input type="radio" name="gender" value="other">  Other <br> </td>
+      </tr>
+      <tr>
+        <td><label for="language">Language</label></td>
+        <td>
+          <select name="language" id="language">
+            <option value="">Select language</option>
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Russian">Russian</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="zipcode">Zip Code:</label></td>
+        <td><input type="number" name="zipcode" id="zipcode"></td>
+      </tr>
+      <tr>
+        <td><label for="Interested">Interested:</label></td>
+        <td><input type="checkbox" name="Interested" value="Cricket"> Cricket <br>
+          <input type="checkbox" name="Interested" value="Chess">Chess <br>
+          <input type="checkbox" name="Interested" value="Boxing">Boxing <br></td>
+      </tr>
+      <tr>
+        <td><label for="about">About:</label></td>
+        <td><textarea name="about" id="about" placeholder="Write about yourself..."></textarea></td><br><br><br>
+      </tr>
+    
+    </table>
+  
+  </div><br><br><br>
+  <div> 
+    <input type="submit" class="submit" value="Register" />
+  </div>
+  </form>
+</div>
+</body>
+  
+<script>
+  
+function validateFileType(){
+  var fileName = document.getElementById("logo").value;
+  var idxDot = fileName.lastIndexOf(".") + 1;
+  var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+  if (extFile=="png"){
+      //TO DO
+  }else{
+      document.getElementById("logo").value = "";
+      alert("Please upload png format image  only.");
+  }   
+}
+
+function pageload(){
+  document.getElementById("myDIV").style.display ="none";
+  document.getElementById('FEDiv').style.display ="none";
+  document.getElementById("ScDiv").style.display ="none";
+  document.getElementById("formtable").style.display ="none";
+}
+
+function techonClick(){  
+  var getSelectedValue = document.querySelector('input[name="Technologies"]:checked');  
+ 
+  if(getSelectedValue.value == "java"){    
+    document.getElementById("myDIV").style.display ="block";
+    document.getElementById('FEDiv').style.display ="none";
+    document.getElementById("ScDiv").style.display ="none";
+  }else if(getSelectedValue.value == "HTML"){    
+    document.getElementById('FEDiv').style.display ="block";
+    document.getElementById("ScDiv").style.display ="none";
+    document.getElementById("myDIV").style.display ="none";
+  }else if(getSelectedValue.value == "Javascript"){
+    document.getElementById("ScDiv").style.display ="block";
+    document.getElementById("myDIV").style.display ="none";
+    document.getElementById('FEDiv').style.display ="none";
+  }
+  
+}
+
+function showFormFields(){
+  var getSelectedjLanguage = document.getElementById("jlanguage");
+  var getSelectedFelanguage = document.getElementById('felanguage');
+  var getSelectedSclanguage = document.getElementById('sclanguage');
+
+  if((getSelectedjLanguage.value == "" || getSelectedjLanguage.value == null ) && (getSelectedFelanguage.value =="" || getSelectedFelanguage.value == null ) && (getSelectedSclanguage.value =="" || getSelectedSclanguage.value ==null)){
+     document.getElementById("formtable").style.display ="none";
+    }else if (getSelectedjLanguage.value != "" && getSelectedFelanguage.value =="" && getSelectedSclanguage.value ==""){
+      document.getElementById("formtable").style.display ="block";
+    }
+    else if (getSelectedjLanguage.value == "" && getSelectedFelanguage.value !="" && getSelectedSclanguage.value ==""){
+      document.getElementById("formtable").style.display ="block";
+    }
+    else if (getSelectedjLanguage.value == "" && getSelectedFelanguage.value =="" && getSelectedSclanguage.value !=""){
+      document.getElementById("formtable").style.display ="block";
+    }else{
+      document.getElementById("formtable").style.display ="none";
+    }
+}
+
+
+function SubmitFormValidations(){
+  var submitValue = false;
+  var logo = document.getElementById("logo");  
+  var password = document.getElementById("password");
+  var phoneNumber = document.getElementById("phoneNumber");
+  var language = document.getElementById("language");
+  var zipcode = document.getElementById("zipcode");
+  var comment = document.getElementById("about");
+  var getSelectedValue = document.querySelector('input[name="Technologies"]:checked');
+  var getSelectedInterest = document.querySelectorAll('input[name="Interested"]:checked');
+  var name = document.getElementById("name");
+  var email = document.getElementById("email");
+  var getSelectedGenderValue = document.querySelector('input[name="gender"]:checked');  
+  
+    if (logo.value === "") 
+    {
+      alert("Please select logo")
+      submitValue = false;
+      logo.focus();
+    }else{
+      submitValue = true;
+    } 
+  
+
+  if (submitValue)
+   {
+    if (getSelectedValue != null)    {
+      submitValue = true;    
+    }
+    else
+    {
+      alert("Please select any technologie");
+      submitValue = false;        
+    }
+   }
+
+   if(getSelectedValue.value!="" || getSelectedValue.value!=null){
+    if (submitValue)
+   {
+   if (name.value == null || name.value == "") {
+    alert("Please enter the name");
+    name.focus();
+    submitValue = false;
+  }
+}
+
+  if (submitValue) {
+    if (!name.value.match(/^[a-zA-Z\s]*$/)) {
+      alert("Please enter characters only");
+      name.focus();
+      name.value = "";
+      submitValue = false;
+    }
+  }
+  if (submitValue) {
+    if (email.value == null || email.value == "") {
+      alert("Please enter the email");
+      email.focus();
+      submitValue = false;
+    }
+  }
+
+  // checking email
+  if (submitValue) {
+    if (!email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+      alert("Please enter a valid email!");
+      email.focus();
+      email.value = "";
+      submitValue = false;
+    }
+  }
+  if (submitValue) {
+    if (password.value == null || password.value == "") {
+      alert("Please enter password");
+      password.focus();
+      submitValue = false;
+    }
+  }
+
+  // checking password
+  if (submitValue) {
+    if (!password.value.match(/^.{5,15}$/)) {
+      alert("Password length must be between 5-15 characters!");
+      password.focus();
+      submitValue = false;
+    }
+  }
+  // checking phone number
+  if (submitValue) {
+    if (phoneNumber.value == null || phoneNumber.value == "") {
+      alert("Pleae enter phone number");
+      phoneNumber.focus();
+      submitValue = false;
+    }
+  }
+
+  if (submitValue) {
+    if (!phoneNumber.value.match(/^[0-9]+$/)) {
+      alert("Pleae enter numbers only");
+      phoneNumber.focus();
+      submitValue = false;
+    }
+  }
+
+  if (submitValue) {
+    if (!phoneNumber.value.match(/^[1-9][0-9]{9}$/)) {
+      alert("Phone number must be 10 characters long number and first digit can't be 0!");
+      phoneNumber.focus();
+      submitValue = false;
+    }
+  }
+
+  if (submitValue) {      
+    if (getSelectedGenderValue != null) {
+      submitValue = true;        
+    }
+    else {
+      alert("Please select gender");
+      submitValue = false;        
+    }
+  }
+
+  // checking language
+  if (submitValue) {
+    if (language.value === "") {
+      alert("Please select your language!")
+      submitValue = false;
+      language.focus();
+    }
+  }
+  // checking zip code
+  if (submitValue) {
+    if (zipcode.value == null || zipcode.value == "") {
+      alert("Please enter zip code");
+      zipcode.focus();
+      submitValue = false;
+    }
+  }
+
+  if (submitValue) {
+    if (!zipcode.value.match(/^[0-9]{6}$/)) {
+      alert("Zip code must be 6 characters long number!");
+      zipcode.focus();
+      submitValue = false;
+    }
+  }
+  if (submitValue) {     
+    if (getSelectedInterest != null) {
+      submitValue = true;       
+      var mydata="" ; 
+      for (var i = 0; i < getSelectedInterest.length; i++) {   
+        
+          mydata = mydata +  getSelectedInterest[i].value + "\n" ;
+      } 
+      getSelectedInterest.value = mydata;  
+     
+    }
+    else {
+      alert("Please select interest");
+      submitValue = false;
+      
+    }
+  }
+  if (submitValue) {
+    if (comment.value === "") {
+      alert("Please enter comments")
+      submitValue = false;
+      comment.focus();
+    }
+  }
+if(submitValue){
+  var finalSelection =  " Entered Values are  \n" +
+                        "\n " + 
+                        "Name is          : " + name.value + "\n" +
+                        "\n " +
+                        "E-mail is        : " +  email.value + "\n" +
+                        "\n " +
+                        "Password is      : " +  password.value + "\n" +
+                        "\n " +
+                        "Gender is        : " +  getSelectedGenderValue.value + "\n" +
+                        "\n " +
+                        "Language is      : " +  language.value + "\n" +
+                        "\n " +
+                        "Zip Code is      : " +  zipcode.value + "\n" +
+                        "\n " +
+                        "Interested is    : " +  getSelectedInterest.value + "\n" +
+                        "\n " +
+                        "Comments is      : " +  comment.value + "\n" +
+                        "\n " ;
+  alert(finalSelection);
+}
+   }
+   
+
+    return submitValue;
+}
+
+</script>

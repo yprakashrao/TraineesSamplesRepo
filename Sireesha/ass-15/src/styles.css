@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+* {
+  box-sizing: border-box;
+}
+
+
+/*styles for header page*/
+
+.headerstyle{
+  background-color: rgb(250, 248, 248);
+  color: grey;
+  border: 1px solid rgb(219, 209, 209);
+}
+
+
+/*styles for home page*/
+
+.bg-image {
+  /* The image used */
+  background-image: url("assets/imgbg.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(196, 164, 164); /* Fallback color */
+  background-color: rgba(187, 186, 185, 0.4); /* Black w/opacity/see-through */
+  color: black;
+  font-weight: bold;
+  border: 3px solid rgb(99, 98, 96);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/*styles for sign-up page*/
+
+.invalid{
+  color: red;
+}

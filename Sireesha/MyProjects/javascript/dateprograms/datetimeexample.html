@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <center>
+            enterdate<input type="date" size="20" id="userdata"> <br><br>
+            <input type="button" value="submit" onclick="showval()"><br><br>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+            <p id="demo3"></p>
+
+            <script>
+           function showval(){
+            var entereddate = document.getElementById("userdata").value;
+            var checkdate = new Date(entereddate);
+            console.log(checkdate);
+
+            var firstdate = new Date(checkdate.getFullYear(),checkdate.getMonth(),1);
+            var seconddate = new Date(checkdate.getFullYear(),checkdate.getMonth()+1,0);
+
+            document.getElementById("demo").innerHTML = firstdate;
+            document.getElementById("demo1").innerHTML = seconddate;
+
+            
+            var weekstartdate = new Date(checkdate.getMonth(),checkdate.getDay(),1);
+            var weekenddate = new Date(checkdate.getMonth(),checkdate.getDay(),0);
+
+            document.getElementById("demo2").innerHTML = weekstartdate;
+            document.getElementById("demo3").innerHTML = weekenddate;
+
+
+           
+           }
+            </script>
+      </center>
+
+
+
+
+
+
+      <!-- <center>
+            enterdate<input type="date" size="20" id="userdata"> <br><br>
+            <input type="button" value="submit" onclick="showval()"><br><br>
+            <p id="demo"></p>
+            <script>
+           function showval(){
+            var entereddate = document.getElementById("userdata").value;
+            var checkdate = new Date(entereddate);
+            console.log(checkdate);
+
+            var currdate = new Date();
+            console.log(currdate);
+
+            var otherdate = new Date("2000/03/12");
+            console.log(otherdate);
+
+            if(checkdate <= currdate && checkdate >=otherdate) {
+                  document.getElementById("demo").innerHTML = "entered date is with in date range";
+            }
+            else {
+                  document.getElementById("demo").innerHTML = "entered date is beyond date range";
+
+            }
+           }
+            </script>
+      </center> checking wheather the given date is within the two dates or not -->
+
+
+
+      <!-- <center>
+            Enter date: <input type="date" name="date" id="userdata" size="20"> <br><br>
+            : <input type="button" name="sds" value="submit" onclick="showval()"> :<br><br>
+            Here:<span id="demo"></span>
+            <script type="text/javascript">
+                  function showval() {
+                        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        var givenval = document.getElementById("userdata").value; //assign value
+                        var userdate = new Date(givenval); //create object  
+                        var x = userdate.getDay(); // it shows day in number form
+                        var day = days[userdate.getDay()]; // getting day 
+
+                        if (x % 6 === 0 ) {
+                              document.getElementById("demo").innerHTML = "entered day is weekend";
+                        }
+                        if(x % 6 != 0 ) {
+                              document.getElementById("demo").innerHTML = "entered day is not weekend";
+                        }
+                        console.log(day);
+                  }
+            </script>
+      </center>  dispalying the entered day is weekend or not-->
+
+
+
+      <!-- <center>
+            Enter date: <input type="date" name="date" id="userdata" size="20"> <br><br>
+            : <input type="button" name="sds" value="submit" onclick="showval()"> :<br><br>
+                  Here:<span id="demo"></span>
+                  <script type="text/javascript">
+                        function showval() {
+                              const days = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+                              var givenval = document.getElementById("userdata").value;
+                              var userdate = new Date();                            
+                              var day = days[userdate.getDay()];
+                              document.getElementById("demo").innerHTML = day;
+                              console.log(day);
+                        }
+      </script>
+      </center>displaying the day of a specific date -->
+
+
+
+
+      <!-- <center>
+            <script>
+                  var is_date = function (input) {
+                        if (Object.prototype.toString.call(input) === "[object Date]")
+                              return true;
+                        return false;
+                  };
+
+                  console.log(is_date("October 13, 2014 11:13:00"));
+                  console.log(is_date(new Date()));
+            </script>
+      </center> checking weather the date is object or not-->
+
+
+      <!-- <script type="text/javascript">
+            var currentdate = function (cd) {
+                  var today = new Date();
+
+                  var yyyy = today.getFullYear();
+                  var mm = today.getMonth() + 1;
+                  var dd = today.getDate();
+
+
+                  if (mm < 10 || dd < 10) {
+                        mm = '0' + mm;
+                        dd = '0' + dd;
+                  }
+                  return (yyyy + cd + mm + cd + dd);
+            }
+            console.log(currentdate('/'));
+
+            var currenttime = function (ct) {
+                  var today = new Date();
+
+                  var HH = today.getHours();
+                  var MM = today.getMinutes();
+                  var SS = today.getSeconds();
+
+                  if (MM < 10) {
+                        MM = '0' + MM;
+                  }
+                  if (SS < 10) {
+                        SS = '0' + SS;
+                  }
+                  return (HH + ct + MM + ct + SS);
+                  
+            }
+            console.log(currenttime(':')); 
+      </script> displaying the date in required format-->
+
+</body>
+
+</html>

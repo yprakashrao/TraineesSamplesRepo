@@ -1,0 +1,22 @@
+header{
+      display: flex;
+      justify-content: space-between;
+      background-color:rgb(110, 145, 145);
+      color: bisque ;
+      padding: 10px;
+      margin-top: 15px;
+}
+
+.brand{
+      font-size: 25px;
+      font-weight: bold;
+}
+
+.navmenu a{
+      margin-right: 20px;
+      font-size: 20px;
+}
+a{
+      color:  bisque ;
+      text-decoration: none;
+}

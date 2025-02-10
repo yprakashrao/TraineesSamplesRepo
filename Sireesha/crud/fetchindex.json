@@ -1,0 +1,37 @@
+{
+      "person":[
+            {
+                  "name" : "siri",
+                  "age" : 33
+            },
+            {
+                  "name" : "adi",
+                  "age" : 35
+            },
+            {
+                  "name" : "suneel",
+                  "age" : 34
+            },
+            {
+                  "name" : "akshaj",
+                  "age" : 3
+            },
+            {
+                  "name" : "rudhvi",
+                  "age" : 8
+            }          
+
+      ],
+      "child":
+      [
+      {
+            "name":"thanvi",
+            "age": "4"
+      },
+      {
+            "name" : "gnanvi",
+            "age" : "1"
+
+      }
+]
+}

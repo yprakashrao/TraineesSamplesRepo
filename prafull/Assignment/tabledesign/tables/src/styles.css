@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-sort-header-stem,
+.mat-sort-header-indicator {
+  color: white;
+}
+
+.mat-mdc-dialog-container {
+    width: 500px !important;
+    height: 500px !important;
+}
+
+.container{
+    padding: 35px !important;
+}

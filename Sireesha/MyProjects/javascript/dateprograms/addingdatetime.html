@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Adding date and time </title>
+      <style>
+            .datedisaply {
+                  margin-top: 100px;
+                  padding-top: 30px;
+                  margin-bottom: 80px;
+                  padding-bottom: 30px;
+                  margin-left: 300px;
+                  padding-left: 200px;
+                  margin-right: 300px;
+                  /* padding-right: 200px; */
+            }
+      </style>
+</head>
+
+<body>
+      <fieldset>
+            <legend> showing data</legend>
+
+            <div class="datedisaply">
+                  Enter date: <input type="datetime-local" name="date" id="userdata" size="20"> <br><br>
+                  Enter time: <input type="time" id="usertime" size="20"><br><br>
+                  : <input type="button" name="sds" value="submit" onclick="showval()"> :<br><br>
+                  Here:<span id="demo"></span>
+            </div>
+
+            <script type="text/javascript">
+                  function showval() {
+                        var givenval = document.getElementById("userdata").value;
+                        var userdate = new Date(givenval);
+                        console.log(userdate); //created an object
+                        var enteredvalue = userdate.getTime();
+                        console.log(enteredvalue); // converted date into millis
+
+                        var usertim = document.getElementById("usertime").value;
+                        console.log(usertim); //printed the entered time
+
+                        const [hours, minutes] = usertim.split(':'); //splitted the time into hour&min
+                        var splitedhour = hours * 60 * 60 * 1000; //hours into millis
+                        console.log(splitedhour);
+                        var splitedmin = minutes * 60 * 1000; console.log(splitedmin); //min into millis
+
+                        var days = userdate.setTime(enteredvalue + splitedhour + splitedmin);
+                        var date = new Date(days);
+                        demo.innerHTML = date.toString();
+
+                        
+                  }            
+            </script>
+
+      </fieldset>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <p>helloo javascript</p>
+      <!-- enter value: <input type="date" id="userval"> -->
+      <input type="submit" value="submit" onclick="showval()">
+      <p id="demo"></p>
+
+      <script type="text/javascript">
+            function showval(){
+                  // let uservalue = document.getElementById("userval").value;
+                  let date = new Date("2022 mar,12");
+                  x=date.toString(date);
+                  document.getElementById("demo").innerHTML = x;
+                  console.log(date);
+            }
+           
+      </script>
+</body>
+</html>

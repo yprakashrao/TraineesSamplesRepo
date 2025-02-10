@@ -1,0 +1,50 @@
+*************************************HTML & CSS*********************************
+
+    * What is html ?
+   1.Hyper text markup language
+   2.HTML is the standard markup language for Web pages.  
+   3.With HTML you can create your own Website.
+   4.HTML describes the structure of a Web page.
+   5.HTML elements tell the browser how to display the content.
+
+   * Features of HTML
+   1) It is a very easy and simple language.
+   2) to make an effective presentation with HTML because it has a lot of formatting tags.
+  3)  It is platform-independent because it can be displayed on any platform like Windows, Linux.
+  4)  programmers to add a link on the web pages (by html anchor tag),
+  5) HTML is a case-insensitive language.
+
+  * What is Tag ?
+      <p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <abbr>, <address>,
+      <br>,<img>, <area>, <map>, <param> ,<object>,<table>,<head>
+  
+ * layout of HTML ?
+  <header>: It is used to header for a document or a section.
+  <nav>: It is used to container for navigation links.
+  <section>: It is used  to section in a document.
+  <footer>: It is used to  footer for a document or a section. 
+
+ * What is CSS ?
+   1) Cascading Style Sheet.
+   2) CSS is used to design HTML tags.
+   3) CSS is a widely used language on the web.
+   4) HTML, CSS and JavaScript are used for web designing. 
+   5) It helps the web designers to apply style on HTML tags.
+
+  * Features of CSS ?
+  1) it can be used inline css.
+  2) it can be used internal css.
+  3) it can be used external css.
+  4) code reusability.
+  5) Save lot of time.
+ 
+  * functions of css ?
+  1) Style.
+  2) Font.
+  3) Color.
+  4) Size.
+  5) Height.
+  6) Width.
+  
+ 
+

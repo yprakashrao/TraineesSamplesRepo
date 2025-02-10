@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>JavaScript program with 3 different forms</title>
+    <script type="text/javascript" src="radiowith3differentform.js"></script>
+    <link rel="stylesheet" href="../../styles/mystyles1.css">    
+    <h2 style="background-color: rgb(78, 233, 78); padding:20px; text-align: center;">
+        Creating a form using hidden form</h2>        
+    <marquee behavior="scroll" direction="right">
+        Hide/Display of dropdown using radio and validation of form.
+    </marquee>   
+    </head>
+
+    <body onload="pageload();">    
+    <form onsubmit="formvalidation();">
+        <div style="display: block;text-align: center;background-color: burlywood;color: blueviolet;font-size: larger;">
+            <i>Selection of radio and dropdown to get form</i>
+        </div>
+    <div>
+    <table>
+        <tr>
+        <td><label for="Language" >Language:</label></td>
+        <td>
+            <input type="radio" name="lang" value="C" onclick="language()">C
+            <input type="radio" name="lang" value="C++" onclick="language()">C++
+            <input type="radio" name="lang" value="Java" onclick="language()">Java
+        </td>
+        </tr>
+        <tr id="Clang" onsubmit="formvalidation();">
+        <td><label for="Clang" >C Language:</label></td>
+        <td>
+            <select id="clanguage" onchange="showform();" onfocus="onfocusevent();" >
+                <option value="">-----</option>
+                <option value="Array">Array</option>
+                <option value="Operators">Operators</option>
+                <option value="Operators">Operators</option>
+            </select>
+        </td>
+        </tr>
+        <tr id="C++lang" onsubmit="formvalidation1();" >
+       <td><label for="C++lang" >C++ Language:</label></td>
+        <td>
+            <select id="c++language" onchange="showform();" onfocus="onfocusevent();">
+                <option value="">-----</option>
+                <option value="Array">Array</option>
+                <option value="Operators">Operators</option>
+                <option value="Operators">Operators</option>
+            </select>
+        </td>
+        </tr> 
+        <tr id="Javalang" onsubmit="formvalidation2();" >      
+        <td><label for="Javalang">Java Language:</label></td>
+        <td>
+            <select id="javalanguage" onchange="showform();" onfocus="onfocusevent();">
+                <option value="">-----</option>
+                <option value="Array">Array</option>
+                <option value="Operators">Operators</option>
+                <option value="Operators">Operators</option>
+            </select>
+        </td>
+        </tr> 
+    </div>
+    </table>
+
+        <!---form1-->
+        <div id="myform1">
+            <table>
+            <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="Text" id=name size="20" placeholder="Enter name" ></td>
+            </tr>
+            <tr>
+            <td><label for="number">Phone Number:</label></td>
+            <td><input type="number" id="number" size="20" placeholder="Enter phonenumber"></td>
+            </tr>
+            <tr>
+            <td><label for="Email">Email:</label></td>
+            <td><input type="email" id="email" size="20" placeholder="Enter email"></td>
+            </tr>    
+            </table>
+        </div>
+        <!---form2-->
+
+        <div id="myform2">
+            <table>
+            <tr>
+            <td><label for="pword">Password:</label></td>
+            <td><input type="password" id="password" size="20" placeholder="Enter password"></td>
+            </tr>
+            <tr>
+            <td><label for="gender">Gender:</label></td>
+            <td><input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="others">Others </td>
+            </tr>
+            <tr>
+            <td><label for="group">Group:</label></td>
+            <td><select name="Group">
+                <option  value="">-----</option>
+                <option value="BSC">BSC</option>
+                <option value="BBA">BBA</option>
+                <option value="BCOM">BCOM</option>
+                </select></td>
+            </tr>    
+            </table>
+        </div>
+        
+        <!---form3-->
+
+        <div id="myform3">
+            <table>
+            <tr>
+            <td><label for="checkbox" >Fruits:</label></td>
+            <td><input type="checkbox" name=fruits value="Apple">Apple
+            <input type="checkbox" name=fruits value="Orange">Orange
+            <input type="checkbox" name=fruits value="Grapes">Grapes</td>
+            </tr>
+            <tr>
+            <td><label for="title">Comments:</label></td>
+            <td><textarea id="comment" rows="10" columns="30" placeholder="Write Text Here"></textarea></td>
+            </tr>    
+            </table>
+        </div>
+
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Click"></td>                
+            </tr> 
+        </table>       
+</form>    
+</body>
+</html>

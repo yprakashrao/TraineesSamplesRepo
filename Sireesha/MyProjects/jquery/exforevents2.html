@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset = "UTF-8">  
+            <meta name = "viewport" content="width=device-width, initial-scale=1.0"> 
+            <title>examples for filter,eq,first,last</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                  $(document).ready(function(){
+                  /*      $("#btn1").click(function(){
+                        $("body").data("name","hello query");
+                        alert("data attached"); 
+                  });
+                        $("#btn2").click(function(){                  
+                        alert($("body").data("name"));   
+                        $("span").text($("body").data("name"))  ;            
+                  });*/
+
+
+                  /*  $("body").click(function(){
+                        $("body").children("p.second").css({"color":"yellow"});
+                  });*/
+
+
+                  /*$("#btn1").click(function(){
+                        $("div").first().css({"background-color":"pink"});
+                  });     
+                  $("#btn2").click(function(){
+                        $("div").last().css({"background-color":"green"});
+                  });*/
+
+
+                  /*$("#btn").click(function(){
+                        $("div").eq(1).css({"background-color":"yellow"});
+                        $("div").eq(2).css({"background-color":"pink"});
+                  });*/
+
+
+                  /*1st filter $("button").click(function(){
+                        $("p").filter("p").css({"background-color":"yellow"});
+                        
+                  });*/
+
+
+                  /* 2nd filter $("#btn").click(function(){
+                        $("p").filter(function(index){
+                              if(index==4 || index==1){
+                                    return true;
+                              }
+                        }).css({"background-color":"grey"});  
+                  });*/
+
+
+                  /*$("button").click(function(){
+                        $("p").not(".para").css({"background-color":"yellow"});
+                        
+                  });*/
+
+                  /*$("button").click(function(){
+                        $("li").each(function(index,element){
+                              alert($(this).text());
+                              if(index==1 || index==3) {
+                              alert($(this).text("hello query i am usiing your each method"));
+                              }
+                        });
+                  });*/
+
+                  /*$("button").click(function(){
+                        $("div").find("ul").css({"background-color":"pink"});
+                  });*/
+
+                  /* $("button").click(function(){
+                       alert($("p").size()); 
+                       alert($("p").length);                        
+                  });
+                  */
+
+                  /*$("#btn").click(function(){
+                        $("body").children().is(".para");
+                        $(".para").css({"background-color":"pink"});
+                        alert("this is your selected paragraph.")  ;                                      
+                  });*/
+
+                                   
+            });         
+           
+            </script>
+            <link rel="stylesheet" href="../../styles/myjquerystyles.css">
+      </head>
+      <body>
+            <!--<p >this is the example for is.</p>
+            <p >click for the following buttons to get the data.</p>
+            <p class="para">click for the following buttons to get the data.</p>
+            <p >click for the following buttons to get the data.</p>
+            <p >click for the following buttons to get the data.</p>
+            <button id="btn">click for filter</button>--->   
+            <!---this is for is() method-->        
+
+            <!---<div>
+                  <p >click for the following buttons to get the data.</p>
+                  <p >click for the following buttons to get the data.</p>
+                  <p >click for the following buttons to get the data.</p>                
+
+            </div>        
+            <span></span>   
+            <button>click for length</button>-->  
+             <!---this for length property and size()  method-->          
+
+            <!---<div>
+                  <p>Here i am going to write example for each() method</p>
+                  <ul>
+                        <li>html</li>
+                        <li>javascript</li>
+                        <li>jquery</li>
+                        <li>css</li>
+                  </ul>
+            </div><br>
+            <button>Click for find</button>--->
+             <!---this for find() method--> 
+            
+            <!-- <div>
+                  <p>Here i am going to write example for each() method</p>
+                  <ul>
+                        <li>html</li>
+                        <li>javascript</li>
+                        <li>jquery</li>
+                        <li>css</li>
+                  </ul>
+            </div><br>
+            <button>Click for each</button>  --->
+             <!---this for each() method--> 
+
+            <!---<p class="para" >click for the following buttons to get the data.</p>
+            <p >click for the following buttons to get the data.</p>
+            <p >click for the following buttons to get the data.</p>
+            <button>click</button>-->
+            <!---this for not() method-->          
+
+            <!---<p class="first">this is the example for filter.</p>
+            <p >click for the following buttons to get the data.</p>
+            <p >click for the following buttons to get the data.</p>
+            <p >click for the following buttons to get the data.</p>
+            <p >click for the following buttons to get the data.</p>
+            <button id="btn">click for filter</button>--->            
+            <!---this for filter() method using indexes and classes-->
+
+            <!--<div><h3>Here is the example for data() method.
+                  In this data is used to store and to get the stored data</h3></div>
+            <div><p class="second">click for the following buttons to get the data.</p></div>
+            <div><p>click for the following buttons to get the data.</p></div>
+            <button id = btn>click for index</button>     -->            
+            <!---this for eq() method-->
+
+            <!--<div><h3>Here is the example for data() method.
+                  In this data is used to store and to get the stored data</h3></div>
+                  <div><p class="second">click for the following buttons to get the data. </p></div>
+            <button id = btn1>first div</button>
+            <button id = btn2>last div</button><br>--->
+            <!---this for first() and last() method-->
+            
+            <!--<h3>Here is the example for data() method.
+                  In this data is used to store and to get the stored data</h3>
+            <p class="second">click for the following buttons to get the data. </p>
+            <p>click for the following buttons to get the data. </p>
+            <span>helooo</span><br>
+            <button id = btn1>click1</button><br>
+            <button id = btn2>click2</button><br> -->
+            <!---this for data() and children() method-->
+      </body>
+</html>

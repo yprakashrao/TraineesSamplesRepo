@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Assignment on Date</title>
+</head>
+
+<body>
+      <center>
+            <div>
+                  <h2>Displaying the Date</h2>            
+                  current date in string:<span id="here"></span>
+            </div>
+
+            <script>
+                  const today = new Date();
+                  let text = today.toString();
+                  console.log(typeof (today));
+                  console.log(typeof (text));
+                  document.getElementById("here").innerHTML = text;
+
+            </script>
+      </center>
+</body>
+</html>
+
+
+
+
+ 

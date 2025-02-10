@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no" />
+            <title>Get a district by changing the Dropdown</title>
+      </head>
+      <style>
+            body{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 200px;
+            }
+            select{
+                  cursor:pointer;
+                  background-color: antiquewhite; 
+            }
+      </style>
+      <body>
+            <div>
+                  State:<select type="text" id="states">
+                        <option value="-1">----</option>
+                        <option value="AP">AndhraPradesh</option>
+                        <op.tion value="TN">Telangana</option>
+                        <option value="KL">Kerala</option>
+                        <option value="KA">Karnataka</option>
+                        </select><br/><br/>
+                  district:<select type="text" id="districts">
+                        <option value="----">----</option>
+                        </select> <br/><br/>
+            </div>
+
+            function loaddata(){
+                  let  xhr = new XMLHttpRequest();
+                  xhr.open('GET', 'text1.json',true);
+                  xhr.send();
+                  xhr.onload = function(){
+                        let result = xhr.responseText;
+                        result = JSON.parse(result);
+                        console.log(result);               
+                  }
+                  }            
+            
+      </body>
+</html>
+
+ -->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+      <h2>The XMLHttpRequest Object</h2>
+      <button type="button" onclick="loadDoc()">Request data</button>
+
+      <p id="demo"></p>
+
+      <script>
+            function loadDoc() {
+                  const xhttp = new XMLHttpRequest();
+                  xhttp.onload = function () {
+                        document.getElementById("demo").innerHTML = this.responseText;
+                  }
+                  xhttp.open("POST", "text1.json");
+                  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                  xhttp.send("fname=Henry&lname=Ford");
+            }
+      </script>
+
+</body>
+
+</html>

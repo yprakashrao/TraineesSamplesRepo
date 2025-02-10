@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>EX-2 for AJAX</title>
+      <h3>Applying AJAX using JSON</h3>
+
+</head>
+
+<body>
+      <input type="button" id="btn" value="Clickhere">
+      <div id="Displayhere1"></div>
+      <script>
+            var btn = document.getElementById("btn");
+            var displayhere1 = document.getElementById("displayhere1");
+
+            btn.addEventListener('click', loaddata);
+
+            function loaddata() {
+                  let xhr = new XMLHttpRequest();
+                  xhr.open('GET', 'text1.json', true);
+                  xhr.send();
+
+                  xhr.onload = function () {
+                        let result = xhr.responseText; //gets the response data as string
+                        // result = JSON.parse(result);
+                        // result1 = JSON.stringify(result);
+                        console.log(result);
+                        console.log(typeof result);
+                        // console.log(result1);
+                        // console.log(typeof result1);
+                  document.getElementById("Displayhere1").innerHTML = result;      
+                  }
+            }            
+      </script>
+</body>
+
+</html>

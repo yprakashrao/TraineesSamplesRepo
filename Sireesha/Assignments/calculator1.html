@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Create a claculator</title>
+      <style>
+            .btn {
+                  background-color: grey;
+                  color: whitesmoke;
+                  width: 200px;
+                  font-size: 40px;
+                  padding: 20px;
+                  border-radius: 15px;
+                  border: 3px dashed rgb(117, 117, 170);
+            }
+
+            .btn1 {
+                  background-color: grey;
+                  color: whitesmoke;
+                  width: 750px;
+                  font-size: 40px;
+                  padding: 10px;
+                  border-radius: 15px;
+                  border: 3px dashed rgb(117, 117, 170);
+                  opacity: 0.6;
+            }
+
+            input:hover {
+                  background-color: cadetblue;
+            }
+      </style>
+</head>
+
+<body>
+      <center>
+            <input type="text" value="" size="25" id="result" class="btn1"><br><br>
+            <div>
+                  <input type="button" onclick="clearval()" value="C" class="btn">
+                  <input type="button" onclick="showval('/')" value="/" class="btn">
+                  <input type="button" onclick="showval('.')" value="." class="btn">
+                  <input type="button" onclick="showval('%')" value="%" class="btn"> <br><br>
+            </div>
+
+            <div>
+                  <input type="button" onclick="showval('7')" value="7" class="btn">
+                  <input type="button" onclick="showval('8')" value="8" class="btn">
+                  <input type="button" onclick="showval('9')" value="9" class="btn">
+                  <input type="button" onclick="showval('*')" value="*" class="btn"> <br><br>
+
+            </div>
+            <div>
+                  <input type="button" onclick="showval('4')" value="4" class="btn">
+                  <input type="button" onclick="showval('5')" value="5" class="btn">
+                  <input type="button" onclick="showval('6')" value="6" class="btn">
+                  <input type="button" onclick="showval('-')" value="-" class="btn"><br><br>
+            </div>
+
+            <div>
+                  <input type="button" onclick="showval('1')" value="1" class="btn">
+                  <input type="button" onclick="showval('2')" value="2" class="btn">
+                  <input type="button" onclick="showval('3')" value="3" class="btn">
+                  <input type="button" onclick="showval('+')" value="+" class="btn"><br><br>
+            </div>
+
+            <div>
+                  <input type="button" onclick="showval('00')" value="00" class="btn">
+                  <input type="button" onclick="showval('0')" value="0" class="btn">
+                  <input type="button" onclick="evaluated()" value="   =   " class="btn"><br><br>
+            </div>
+
+            <script>
+
+                  function showval(value) {
+                        document.getElementById("result").value += value;
+                  }
+
+                  function clearval(value) {
+                        document.getElementById("result").value = "";
+                  }
+
+                  function evaluated() {
+                        var x = document.getElementById("result").value;
+                        var y = eval(x);
+                        document.getElementById("result").value = y;
+                  }                  
+            </script>
+      </center>
+</body>
+
+</html>

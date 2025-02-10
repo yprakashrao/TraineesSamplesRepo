@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Ajax js</title>      
+      </head>
+      <body>
+            Country: <input type="text" name="Country" id="Country" >
+            <button type="click for api" onclick="loaddata()" >Clickhere</button><br><br>
+            load : <span id="Capital" ></span>
+           
+           
+           <script>
+            function loaddata(){
+                  var Country = document.getElementById("Country").value;    
+                  //Here creating the ajax object
+                        var xhttp = new XMLHttpRequest(); 
+                        
+                        xhttp.onreadystatechange = function(){   
+                        if(xhttp.readyState === 4 && this.status === 200){
+                                    var responseData = xhttp.responseText;                                   
+                                    var JSONdata = JSON.parse(responseData);
+                                    var Capital = JSONdata[0].currency;
+                                    document.getElementById("Capital").innerHTML = Capital;
+                              }
+                        }     
+                  // creating method for object
+                        xhttp.open("GET" , "https://restcountries.com/v3.1/name/"+Europe+"?fullText=true", true);
+                  // Sending the request for ajax object
+                        xhttp.send(); 
+                       
+                  }
+                  </script>
+      </body></html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+      <head>
+            <title>AJAX usin jquery</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>" 
+     </head>
+      <body>
+            country: <input type="text" id="country">
+            <input type="button" value="click" id="btn">
+            <span id="borders"></span>
+            <script>
+                  $(document).ready(function(){
+                        $("#btn").click(function(){
+                              var country = $("#country").val();
+                        $.ajax({
+                                    "url" : "https://restcountries.com/v3.1/name/"+country+"?fullText=true",
+                                    "success" : function(response){
+                                          var borders = response[0].borders;
+                                          $("#borders").html(borders);                                          
+                                    }
+                              });
+                        });
+                  });
+            </script>
+
+      </body>
+</html> --> 

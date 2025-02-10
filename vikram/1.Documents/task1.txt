@@ -1,0 +1,76 @@
+.Over view of the html
+.Studied about the html basic functionalities
+.Studied about the some of the html tags and used to created the pages with the "hyperlink"
+
+.HTML links are hyperlinks.
+
+.You can click on a link and jump to another document.
+
+.When you move the mouse over a link, the mouse arrow will turn into a little hand
+.The HTML <a> tag defines a hyperlink. It has the following syntax:
+
+<a href="url">link text</a>
+
+ex:
+<html>
+<body>
+
+<h1>HTML Links</h1>
+
+<p><a href="https://www.w3schools.com/">Visit W3Schools.com!</a></p>
+
+</body>
+</html>
+
+.By default, links will appear as follows in all browsers:
+
+.An unvisited link is underlined and blue
+.A visited link is underlined and purple
+.An active link is underlined and red
+By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.
+
+.The target attribute specifies where to open the linked document.
+.
+The target attribute can have one of the following values:
+
+. Default. Opens the document in the same window/tab as it was clicked
+.blank - Opens the document in a new window or tab
+.parent - Opens the document in the parent frame
+.top - Opens the document in the full body of the window
+
+ex:
+<html>
+<body>
+
+<h2>The target Attribute</h2>
+
+<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a> 
+
+<p>If target="_blank", the link will open in a new browser window or tab.</p>
+
+</body>
+</html>
+
+.Inserted some images in the header and footer with the help of <img> tags
+.Definition and Usage
+.The <img> tag is used to embed an image in an HTML page.
+
+.Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image.
+
+.The <img> tag has two required attributes:
+
+.src - Specifies the path to the image
+.alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed
+.Note: Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.
+
+.Tip: To link an image to another document, simply nest the <img> tag inside an <a> tag (see example below).
+ex:
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="smiley.gif" alt="Smiley face" width="42" height="42" style="border:5px solid black">
+
+</body>
+</html>
+

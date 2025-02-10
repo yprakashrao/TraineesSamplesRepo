@@ -1,0 +1,48 @@
+<div class="bg-img">
+
+      <div class="card w-50 mx-auto   container">
+            <h4 class="card-header text-center">Login Here</h4>
+
+            <div class="card-body">
+
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+                        <div class="form-group mt-3">
+                              <label>User Name:</label>
+                              <input type="text" class="form-control" formControlName="userName"
+                                    placeholder="Enter User Name ">
+                              <div class="form-text text-muted"
+                                    *ngIf="loginForm.controls['userName'].touched && loginForm.controls['userName'].errors?.['required']">
+                                    <span>Please enter userName address.!</span>
+                              </div>
+
+                              <div class="form-text text-muted"
+                                    *ngIf="loginForm.controls['userName'].touched && loginForm.controls['userName'].errors?.['userName']">
+                                    <span>userName address not well formed.!</span>
+                              </div>
+                        </div>
+
+                        <div class="form-group mt-3">
+                              <label>Password</label>
+                              <input type="text" class="form-control" formControlName="PASS" placeholder="Password">
+                        </div><br><br>
+
+
+                        <button type="submit" class="btn btn-light form-control " color="burlywood"
+                              [disabled]="!loginForm.valid">Submit</button>
+
+
+                  </form>
+
+
+            </div>
+
+            <span class="text-center">You already have an account?<a href="/signUp">
+                   Register here.</a></span>
+
+      </div>
+
+      <div *ngIf="errormsg">Entered data is not found</div>
+      <div *ngIf="successmsg"></div>
+
+</div>

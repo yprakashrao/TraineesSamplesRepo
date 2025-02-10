@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Using javascript showing the diff b\n two dates</title>
+      <style>
+
+            h2 {
+                  background-color: rgb(35, 36, 36);
+                  color: aliceblue;
+                  border: 2px dotted white;
+                  margin: 20px 150px;
+                  width: 800px;
+            }
+
+
+            .datedisaply {
+                  border: 1px solid grey;
+                  margin-top: 40px;
+                  padding-top: 30px;
+                  margin-bottom: 40px;
+                  padding-bottom: 30px;
+                  margin-left: 300px;
+                  padding-left: 200px;
+                  margin-right: 300px;
+                  padding-right: 200px;
+                  background-color: blanchedalmond;
+            }
+
+</style>
+</head>
+
+<body>
+      <center>
+            <div>
+                  <h2>
+                        Calculating the difference between two dates dynamically
+                  </h2>
+            </div>
+
+            <div class="datedisaply">
+                  Start Date: <input type="date" id="fromdate"> <br><br>
+                  End Date:<input type="date" id="todate"><br><br>
+
+                  <input class='todate' type="submit" onclick='showDays()'><br><br>
+                  No. of days:<span id="demo" style="background-color: yellow;"></span>
+            </div>
+
+            <script type="text/javascript">
+                  function showDays() {
+
+                        var start = document.getElementById("fromdate").value;
+                        var end = document.getElementById("todate").value;   // $('.end-date').val(); here we use class in given`
+                        console.log(start);
+                        console.log(typeof (start));   //in string
+
+                        var startDay = new Date(start); //created a object
+                        console.log(startDay)
+                        console.log(typeof (startDay));                        
+                        let text = startDay.toString(); //console.log(typeof (text));                     
+
+                        var endDay = new Date(end);
+                        console.log(endDay);
+
+                        var millisecondsPerDay = 1000 * 60 * 60 * 24;
+
+                        var millisBetween = endDay.getTime() - startDay.getTime();
+                        console.log(millisBetween);
+
+                        var days = millisBetween / millisecondsPerDay;
+                        document.getElementById("demo").innerHTML = days;
+
+                  }
+            </script>
+      </center>
+</body>
+</html>
+
+
+
+
+

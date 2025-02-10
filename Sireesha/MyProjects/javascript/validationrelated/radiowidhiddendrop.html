@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form using hidden dropdown using radio</title>
+        <link rel="stylesheet" href="../../styles/mystyles.css">
+        <script type="text/javascript"  src="19092022script.js"></script>
+        <div class="heading19"><h3>Click on radio to get dropdown</h3></div>        
+    </head>
+    <body onload="pageload();">
+        <div class="subheading19">
+        <h3>Hidden dropdown</h3> 
+        </div> 
+        <form  onsubmit="return hiddendropdown();">
+            <div>
+                <table>
+                <tr>
+                    <td><label for="text">Name:</label></td>
+                    <td><input type="text" id="name" placeholder="enter name"></td>
+                </tr>
+                <tr>
+                    <td><label for="number">PhoneNumber:</label></td>
+                    <td><input type="number" id="number" placeholder="enter number"></td>
+                </tr> 
+                <tr>                   
+                    <td><label for="gender">Gender:</label></td>
+                    <td><input type="radio" name="gender" onclick="genderradio()" value="Male">Male
+                    <input type="radio" name="gender" onclick="genderradio()" value="Female">Female
+                    <input type="radio" name="gender" onclick="genderradio()" value="Others">Others</td>
+                </tr> 
+                <tr id="myinterest">
+                    <td><label for="language">Interests:</label></td>
+                    <td><select id="language">
+                        <option   value="">----</option>
+                        <option   value="Java">Java</option>
+                        <option  value=".net">.Net</option>
+                        <option  value="python">python</option>
+                    </select></td>
+                </tr> 
+                <tr id="myfruits">
+                    <td><label for="fruits">Fruits:</label></td>
+                    <td><select id="fruits">
+                        <option   value="">----</option>
+                        <option   value="Jamun">Jamun</option>
+                        <option  value="Apple">Apple</option>
+                        <option  value="Grapes">Grapes</option>
+                    </select></td>
+                </tr> 
+                <tr id="mycourse">
+                    <td><label for="courses">Courses:</label></td>
+                    <td><select id="courses">
+                        <option   value="">----</option>
+                        <option   value="js">is</option>
+                        <option  value="jquery">jquery</option>
+                        <option  value="sassy">sassy</option>
+                    </select></td>
+                </tr> 
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+            </div>
+        </form>
+    
+    </body>
+</html>

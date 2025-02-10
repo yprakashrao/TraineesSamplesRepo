@@ -1,0 +1,280 @@
+<div class="bg-img">
+      <div class="container">
+            <div class="col-md-12 row">
+                  <div class="col-md-6"></div>
+                  <div class="card w-50 mx-auto " *ngIf="!showEditForm">
+                        <div class="card-header text-center">
+                              <h4><i class="fa fa-pencil"></i>Patient Registration Form</h4>
+                        </div>
+                        <div class="card-body">
+                              <form name="myForm" #RegForm=ngForm (ngSubmit)="onSubmit(RegForm.value)">
+                                    <div class="form-group mt-1">
+                                          <label>firstname:</label>
+                                          <input type="text" ngModel class="form-control" name="firstname"
+                                                pattern="[A-Za-z]{1,15}" required minlength="6" maxlength="15">
+                                          <div *ngIf="RegForm.controls['firstname']?.['touched'] && RegForm.controls['firstname']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['firstname']?.['errors']?.['required']">
+                                                      firstname is required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['firstname']?.['errors']?.['minlength']">
+                                                      minimum 6 characters required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['firstname']?.['errors']?.['pattern']">
+                                                      please enter characters only.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label>lastname:</label>
+                                          <input type="text" ngModel class="form-control" name="lastname"
+                                                pattern="[A-Za-z]{1,15}" required minlength="6" maxlength="15">
+                                          <div *ngIf="RegForm.controls['lastname']?.['touched'] && RegForm.controls['lastname']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['lastname']?.['errors']?.['required']">
+                                                      lastname is required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['lastname']?.['errors']?.['minlength']">
+                                                      minimum 6 characters required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['lastname']?.['errors']?.['pattern']">
+                                                      please enter characters only.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label>age:</label>
+                                          <input type="number" ngModel class="form-control" name="age" required min="1"
+                                                max="120">
+                                          <div *ngIf="RegForm.controls['age']?.['touched'] && RegForm.controls['age']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['age']?.['errors']?.['required']">
+                                                      age is required and only numbers.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['age']?.['errors']?.['min']">
+                                                      please enter minimum age.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['age']?.['errors']?.['max']">
+                                                      maximum age exceded.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label>phone:</label>
+                                          <input type="tel" ngModel class="form-control" name="phone"
+                                                pattern="[0-9]{10}" maxlength="10" required>
+                                          <div *ngIf="RegForm.controls['phone']?.['touched'] && RegForm.controls['phone']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['phone']?.['errors']?.['required']">
+                                                      phone is required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['phone']?.['errors']?.['pattern']">
+                                                      please enter proper phone.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label>Date:</label>
+                                          <input type="date" ngModel class="form-control" name="date"
+                                                min="{{currentDate | date :'yyyy-MM-dd'}}" required>
+                                          <div *ngIf="RegForm.controls['date']?.['touched'] && RegForm.controls['date']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['date']?.['errors']?.['required']">
+                                                      date is required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['date']?.['errors']?.['pattern']">
+                                                      please enter date.
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <!-- <mat-form-field>
+                                          <input matInput [matDatepicker]="picker" [min]="minDate" placeholder="Choose a date">                                            
+                                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> 
+                                          <mat-datepicker #picker ></mat-datepicker>  
+                                    </mat-form-field> -->
+
+
+                                    <div class="form-group mt-1">
+                                          <label>Time:</label>
+                                          <input type="time" ngModel class="form-control" name="time" required>
+                                          <div *ngIf="RegForm.controls['time']?.['touched'] && RegForm.controls['time']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['time']?.['errors']?.['required']">
+                                                      time is required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['time']?.['errors']?.['pattern']">
+                                                      please enter time.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label for="gender">Gender: </label>
+                                          <label>
+                                                <input type="radio" ngModel name="gender" value="Male" required="true">
+                                                Male
+                                          </label>
+                                          <label>
+                                                <input type="radio" ngModel name="gender" value="Female"
+                                                      required="true"> Female
+                                          </label>
+                                          <label>
+                                                <input type="radio" ngModel name="gender" value="Others"
+                                                      required="true"> Others
+                                          </label>
+                                          <div *ngIf="RegForm.controls['gender']?.['touched'] && RegForm.controls['gender']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['gender']?.['errors']?.['required']">
+                                                      gender is required.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group row col-md-12 mt-1">
+                                          <div class="col-md-6">
+                                                <button type="submit" [disabled]="RegForm.invalid"
+                                                      class="btn btn-primary form-control">Submit</button>
+                                          </div>
+                                          <div class="col-md-6">
+                                                <button type="reset" (click)="resetUserForm(RegForm)"
+                                                      class="btn btn-primary form-control">Reset</button>
+                                          </div>
+                                    </div>
+                                    <div class="col-md-12 mt-3">
+                                          <div class="col-md-3 "></div>
+                                          <div class="col-md-6">
+                                                <span>Registration is successfull</span>
+                                          </div>
+                                    </div>
+                                    <!-- {{RegForm.value | json}} -->
+                                    <!-- (click)="show(RegForm)" previously i placed this in button -->
+
+                              </form>
+                              <!-- <div>{{RegForm.valid}}</div> -->
+                        </div>
+                  </div>
+                  <div class="card w-50 mx-auto " *ngIf="showEditForm">
+                        <div class="card-header text-center">
+                              <h4><i class="fa fa-pencil"></i>Edit Patient Information</h4>
+                        </div>
+                        <div class="card-body">
+                              <form name="myForm" #RegForm=ngForm (ngSubmit)="onSubmit(RegForm.value)">
+                                    <div class="form-group mt-1">
+                                          <label>firstname:</label>
+                                          <input type="text" class="form-control" name="firstname"
+                                                [(ngModel)]=data[0].firstname pattern="[A-Za-z]{1,15}" required
+                                                minlength="6" maxlength="15">
+                                          <div *ngIf="RegForm.controls['firstname']?.['touched'] && RegForm.controls['firstname']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['firstname']?.['errors']?.['required']">
+                                                      firstname is required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['firstname']?.['errors']?.['minlength']">
+                                                      minimum 6 characters required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['firstname']?.['errors']?.['pattern']">
+                                                      please enter characters only.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label>lastname:</label>
+                                          <input type="text" [(ngModel)]=data[0].lastname class="form-control"
+                                                name="lastname" pattern="[A-Za-z]{1,15}" required minlength="6"
+                                                maxlength="15">
+                                          <div *ngIf="RegForm.controls['lastname']?.['touched'] && RegForm.controls['lastname']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['lastname']?.['errors']?.['required']">
+                                                      lastname is required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['lastname']?.['errors']?.['minlength']">
+                                                      minimum 6 characters required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['lastname']?.['errors']?.['pattern']">
+                                                      please enter characters only.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label>age:</label>
+                                          <input type="number" [(ngModel)]=data[0].age class="form-control" name="age"
+                                                required min="1" max="120">
+                                          <div *ngIf="RegForm.controls['age']?.['touched'] && RegForm.controls['age']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['age']?.['errors']?.['required']">
+                                                      age is required and only numbers.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['age']?.['errors']?.['min']">
+                                                      please enter minimum age.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['age']?.['errors']?.['max']">
+                                                      maximum age exceded.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label>phone:</label>
+                                          <input type="tel" [(ngModel)]=data[0].phone class="form-control" name="phone"
+                                                pattern="[0-9]{10}" maxlength="10" required>
+                                          <div *ngIf="RegForm.controls['phone']?.['touched'] && RegForm.controls['phone']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['phone']?.['errors']?.['required']">
+                                                      phone is required.
+                                                </div>
+                                                <div *ngIf="RegForm.controls['phone']?.['errors']?.['pattern']">
+                                                      please enter proper phone.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group mt-1">
+                                          <label for="gender">Gender: </label>
+                                          <label>
+                                                <input type="radio" [(ngModel)]=data[0].gender name="gender"
+                                                      value="Male" required="true">
+                                                Male
+                                          </label>
+                                          <label>
+                                                <input type="radio" [(ngModel)]=data[0].gender name="gender"
+                                                      value="Female" required="true"> Female
+                                          </label>
+                                          <label>
+                                                <input type="radio" ngModel name="gender" value="Others"
+                                                      required="true"> Others
+                                          </label>
+                                          <div *ngIf="RegForm.controls['gender']?.['touched'] && RegForm.controls['gender']?.['errors']"
+                                                class="invalid">
+                                                <div *ngIf="RegForm.controls['gender']?.['errors']?.['required']">
+                                                      gender is required.
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="form-group row col-md-12 mt-1">
+                                          <div class="col-md-6">
+                                                <button type="submit" [disabled]="RegForm.invalid"
+                                                      class="btn btn-primary form-control">Submit</button>
+                                          </div>
+                                          <div class="col-md-6">
+                                                <button type="reset" (click)="resetUserForm(RegForm)"
+                                                      class="btn btn-primary form-control">Reset</button>
+                                          </div>
+                                    </div>
+                                    <!-- {{RegForm.value | json}} -->
+                                    <!-- (click)="show(RegForm)" previously i placed this in button -->
+
+                              </form>
+                              <!-- <div>{{RegForm.valid}}</div> -->
+                        </div>
+
+                  </div>
+
+
+            </div>

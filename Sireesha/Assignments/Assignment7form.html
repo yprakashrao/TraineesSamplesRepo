@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hidden Form</title>
+    <link rel="stylesheet" href="../styles/mystyles.css">
+    <script type="text/javascript" src="Assignment7.js"></script>
+    <div class="Ass7heading">
+        <h3>Creating a form using JavaScript with hidden Dropdown and Form</h3>
+    </div>          
+</head><br><br>
+<body onload="pageload();">
+    <div class="Ass7form">
+        <form  onsubmit = "return hiddenformvalidation();">
+        <label for="imagefile">Logo:</label>
+        <input type="file" id="logo" name="logo" size="20" accept="image/png"><br><br>                 
+            
+        <label for="interests">Interests:</label>                
+        <input type="radio" name="interests" value="Java" onclick="Interests()">Java
+        <input type="radio" name="interests" value="HTML" onclick="Interests()">HTML
+        <input type="radio" name="interests" value="CSS" onclick="Interests()">CSS <br><br>          
+              
+        <div id="hidedisplay1">
+        <label for="Java" name="Java Courses" >Java Courses:</label>            
+        <select id="Course1" onchange="showdropdown();">
+            <option value="">----</option>
+            <option value="springboot">springboot</option>
+            <option value="hybernet">hybernet</option>
+            <option value="junit">junit</option>           
+        </select>  <br><br>                                             
+        </div>
+        
+        <div id="hidedisplay2">           
+        <label for="HTML" name="HTML Courses" >HTML Courses:</label>
+        <select id="Course2" onchange="showdropdown();">
+            <option value="">----</option>
+            <option value="basics of html">basics of html</option>
+            <option value="css styles">css styles</option>
+            <option value="sassy">sassy</option>           
+        </select>     <br><br> 
+        </div> 
+
+        <div id="hidedisplay3">           
+        <label for="CSS" name="CSS Courses" >CSS Courses:</label>
+        <select id="Course3" onchange="showdropdown();">
+            <option value="">----</option>
+            <option value="springboot">springboot</option>
+            <option value="junit">junit</option>
+            <option value="junkins">junkins</option>           
+        </select><br><br> 
+        </div>         
+                   
+        
+        <div id="formforall" class="Ass7div">   
+                <label for="text">Name:</label>
+                <input type="text" id="name" size="20" placeholder="Enter name"> <br><br>      
+                
+                <label for="number">Phone Number:</label>
+                <input type="number" id="pnumber" size="20" placeholder="Enter number"><br><br>        
+                           
+                <label for="checkbox">Hobbies:</label>       
+                <input type="checkbox"  name="Hobbies" value="Karate">Karate
+                <input type="checkbox"  name="Hobbies" value="Coco">Coco
+                <input type="checkbox"  name="Hobbies" value="Tennis">Tennis   <br><br>         
+                 
+                <label for="area">Comments:</label>                        
+                <textarea rows="7" cols="15" id="Comment"></textarea><br><br>        
+        </div>
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+           
+        </form>
+    </div>          
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*new form component*/
+.invalid {
+      color: red;
+}
+
+span{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+     color: red;
+}
+/*nav component*/
+a {
+      text-decoration: none;
+      color: grey;
+}
+
+
+/*header component*/
+#bg-secon {
+      background-color: rgb(207, 221, 238);
+      color: grey;
+}
+
+
+/*homepage component*/
+.bg-img {
+      background-image: url("assets/bg-img.jpg");
+      min-height: 400px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+
+}
+
+.container1 {
+      position: absolute;
+      right: 60px;
+      margin-top: 100px;
+      max-width: 600px;
+      padding: 25px;
+}
+
+.sect1 {
+      position: relative;
+      align-items: center;
+}
+
+/*show form component*/
+.t-body {
+      text-align: center;
+      /* height: 300px; */
+} 
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Number concept</title>
+</head>
+<body>
+      <h2>Number concept... toFixed() method is used to convert the given number into string</h2>
+      <h3>
+            By using this we can able to fix the number of decimals values.
+      </h3>      
+      Enter Number: <input type="number"  id="usernumber">
+       <input type="submit" value="submit" onclick="numberex();">
+      
+      <p id="demo"></p>
+
+      <script type="text/javascript">
+          function numberex(){
+            let num = document.getElementById("usernumber").value;
+           let y =  Number(num);
+            let x = y.toFixed(4);
+            console.log(typeof (x));
+            document.getElementById("demo").innerHTML = x;
+          }
+      </script>
+</body>
+</html>

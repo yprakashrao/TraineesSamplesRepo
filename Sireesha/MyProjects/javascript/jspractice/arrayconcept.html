@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Adding a number to an array list</title>
+</head>
+
+<body>
+      <center>
+            <form>
+                  <!-- <label for="number">Enter Number:</label>
+                  <input type="number" id="number" name="" value=""><br><br>
+
+                  <input type="button" value="Add here" onclick="AddingUnToArray();"> -->
+
+                  <span id="displaydatahere"></span>
+            </form>
+      </center>
+
+      <!-- Assignment 1 &2 adding numbers to an array
+            <script>
+            const array = [21, 49, 05];
+
+            function AddingUnToArray() {
+                  let number = document.getElementById("number");
+
+                  var submitvalue = true;
+
+                  if (number.value == "" && number.value == null) {
+                        console.log(number);
+                        submitvalue = false;
+                  }
+
+                  if (submitvalue) {
+                        if (!number.value.match(/^[0-9]*$/)) {
+                              console.log("enter numbers only");
+                              submitvalue = false;
+                        }
+                  }
+
+                  if (submitvalue) {
+                        if (number.value != 0) {
+                              array.push(number.value);
+                              console.log(array.length);
+                        }
+                        else {
+                              submitvalue = false;
+                        }
+                  }
+
+                  document.getElementById("displaydatahere").innerHTML = array;
+
+            }
+      </script> -->
+
+      <!-- Assignment 3 for filtering of array
+      <script>
+            const array = [12, 30, 50, 24, 40]
+            const div10 = array.filter(myFunc);
+
+            function myFunc(value, index) {
+                  
+                  return value % 10 == 0;
+            }
+
+            document.getElementById("displaydatahere").innerHTML = div10;
+
+      </script>-->
+
+      <!-- Assignment 4 for squaring each number or digit in array. 
+      <script>
+            const arr = [12,02,14,15,20]
+            const divsqua = arr.map(myFunc);
+
+            function myFunc(value){
+                  return value * 2 ; 
+            }
+            document.getElementById("displaydatahere").innerHTML = divsqua;
+      </script> -->
+
+      <script>
+            var fact = "";
+
+            function myFunc(num) {
+                  if (num == 1) {
+                        fact = 1;
+                  }
+                  else {
+                        fact = num * myFunc(num - 1)
+                        // console.log(fact)
+
+                  }
+            }
+            myFunc(6);
+
+            document.getElementById("displaydatahere").innerHTML = fact;
+
+      </script>
+
+
+</body>
+
+</html>

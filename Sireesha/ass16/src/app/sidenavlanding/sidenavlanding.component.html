@@ -1,0 +1,63 @@
+<p>
+      <mat-toolbar color="primary">
+
+            <button mat-icon-button class="example-icon" (click)="nav.toggle()"
+                  aria-label="Example icon-button with menu icon">
+                  <mat-icon>menu</mat-icon>
+            </button>
+            <span>Basic Employee Registration form</span>
+
+      </mat-toolbar>
+</p>
+
+<mat-sidenav-container class="sidenav-wrapper">
+
+      <mat-sidenav opened="true" #nav mode="side">
+
+            <mat-list>
+
+                  <mat-list-item routerLinkActive="active-link">
+                        <button class="sidenav-btn" routerLink="personal" disabled>
+                              <mat-icon>person-fill</mat-icon>
+                        Personal Details
+                        </button>
+                  </mat-list-item>
+
+                  <mat-list-item routerLinkActive="active-link">
+                        <button class="sidenav-btn" routerLink="qualification" disabled >
+                              <mat-icon>create</mat-icon>
+                              Qualification Details
+                        </button>
+                  </mat-list-item>
+
+
+                  <mat-list-item routerLinkActive="active-link">
+                        <button class="sidenav-btn" routerLink="job" disabled>
+                              <mat-icon>beenhere</mat-icon>
+                              Job Details
+                        </button>
+                  </mat-list-item>
+
+                  <mat-list-item routerLinkActive="active-link">
+                        <button class="sidenav-btn" routerLink="skill" disabled>
+                              <mat-icon>school</mat-icon>
+                              Skill Set
+                        </button>
+                  </mat-list-item>
+
+                  <mat-list-item routerLinkActive="active-link">
+                        <button class="sidenav-btn" routerLink="technical" disabled>
+                              <mat-icon>book</mat-icon>
+                              Final Details
+                        </button>
+                  </mat-list-item>
+            </mat-list>
+
+      </mat-sidenav>
+
+
+      <mat-sidenav-content>
+            <router-outlet></router-outlet>
+      </mat-sidenav-content>
+
+</mat-sidenav-container>

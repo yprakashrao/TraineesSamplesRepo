@@ -1,0 +1,80 @@
+
+
+<div class="row mt-5">
+    
+    <div class="col ">
+        <img src="../../assets/emjh.png" alt="img" style="width:100%" height="300px">
+    </div>
+
+    <div class="col jobimg">
+
+        <h2 class="header">Job Details</h2>
+    
+        <form [formGroup]="regForm" name="myForm" (ngSubmit)="onSubmit(regForm)">
+
+            <div class="form-group">
+
+                <label>Previous Company Name:</label>
+                <input type="text" formControlName="pcname" class="form-control" maxlength="25" placeholder="gowri pvt limited">
+                <div *ngIf="regForm.controls['pcname'].touched && regForm.controls['pcname']?.['errors']" class="invalid">
+
+                    <div *ngIf="regForm.controls['pcname']?.['errors']?.['required']">
+                        <span> pcname is required</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['pcname']?.['errors']?.['maxlength']">
+                        <span>pcname reaches max characters.</span>
+                    </div>
+
+                    <div *ngIf="regForm.controls['pcname']?.['errors']?.['pattern']">
+                        <span>please enter alphabets with some space only.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="yoe">Years Of Experience:</label>
+                <input type="number" formControlName="yoe" class="form-control" placeholder="">
+                <div *ngIf="regForm.controls['yoe'].touched && regForm.controls['yoe']?.['errors']" class="invalid">
+
+                    <div *ngIf="regForm.controls['yoe']?.['errors']?.['required']">
+                        <span>years of experience is required</span>
+                    </div>
+
+                </div>
+            </div>&nbsp;
+
+
+            <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary form-control">Click/Continue</button><br><br>
+
+
+            <!-- <div class="form-group row col-md-12 mt-1">
+                <div class="col-md-6">
+                    <button type="button" routerLink="/qualification" class="btn btn-primary form-control">Back</button>
+    
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary form-control">Click/Continue</button><br><br>
+                </div>
+          </div> -->
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- 
+
+<div class="job-img">
+
+    <div class="job-form">
+
+           
+        
+    
+    </div>
+
+</div> -->
